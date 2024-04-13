@@ -36,11 +36,6 @@
 
 ###
 
-<br clear="both">
-
-
-###
-
 <div align="center">
   <img src="https://profile-counter.glitch.me/Alexito-Hub/count.svg?"  />
 </div>
