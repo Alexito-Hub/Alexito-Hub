@@ -4,6 +4,9 @@
   <img src="https://raw.githubusercontent.com/AVS1508/AVS1508/master/assets/Night-Coding.gif">
 </div>
 
+<div align="center">
+  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&duration=4500&pause=1000&random=true&width=435&lines=Pr%C3%B3ximo+desarrollador+Full+Stack;Quien+dice+que+no+se+puede+programar+un+futuro%3F;La+imaginaci%C3%B3n+es+lo+que+sobra;Ser+un+programador+esta+en+mi+sangre" alt="Typing SVG" /></a>
+</div>
 
 <div align="center">
   <img src="https://img.shields.io/static/v1?message=Youtube&logo=youtube&label=&color=FF0000&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="youtube logo"  />
