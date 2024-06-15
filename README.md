@@ -9,7 +9,7 @@
 </div>
 
 <div align="center">
-  <h3><img width="50px" src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gi"> Acerca de mí</h3>
+  <h4><img width="10px" src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gi"> Acerca de mí</h4>
 </div>
 
 
