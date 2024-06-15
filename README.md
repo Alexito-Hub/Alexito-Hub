@@ -9,9 +9,10 @@
 <p align="center"><img src="https://raw.githubusercontent.com/KevinPatel04/KevinPatel04/master/header.png"></p>
 
 - ☕ Mi nombre es **Alessandro** o también conocido como **Zioo**.
+- 🎂 Tengo 18 años de edad.
+- 🇵🇪 Mi nacionalidad es Peruana.
 - 👣 Desarrollador NOVATO, siguiendo el camino de la programación.
 - 🏫 Estudio en la [I.E Mariscal Castilla](https://mariscalcastilla.edu.pe) ingresaré a [Universidad Tecnología del Perú](https://utp.edu.pe).
-- 
 
 
 
