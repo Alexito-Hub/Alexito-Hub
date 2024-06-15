@@ -5,7 +5,7 @@
 </div>
 
 <div align="center">
-  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&duration=4500&pause=1000&center=true&random=true&width=500&lines=Pr%C3%B3ximo+desarrollador+Full+Stack;Quien+dice+que+no+se+puede+programar+un+futuro%3F;La+imaginaci%C3%B3n+es+lo+que+sobra;Ser+un+programador+esta+en+mi+sangre" alt="Typing SVG" /></a>
+  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&duration=4500&pause=1000&center=true&vCenter=true&random=true&width=600&lines=Pr%C3%B3ximo+desarrollador+Full+Stack;Quien+dice+que+no+se+puede+programar+un+futuro%3F;La+imaginaci%C3%B3n+es+lo+que+sobra;Ser+un+programador+esta+en+mi+sangre" alt="Typing SVG" /></a>
 </div>
 
 <div align="center">
