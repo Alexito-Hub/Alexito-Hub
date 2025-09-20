@@ -8,16 +8,6 @@
 
 <p align="center"><img src="https://raw.githubusercontent.com/KevinPatel04/KevinPatel04/master/header.png"></p>
 
-- ☕ Mi nombre es **Alessandro** o también conocido como **Zioo**.
-- 🎂 Tengo **18** años de edad.
-- 🇵🇪 Mi nacionalidad es Peruana.
-- 🕴️ Fundador de la empresa **Alexito Entertainment**.
-- 💻 Desarrollador de **Kaori - Net**.
-- 🧑‍💻 Próximo proyecto **Vbooks**
-- 🏫 Estudio en la [I.E Mariscal Castilla](https://mariscalcastilla.edu.pe) ingresaré a [Universidad Tecnología del Perú](https://utp.edu.pe).
-
-
-
 <div align="center">
   
 [![](https://visitcount.itsvg.in/api?id=Alexito-Hub&label=Profile%20Views&color=1&pretty=false)](https://visitcount.itsvg.in)
