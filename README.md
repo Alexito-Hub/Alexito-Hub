@@ -7,17 +7,3 @@
 </div>
 
 <p align="center"><img src="https://raw.githubusercontent.com/KevinPatel04/KevinPatel04/master/header.png"></p>
-
-<div align="center">
-  
-[![](https://visitcount.itsvg.in/api?id=Alexito-Hub&label=Profile%20Views&color=1&pretty=false)](https://visitcount.itsvg.in)
-
-</div>
-
-###
-
-<div align="center">
-  <a href="https://github.com/Alexito-Hub/">
-  <img src="https://github.com/1999AZZAR/1999AZZAR/blob/readme/resources/img/grid-snake.svg"
-       alt="snake" /></a>
-</div>
