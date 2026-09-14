@@ -1,9 +1,19 @@
 const algoritmosUnidades = [
+  {
+    titulo: 'Introducción a Algoritmo y Estructura de Datos',
+    entregas: [
+      {
+        nombre: 'Desarrollo de trabajo en java ',
+        tipo: 'word',
+        url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana01/Actividad_Arreglos_Java.docx'
+      }
+    ]
+  }
 ];
 
 const tallerUnidades = [
   {
-    titulo: 'Introducción a Algoritmo y Estructura de Datos',
+    titulo: 'Introducción a Taller VII: Desarrollo de apps',
     entregas: [
       {
         nombre: 'Desarrollo de trabajo en figma ',
