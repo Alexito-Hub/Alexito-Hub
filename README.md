@@ -1,9 +1,69 @@
-<img align="center" width=100% src="https://capsule-render.vercel.app/api?type=waving&height=120&color=gradient&text=Alexito%20-%20成功へ&fontSize=20&fontAlignY=22&animation=fadeIn&desc=Full%20Stack%20Developer%20&descAlignY=33&descSize=10">
-
-<div align="center"><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&duration=4500&pause=1000&center=true&vCenter=true&random=true&width=600&lines=Pr%C3%B3ximo+desarrollador+Full+Stack;Quien+dice+que+no+se+puede+programar+un+futuro%3F;La+imaginaci%C3%B3n+es+lo+que+sobra;Ser+un+programador+esta+en+mi+sangre" alt="Typing SVG" /></a></div>
-
 <div align="center">
-  <h4><img width="10px" src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gi"> Acerca de mí</h4>
+
+# 🎓 Alexito-Hub — Portafolio Académico
+
+[![GitHub Pages](https://img.shields.io/badge/Ver%20Sitio-GitHub%20Pages-8b5cf6?style=for-the-badge&logo=github)](https://alexito-hub.github.io/Alexito-Hub/)
+[![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)]()
+[![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)]()
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)]()
+
 </div>
 
-<p align="center"><img src="https://raw.githubusercontent.com/KevinPatel04/KevinPatel04/master/header.png"></p>
+---
+
+Portafolio académico de **Alessandro Villogas Gaspar**, estudiante de **Ingeniería de Sistemas y Computación**. Aquí se organizan las entregas, talleres y laboratorios de las asignaturas cursadas.
+
+## 📚 Asignaturas
+
+| # | Asignatura | Unidades |
+|---|------------|----------|
+| 1 | **Algoritmos y Estructura de Datos** | 4 |
+| 2 | **Taller VII: Desarrollo de Aplicaciones I** | 4 |
+
+## 🗂 Estructura del Proyecto
+
+```
+Alexito-Hub/
+├── index.html          ← Página de inicio
+├── algoritmos.html     ← Algoritmos y Estructura de Datos
+├── taller-vii.html     ← Taller VII: Desarrollo de Aplicaciones I
+├── perfil.html         ← Perfil del estudiante
+├── assets/
+│   ├── css/styles.css  ← Estilos del sitio
+│   └── js/app.js       ← Datos y lógica (editar aquí las entregas)
+└── pdfs/               ← Archivos PDF y Word de las entregas
+```
+
+## ✏️ Cómo agregar entregas
+
+Edita el archivo **`assets/js/app.js`** y agrega objetos al array de la asignatura correspondiente:
+
+```js
+{
+  nombre: 'Nombre del trabajo',
+  tipo: 'pdf',        // pdf | word | enlace
+  url: 'pdfs/archivo.pdf'
+}
+```
+
+**Tipos soportados:**
+- `pdf` → Botones "Ver PDF" y "Descargar"
+- `word` → Botón "Descargar .docx"
+- `enlace` → Botón con link externo
+
+## 🛠 Tecnologías
+
+- **HTML5** — Estructura semántica
+- **CSS3** — Diseño dark mode con variables CSS
+- **JavaScript Vanilla** — Renderizado dinámico de unidades
+- **Google Fonts** — Tipografía Inter
+
+## 📬 Contacto
+
+- ✉️ [alessandrovillogas@outlook.es](mailto:alessandrovillogas@outlook.es)
+
+---
+
+<div align="center">
+  <sub>Hecho con 💜 por Alessandro Villogas Gaspar</sub>
+</div>
