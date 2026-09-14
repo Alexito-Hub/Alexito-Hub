@@ -1,0 +1,52 @@
+﻿# ============================================================
+# GitHub Actions — Deploy to GitHub Pages
+# Se activa automáticamente en cada push a main
+# ============================================================
+
+name: Deploy Portafolio to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main       # dispara en cada push al branch principal
+  workflow_dispatch:   # permite disparar manualmente desde la UI de GitHub
+
+# Permisos necesarios para desplegar en GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Solo un despliegue a la vez (cancela el anterior si hay uno en curso)
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Clonar el repositorio
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Configurar GitHub Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # 3. Subir los archivos del sitio como artefacto
+      #    "." sube todo el repositorio raíz como el sitio web
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      # 4. Publicar en GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

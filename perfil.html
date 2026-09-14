@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Perfil académico — Ingeniería de Sistemas y Computación. Formación, herramientas, habilidades y contacto." />
+  <title>Perfil — Portafolio Académico</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238b5cf6' stroke-width='2'><path d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'/><circle cx='12' cy='7' r='4'/></svg>" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">
+      <span class="brand-dot"></span>
+      Portafolio Académico
+    </a>
+    <div class="navbar-links">
+      <a href="index.html"      class="nav-link"        id="nav-works">Trabajos</a>
+      <a href="proyectos.html"  class="nav-link"        id="nav-projects">Proyectos</a>
+      <a href="perfil.html"     class="nav-link active"  id="nav-profile">Perfil</a>
+    </div>
+    <div class="navbar-spacer"></div>
+    <div class="navbar-actions">
+      <a href="pdfs/cv-placeholder.pdf" download class="btn btn-primary btn-sm" id="btn-download-cv">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Descargar CV
+      </a>
+      <button class="burger" id="burger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="nav-drawer" id="nav-drawer">
+  <a href="index.html"     class="drawer-link">Trabajos</a>
+  <a href="proyectos.html" class="drawer-link">Proyectos</a>
+  <a href="perfil.html"    class="drawer-link active">Perfil</a>
+</div>
+
+<main class="page-wrapper">
+  <div class="container">
+
+    <!-- PROFILE CARD -->
+    <div class="profile-card" id="perfil-header">
+      <div class="avatar" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </div>
+      <div>
+        <div class="profile-name">Tu Nombre Completo</div>
+        <div class="profile-role">Estudiante — Ingeniería de Sistemas y Computación</div>
+        <p class="profile-bio">
+          Apasionado por el desarrollo de software de sistemas, la inteligencia artificial aplicada
+          y la arquitectura de software limpia. Actualmente en 7° semestre, con enfoque en
+          proyectos que combinan rendimiento nativo, privacidad y experiencia de usuario.
+        </p>
+        <div class="profile-tags">
+          <span class="tag green">Disponible para pasantías</span>
+          <span class="tag violet">Colombia</span>
+          <span class="tag cyan">7° Semestre</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- EDUCACIÓN -->
+    <section id="educacion-section" style="margin-bottom:36px">
+      <h2 class="section-heading">Educación</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-period">2022 — Presente</div>
+          <div class="tl-title">Ingeniería de Sistemas y Computación</div>
+          <div class="tl-sub">Universidad [Tu Universidad] — Bogotá, Colombia</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-period">2024 — Certificación</div>
+          <div class="tl-title">Desarrollo de Aplicaciones con Rust</div>
+          <div class="tl-sub">Udemy / The Rust Programming Language (Online)</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-period">2023 — Certificación</div>
+          <div class="tl-title">Machine Learning Fundamentals</div>
+          <div class="tl-sub">Coursera — Andrew Ng (Stanford Online)</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-period">2020 — 2021</div>
+          <div class="tl-title">Bachillerato Académico</div>
+          <div class="tl-sub">Colegio [Tu Colegio] — Graduado con honores</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills-section" style="margin-bottom:36px">
+      <h2 class="section-heading">Herramientas &amp; Tecnologías</h2>
+
+      <p style="font-size:0.8rem;color:var(--text-3);margin-bottom:14px;text-transform:uppercase;letter-spacing:0.06em;font-weight:600">Lenguajes</p>
+      <div class="skills-grid mb-28">
+        <div class="skill-item"><div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="1.5" stroke-linecap="round" width="24" height="24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><div class="skill-name">Rust</div></div>
+        <div class="skill-item"><div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="1.5" stroke-linecap="round" width="24" height="24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><div class="skill-name">Python</div></div>
+        <div class="skill-item"><div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" width="24" height="24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><div class="skill-name">Java</div></div>
+        <div class="skill-item"><div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="1.5" stroke-linecap="round" width="24" height="24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><div class="skill-name">JavaScript</div></div>
+        <div class="skill-item"><div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--text-2)" stroke-width="1.5" stroke-linecap="round" width="24" height="24"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></div><div class="skill-name">Bash / Shell</div></div>
+        <div class="skill-item"><div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="1.5" stroke-linecap="round" width="24" height="24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div><div class="skill-name">SQL</div></div>
+        <div class="skill-item"><div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="1.5" stroke-linecap="round" width="24" height="24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><div class="skill-name">TypeScript</div></div>
+        <div class="skill-item"><div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--text-2)" stroke-width="1.5" stroke-linecap="round" width="24" height="24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></div><div class="skill-name">C / C++</div></div>
+      </div>
+
+      <p style="font-size:0.8rem;color:var(--text-3);margin-bottom:14px;text-transform:uppercase;letter-spacing:0.06em;font-weight:600">Frameworks &amp; Herramientas</p>
+      <div class="skills-grid mb-28">
+        <div class="skill-item"><div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="1.5" stroke-linecap="round" width="24" height="24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div class="skill-name">Tauri</div></div>
+        <div class="skill-item"><div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--text-2)" stroke-width="1.5" stroke-linecap="round" width="24" height="24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></div><div class="skill-name">Git / GitHub</div></div>
+        <div class="skill-item"><div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="1.5" stroke-linecap="round" width="24" height="24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M2 8h20M8 2v20"/></svg></div><div class="skill-name">Docker</div></div>
+        <div class="skill-item"><div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" width="24" height="24"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="12" cy="10" r="3"/></svg></div><div class="skill-name">Ollama</div></div>
+        <div class="skill-item"><div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="1.5" stroke-linecap="round" width="24" height="24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div><div class="skill-name">PostgreSQL</div></div>
+        <div class="skill-item"><div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="1.5" stroke-linecap="round" width="24" height="24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></div><div class="skill-name">Node.js</div></div>
+        <div class="skill-item"><div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="1.5" stroke-linecap="round" width="24" height="24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div class="skill-name">React</div></div>
+        <div class="skill-item"><div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--text-2)" stroke-width="1.5" stroke-linecap="round" width="24" height="24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><div class="skill-name">Linux</div></div>
+      </div>
+
+      <p style="font-size:0.8rem;color:var(--text-3);margin-bottom:14px;text-transform:uppercase;letter-spacing:0.06em;font-weight:600">Áreas de Conocimiento</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <span class="tag violet">Estructuras de Datos</span>
+        <span class="tag violet">Algoritmos</span>
+        <span class="tag cyan">Redes TCP/IP</span>
+        <span class="tag cyan">Seguridad Informática</span>
+        <span class="tag green">Bases de Datos</span>
+        <span class="tag green">Sistemas Operativos</span>
+        <span class="tag amber">IA / LLMs</span>
+        <span class="tag amber">Arquitectura de Software</span>
+        <span class="tag red">Criptografía</span>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto-section">
+      <h2 class="section-heading">Contacto</h2>
+      <div class="contact-grid">
+        <a href="mailto:tu.email@universidad.edu.co" class="contact-item" id="contact-email">
+          <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="1.5" stroke-linecap="round" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+          <div><div class="contact-label">Correo institucional</div><div class="contact-value">tu.email@universidad.edu.co</div></div>
+        </a>
+        <a href="https://github.com/TU_USUARIO" target="_blank" class="contact-item" id="contact-github">
+          <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="1.5" stroke-linecap="round" width="20" height="20"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span>
+          <div><div class="contact-label">GitHub</div><div class="contact-value">github.com/TU_USUARIO</div></div>
+        </a>
+        <a href="https://linkedin.com/in/TU_USUARIO" target="_blank" class="contact-item" id="contact-linkedin">
+          <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="1.5" stroke-linecap="round" width="20" height="20"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>
+          <div><div class="contact-label">LinkedIn</div><div class="contact-value">linkedin.com/in/TU_USUARIO</div></div>
+        </a>
+        <a href="https://wa.me/573000000000" target="_blank" class="contact-item" id="contact-wa">
+          <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="1.5" stroke-linecap="round" width="20" height="20"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+          <div><div class="contact-label">WhatsApp</div><div class="contact-value">+57 300 000 0000</div></div>
+        </a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  Portafolio Académico &mdash; Ingeniería de Sistemas y Computación &mdash; Actualizado Sep 2026
+</footer>
+
+<script src="assets/js/app.js"></script>
+<script>
+  const burger = document.getElementById('burger');
+  const drawer = document.getElementById('nav-drawer');
+  if (burger) burger.addEventListener('click', () => drawer.classList.toggle('open'));
+</script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Repositorio académico de trabajos universitarios de Ingeniería de Sistemas: informes, laboratorios, proyectos y diagramas." />
+  <title>Portafolio Académico — Trabajos</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238b5cf6' stroke-width='2'><path d='M22 10v6M2 10l10-5 10 5-10 5z'/><path d='M6 12v5c3 3 9 3 12 0v-5'/></svg>" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<!-- ══ NAVBAR ══════════════════════════════════════════════ -->
+<nav class="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="navbar-inner">
+
+    <a href="index.html" class="navbar-brand">
+      <span class="brand-dot"></span>
+      Portafolio Académico
+    </a>
+
+    <div class="navbar-links">
+      <a href="index.html"      class="nav-link active" id="nav-works">Trabajos</a>
+      <a href="proyectos.html"  class="nav-link"        id="nav-projects">Proyectos</a>
+      <a href="perfil.html"     class="nav-link"        id="nav-profile">Perfil</a>
+    </div>
+
+    <div class="navbar-spacer"></div>
+
+    <div class="navbar-actions">
+      <a href="https://github.com/TU_USUARIO" target="_blank" class="btn btn-outline btn-sm" id="btn-github-nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GitHub
+      </a>
+      <button class="burger" id="burger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</nav>
+
+<!-- Mobile Drawer -->
+<div class="nav-drawer" id="nav-drawer">
+  <a href="index.html"     class="drawer-link active">Trabajos</a>
+  <a href="proyectos.html" class="drawer-link">Proyectos</a>
+  <a href="perfil.html"    class="drawer-link">Perfil</a>
+</div>
+
+<!-- ══ PAGE ════════════════════════════════════════════════ -->
+<main class="page-wrapper">
+  <div class="container">
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-label">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/></svg>
+        Ingeniería de Sistemas y Computación
+      </div>
+      <h1>Repositorio de Trabajos Académicos</h1>
+      <p>Colección de informes, laboratorios, proyectos y diagramas desarrollados a lo largo de la carrera. Abierto para evaluadores y colaboradores.</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="val" id="stat-total">—</div><div class="lbl">Trabajos</div></div>
+        <div class="hero-stat"><div class="val" id="stat-cats">—</div><div class="lbl">Categorías</div></div>
+        <div class="hero-stat"><div class="val" id="stat-sems">—</div><div class="lbl">Semestres</div></div>
+        <div class="hero-stat"><div class="val" id="stat-pages">—</div><div class="lbl">Páginas</div></div>
+      </div>
+    </div>
+
+    <!-- FILTER STRIP -->
+    <div class="filter-strip" role="toolbar" aria-label="Filtros">
+      <button class="filter-pill active" data-cat="Todos" id="filter-todos">Todos</button>
+      <button class="filter-pill" data-cat="Informe"     id="filter-informe">Informes</button>
+      <button class="filter-pill" data-cat="Laboratorio" id="filter-lab">Laboratorios</button>
+      <button class="filter-pill" data-cat="Proyecto"    id="filter-proyecto">Proyectos</button>
+      <button class="filter-pill" data-cat="Diagrama"    id="filter-diagrama">Diagramas</button>
+      <button class="filter-pill" data-cat="Taller"      id="filter-taller">Talleres</button>
+
+      <select class="filter-select" id="sem-select" aria-label="Filtrar por semestre">
+        <option value="Todos">Todos los semestres</option>
+        <option value="2025-I">2025 — I</option>
+        <option value="2024-II">2024 — II</option>
+        <option value="2024-I">2024 — I</option>
+      </select>
+
+      <select class="filter-select" id="order-select" aria-label="Ordenar por">
+        <option value="fecha-desc">Más reciente</option>
+        <option value="fecha-asc">Más antiguo</option>
+        <option value="titulo-az">Título A→Z</option>
+        <option value="titulo-za">Título Z→A</option>
+      </select>
+
+      <div class="filter-spacer"></div>
+
+      <div class="filter-search">
+        <span class="s-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </span>
+        <input type="search" id="search-input" placeholder="Buscar trabajos..." autocomplete="off" aria-label="Buscar" />
+      </div>
+
+      <div class="view-btns">
+        <button class="view-btn active" data-view="grid" id="view-grid" aria-label="Cuadrícula" title="Cuadrícula">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        </button>
+        <button class="view-btn" data-view="list" id="view-list" aria-label="Lista" title="Lista">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- RESULTS META -->
+    <p class="results-meta" id="results-count"></p>
+
+    <!-- GRID -->
+    <section id="pdf-grid" class="portfolio-grid" aria-label="Galería de trabajos"></section>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  Portafolio Académico &mdash; Ingeniería de Sistemas y Computación &mdash; Actualizado Sep 2026
+</footer>
+
+<div class="toast-container" id="toast-container"></div>
+
+<script src="assets/js/app.js"></script>
+<script>
+  // Burger toggle
+  const burger = document.getElementById('burger');
+  const drawer = document.getElementById('nav-drawer');
+  burger.addEventListener('click', () => drawer.classList.toggle('open'));
+
+  // Quick filter from (if used elsewhere)
+  function quickFilter(cat) {
+    document.querySelectorAll('.filter-pill[data-cat]').forEach(b => b.classList.remove('active'));
+    const btn = document.querySelector(`.filter-pill[data-cat="${cat}"]`);
+    if (btn) btn.classList.add('active');
+    state.categoria = cat;
+    renderCards();
+  }
+</script>
+</body>
+</html>

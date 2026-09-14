@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Proyectos de software complejos — Nexo: cliente estudiantil unificado con IA local." />
+  <title>Proyectos — Portafolio Académico</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238b5cf6' stroke-width='2'><polygon points='13 2 3 14 12 14 11 22 21 10 12 10 13 2'/></svg>" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<!-- ══ NAVBAR ══════════════════════════════════════════════ -->
+<nav class="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">
+      <span class="brand-dot"></span>
+      Portafolio Académico
+    </a>
+    <div class="navbar-links">
+      <a href="index.html"      class="nav-link"        id="nav-works">Trabajos</a>
+      <a href="proyectos.html"  class="nav-link active"  id="nav-projects">Proyectos</a>
+      <a href="perfil.html"     class="nav-link"         id="nav-profile">Perfil</a>
+    </div>
+    <div class="navbar-spacer"></div>
+    <div class="navbar-actions">
+      <a href="https://github.com/TU_USUARIO" target="_blank" class="btn btn-outline btn-sm" id="btn-github-nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GitHub
+      </a>
+      <button class="burger" id="burger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="nav-drawer" id="nav-drawer">
+  <a href="index.html"     class="drawer-link">Trabajos</a>
+  <a href="proyectos.html" class="drawer-link active">Proyectos</a>
+  <a href="perfil.html"    class="drawer-link">Perfil</a>
+</div>
+
+<main class="page-wrapper">
+  <div class="container">
+
+    <div class="page-header mb-28" style="padding-bottom:0">
+      <h1 style="font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;margin-bottom:6px;background:linear-gradient(135deg,var(--text-1) 40%,var(--violet) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Proyectos de Software</h1>
+      <p style="color:var(--text-2);font-size:0.95rem">Desarrollos técnicos complejos — arquitecturas, código fuente y documentación</p>
+    </div>
+
+    <!-- HERO NEXO -->
+    <section id="nexo-section" style="margin-bottom:44px">
+      <div class="proj-hero">
+        <div class="proj-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Proyecto Estelar
+        </div>
+        <h2>Nexo</h2>
+        <p class="proj-subtitle">
+          Cliente de escritorio estudiantil unificado con IA local. Consolida campus virtual, correo institucional,
+          agenda académica y asistente IA en una sola interfaz nativa, sin depender de la nube para procesamiento inteligente.
+        </p>
+        <div class="proj-actions">
+          <a href="pdfs/nexo-arquitectura-diagrama.pdf" target="_blank" class="btn btn-primary btn-lg" id="btn-nexo-doc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Ver Documentación
+          </a>
+          <a href="https://github.com/TU_USUARIO/nexo" target="_blank" class="btn btn-sky btn-lg" id="btn-nexo-repo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            Repositorio GitHub
+          </a>
+          <a href="pdfs/nexo-arquitectura-diagrama.pdf" download class="btn btn-outline btn-lg" id="btn-nexo-dl">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Descargar PDF
+          </a>
+        </div>
+        <div class="tech-stack">
+          <span class="tech-pill">Rust</span>
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">Ollama</span>
+          <span class="tech-pill">Tauri</span>
+          <span class="tech-pill">WebSocket</span>
+          <span class="tech-pill">SQLite</span>
+          <span class="tech-pill">OAuth 2.0</span>
+          <span class="tech-pill">REST API</span>
+        </div>
+      </div>
+
+      <h2 class="section-heading">Características Principales</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M8.5 10h.01M15.5 10h.01"/></svg></div>
+          <h3>IA Local con Ollama</h3>
+          <p>Asistente académico que corre modelos LLM directamente en el dispositivo. Sin latencia de nube, con privacidad total.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><line x1="6" y1="9" x2="6" y2="21"/></svg></div>
+          <h3>Campus Virtual Unificado</h3>
+          <p>Integración con múltiples plataformas universitarias (Moodle, Blackboard) mediante adaptadores modulares.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+          <h3>Agenda Académica Inteligente</h3>
+          <p>Sincronización automática de fechas de entrega, exámenes y horarios con alertas predictivas.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <h3>Correo Institucional Integrado</h3>
+          <p>Cliente con soporte IMAP/SMTP, categorización automática con IA y resumen de hilos de conversación.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <h3>Rendimiento Nativo</h3>
+          <p>Backend en Rust para operaciones de alta performance con uso de memoria ultra-bajo vs Electron.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--rose)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+          <h3>Privacidad por Diseño</h3>
+          <p>Datos en SQLite cifrado localmente. La IA nunca envía prompts a servidores externos.</p>
+        </div>
+      </div>
+
+      <h2 class="section-heading">Arquitectura del Sistema</h2>
+      <div class="arch-block">
+<pre>
++----------------------------------------------------------+
+|                   NEXO  -  Desktop App                   |
+|                   (Tauri / WebView)                      |
++--------------------+----------------+--------------------+
+|   UI Layer (TS)    |  Core (Rust)   |   AI Layer (Py)   |
+|  ---------------   |  ----------    |  ---------------   |
+|  . React/Vue       |  . IPC Bridge  |  . Ollama Client  |
+|  . Dashboard       |  . Auth OAuth  |  . Prompt Engine  |
+|  . Mail Client     |  . SQLite ORM  |  . Context Mgr    |
+|  . Agenda View     |  . Scheduler   |  . RAG Pipeline   |
++--------------------+----------------+--------------------+
+|            Adapters  (Campus Virtual / Email)            |
+|      Moodle  ·  Blackboard  ·  Canvas  ·  IMAP/SMTP     |
++----------------------------------------------------------+</pre>
+      </div>
+    </section>
+
+    <!-- REPOS -->
+    <section id="repos-section" style="margin-bottom:44px">
+      <h2 class="section-heading">Repositorios de Código</h2>
+      <div class="repo-list">
+        <a href="https://github.com/TU_USUARIO/nexo" target="_blank" class="repo-card" id="repo-nexo">
+          <span class="repo-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span>
+          <div class="repo-info"><div class="repo-name">TU_USUARIO / nexo</div><div class="repo-desc">Cliente estudiantil unificado con IA local — proyecto principal</div></div>
+          <span class="repo-lang">Rust</span>
+        </a>
+        <a href="https://github.com/TU_USUARIO/arbol-avl-visualizer" target="_blank" class="repo-card" id="repo-avl">
+          <span class="repo-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span>
+          <div class="repo-info"><div class="repo-name">TU_USUARIO / arbol-avl-visualizer</div><div class="repo-desc">Árbol AVL con visualización gráfica en tiempo real — Estructuras de Datos</div></div>
+          <span class="repo-lang">Java</span>
+        </a>
+        <a href="https://github.com/TU_USUARIO/stack-vm" target="_blank" class="repo-card" id="repo-vm">
+          <span class="repo-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span>
+          <div class="repo-info"><div class="repo-name">TU_USUARIO / stack-vm</div><div class="repo-desc">Máquina virtual basada en pila con compilador a bytecode — Lenguajes de Programación</div></div>
+          <span class="repo-lang">Python</span>
+        </a>
+        <a href="https://github.com/TU_USUARIO/aes128-impl" target="_blank" class="repo-card" id="repo-aes">
+          <span class="repo-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span>
+          <div class="repo-info"><div class="repo-name">TU_USUARIO / aes128-impl</div><div class="repo-desc">Implementación AES-128 desde cero con análisis de modos ECB, CBC y GCM</div></div>
+          <span class="repo-lang">Python</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- OTROS -->
+    <section id="otros-section">
+      <h2 class="section-heading">Otros Proyectos Académicos</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <h3>Simulador de Scheduling CPU</h3>
+          <p>Visualizador interactivo de algoritmos de planificación: FCFS, SJF, Round Robin. Python + Tkinter.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+          <h3>Análisis de Algoritmos — Benchmarks</h3>
+          <p>Suite de benchmarks empíricos para comparar algoritmos de ordenamiento y búsqueda con gráficas automáticas.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <h3>API REST — Gestión Académica</h3>
+          <p>Backend Node.js + Express con autenticación JWT para el sistema de BD diseñado en Bases de Datos I.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  Portafolio Académico &mdash; Ingeniería de Sistemas y Computación &mdash; Actualizado Sep 2026
+</footer>
+
+<script src="assets/js/app.js"></script>
+<script>
+  const burger = document.getElementById('burger');
+  const drawer = document.getElementById('nav-drawer');
+  if (burger) burger.addEventListener('click', () => drawer.classList.toggle('open'));
+</script>
+</body>
+</html>
