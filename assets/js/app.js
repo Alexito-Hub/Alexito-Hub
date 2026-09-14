@@ -1,4 +1,7 @@
 const algoritmosUnidades = [
+];
+
+const tallerUnidades = [
   {
     titulo: 'Introducción a Algoritmo y Estructura de Datos',
     entregas: [
@@ -10,8 +13,6 @@ const algoritmosUnidades = [
     ]
   }
 ];
-
-const tallerUnidades = [];
 
 function renderUnits(containerId, unidades) {
   const container = document.getElementById(containerId);
