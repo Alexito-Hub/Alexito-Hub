@@ -1,13 +1,26 @@
 const algoritmosUnidades = [
   {
-    titulo: 'Introducción a Algoritmo y Estructura de Datos',
+    titulo: 'CONCEPTOS DE ALGORITMOS Y ESTRUCTURAS DE DATOS',
+    capacidad: "Aplica los conceptos básicos de los algoritmos y estructuras de datos para su aplicación en diversos problemas.",
     entregas: [
       {
         nombre: 'Desarrollo de trabajo en java ',
         tipo: 'word',
-        url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana01/Actividad_Arreglos_Java.docx'
+        url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana01-update/algorit.docx'
       }
     ]
+  },
+  {
+    titulo: "PILAS, COLAS Y RECURSIVIDAD",
+    capacidad: "Construye algoritmos utilizando pilas, colas y recursividad, a través del aprendizaje basado en problemas, para guardar resultados parciales y las llamadas pendientes del procedimiento recursivo"
+  },
+  {
+    titulo: " LISTAS ENLAZADAS",
+    capacidad: "Construye algoritmos utilizando listas enlazadas, a través del aprendizaje basado en problemas, para implementarse en otras estructuras de datos"
+  },
+  {
+    titulo: "ARBOLES, GRAFOS, MÉTODOS DE ORDENACIÓN Y BÚSQUEDA",
+    capacidad: "Construye algoritmos utilizando árboles, grafos, métodos de ordenación y métodos de búsqueda, a través del aprendizaje basado en problemas, para encontrar el elemento que se requiere o identificar las relaciones entre los datos"
   }
 ];
 
