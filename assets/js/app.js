@@ -90,7 +90,7 @@ const tallerUnidades = [
         semana: 'Semana 02',
         nombre: 'Desarrollo de aplicación (.rar)',
         tipo: 'rar',
-        url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana02/taller_semana02.rar',
+        url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana-apps/Ale.rar',
         textoBtn: 'Descargar .rar'
       }
     ]
