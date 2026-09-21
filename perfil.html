@@ -5,136 +5,135 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Perfil académico — Alessandro Villogas Gaspar — UPLA." />
-  <title>Perfil Académico — Alessandro Villogas</title>
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238b5cf6' stroke-width='2'><polyline points='4 17 10 11 4 5'/><line x1='12' y1='19' x2='20' y2='19'/></svg>" />
+  <title>Perfil — Portafolio Académico</title>
+  <link rel="icon" href="assets/img/upla.png" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
 <body>
-  <nav class="navbar" role="navigation" aria-label="Navegación principal">
+  <nav class="navbar terminal-navbar" role="navigation" aria-label="Navegación principal">
     <div class="navbar-inner">
-
-      <a href="index.html" class="navbar-brand">
-        <span class="brand-terminal-prompt">&gt;_</span>
-        <span class="brand-text">alexito@hub</span>
+      <a href="index.html" class="nav-term-brand">
+        <span class="brand-cmd"><span class="brand-user">alessandro@upla</span>:<span class="brand-path">~</span><span
+            class="term-cursor">$</span></span>
       </a>
 
       <div class="navbar-links">
-        <a href="index.html" class="nav-link" id="nav-inicio">[01] Inicio</a>
-        <a href="algoritmos.html" class="nav-link" id="nav-algoritmos">[02] Algoritmos</a>
-        <a href="taller-vii.html" class="nav-link" id="nav-taller">[03] Taller VII</a>
-        <a href="perfil.html" class="nav-link active" id="nav-profile">[04] Perfil</a>
+        <a href="index.html" class="nav-link" id="nav-inicio">
+          <span class="nav-cmd-prompt">&gt;</span> ./inicio
+        </a>
+        <a href="algoritmos.html" class="nav-link" id="nav-algoritmos">
+          <span class="nav-cmd-prompt">&gt;</span> ./algoritmos
+        </a>
+        <a href="taller-vii.html" class="nav-link" id="nav-taller">
+          <span class="nav-cmd-prompt">&gt;</span> ./taller-vii
+        </a>
+        <a href="perfil.html" class="nav-link active" id="nav-profile">
+          <span class="nav-cmd-prompt">&gt;</span> ./perfil
+        </a>
       </div>
 
       <div class="navbar-spacer"></div>
 
       <div class="navbar-actions">
-        <span class="sys-status-badge">
-          <span class="sys-dot"></span> SYS_ONLINE
-        </span>
+        <span class="nav-session-tag"><span class="status-live-dot"></span>TTY1 : 2026-II</span>
         <button class="burger" id="burger" aria-label="Abrir menú">
-          <span></span><span></span><span></span>
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
         </button>
       </div>
-
     </div>
   </nav>
 
   <div class="nav-drawer" id="nav-drawer">
-    <a href="index.html" class="drawer-link">&gt; Inicio</a>
-    <a href="algoritmos.html" class="drawer-link">&gt; Algoritmos y Estructura de Datos</a>
-    <a href="taller-vii.html" class="drawer-link">&gt; Taller VII: Desarrollo de Aplicaciones I</a>
-    <a href="perfil.html" class="drawer-link active">&gt; Perfil</a>
+    <div class="drawer-term-header">// NAVEGACIÓN TERMINAL</div>
+    <a href="index.html" class="drawer-link"><span class="drawer-prompt">$</span> ./inicio.sh</a>
+    <a href="algoritmos.html" class="drawer-link"><span class="drawer-prompt">$</span> ./algoritmos.sh</a>
+    <a href="taller-vii.html" class="drawer-link"><span class="drawer-prompt">$</span> ./taller_vii.sh</a>
+    <a href="perfil.html" class="drawer-link active"><span class="drawer-prompt">$</span> ./perfil.sh</a>
   </div>
 
   <main class="page-wrapper">
     <div class="container">
 
-      <div class="terminal-window profile-page-terminal">
+      <!-- Terminal Window: Perfil del Estudiante -->
+      <section class="terminal-window">
         <div class="terminal-topbar">
           <div class="terminal-dots">
             <span class="term-dot dot-red"></span>
             <span class="term-dot dot-yellow"></span>
             <span class="term-dot dot-green"></span>
           </div>
-          <div class="terminal-title">cat /academic/student_record.sys</div>
-          <div class="terminal-topbar-right">
-            <span class="term-code-tag">UPLA_SYS</span>
-          </div>
+          <div class="terminal-title">alessandro@upla:~$ cat /home/alessandro/perfil.json</div>
+          <div class="terminal-tag">PERFIL_DEV</div>
         </div>
 
-        <div class="terminal-body profile-page-body">
-          <div class="profile-header-terminal">
-            <div class="avatar-terminal">
-              <img src="https://github.com/Alexito-Hub.png" alt="Alessandro Villogas Gaspar">
+        <div class="terminal-body">
+          <div class="profile-card">
+            <div class="profile-header">
+              <div class="profile-avatar">
+                <img src="https://github.com/Alexito-Hub.png" alt="Alessandro Villogas Gaspar" />
+              </div>
+              <div class="profile-title-area">
+                <h1 class="profile-name">Alessandro Villogas Gaspar</h1>
+                <p class="profile-role">&gt; Estudiante de Ingeniería de Sistemas y Computación</p>
+              </div>
             </div>
-            <div class="avatar-text-block">
-              <span class="term-prompt-line">&gt; student.info</span>
-              <h1 class="profile-title-term">Alessandro Villogas Gaspar</h1>
-              <p class="profile-sub-term">Estudiante de Ingeniería de Sistemas y Computación</p>
-            </div>
-          </div>
 
-          <div class="academic-details-grid">
-            <div class="acad-item">
-              <span class="acad-k">// UNIVERSIDAD:</span>
-              <span class="acad-v">Universidad Peruana Los Andes (UPLA)</span>
-            </div>
-            <div class="acad-item">
-              <span class="acad-k">// FACULTAD:</span>
-              <span class="acad-v">Facultad de Ingeniería</span>
-            </div>
-            <div class="acad-item">
-              <span class="acad-k">// PROGRAMA:</span>
-              <span class="acad-v">Ingeniería de Sistemas y Computación</span>
-            </div>
-            <div class="acad-item">
-              <span class="acad-k">// NIVEL / PLAN:</span>
-              <span class="acad-v">IV Ciclo · Plan de Estudios 2022</span>
-            </div>
-            <div class="acad-item">
-              <span class="acad-k">// SEMESTRE:</span>
-              <span class="acad-v">2026-II (Modalidad Presencial)</span>
-            </div>
-            <div class="acad-item">
-              <span class="acad-k">// UBICACIÓN:</span>
-              <span class="acad-v">Huancayo, Junín, Perú</span>
-            </div>
-          </div>
+            <p class="profile-bio">
+              Enfocado en el aprendizaje continuo sobre estructuras de datos, análisis de algoritmos y desarrollo de
+              aplicaciones web y de escritorio, aplicando estándares de calidad de software y metodologías ágiles.
+            </p>
 
-          <p class="profile-desc-term">
-            Enfocado en el aprendizaje continuo sobre estructuras de datos, análisis de algoritmos y desarrollo de
-            aplicaciones web y de escritorio, aplicando metodologías de desarrollo ágil y estándares de calidad de software.
-          </p>
+            <!-- Información Institucional Universitaria (Abajo del perfil) -->
+            <div class="upla-institution-card">
+              <div class="upla-card-logo">
+                <img src="assets/img/upla.png" alt="Universidad Peruana Los Andes" />
+              </div>
+              <div class="upla-card-info">
+                <div class="upla-card-header">
+                  <h2 class="upla-title">Universidad Peruana Los Andes</h2>
+                  <span class="upla-pill">Modalidad Presencial</span>
+                </div>
+                <p class="upla-faculty">Facultad de Ingeniería &bull; Escuela Profesional de Ingeniería de Sistemas y
+                  Computación</p>
+                <div class="upla-meta-tags">
+                  <span class="upla-meta-tag">Plan: 2022</span>
+                  <span class="upla-meta-tag">Ciclo: IV (2026-II)</span>
+                  <span class="upla-meta-tag">Sede: Huancayo, Perú</span>
+                </div>
+              </div>
+            </div>
 
-          <div class="term-contact-links">
-            <div class="term-contact-title">&gt; channels.connect:</div>
-            <a href="https://github.com/Alexito-Hub" target="_blank" rel="noopener noreferrer" class="contact-row-term">
-              <span class="term-label">GITHUB:</span>
-              <span class="term-val">https://github.com/Alexito-Hub</span>
-            </a>
-            <a href="https://www.linkedin.com/in/alessandro-villogas/" target="_blank" rel="noopener noreferrer" class="contact-row-term">
-              <span class="term-label">LINKEDIN:</span>
-              <span class="term-val">https://www.linkedin.com/in/alessandro-villogas/</span>
-            </a>
-            <a href="mailto:alessandrovillogas@outlook.es" class="contact-row-term">
-              <span class="term-label">EMAIL_PERSONAL:</span>
-              <span class="term-val">alessandrovillogas@outlook.es</span>
-            </a>
+            <div class="contact-links-list">
+              <a href="https://github.com/Alexito-Hub" target="_blank" rel="noopener noreferrer" class="contact-item">
+                <span class="contact-label">github:~$</span>
+                <span class="contact-val">github.com/Alexito-Hub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/alessandro-villogas/" target="_blank" rel="noopener noreferrer"
+                class="contact-item">
+                <span class="contact-label">linkedin:~$</span>
+                <span class="contact-val">linkedin.com/in/alessandro-villogas</span>
+              </a>
+              <a href="mailto:alessandrovillogas@outlook.es" class="contact-item">
+                <span class="contact-label">email:~$</span>
+                <span class="contact-val">alessandrovillogas@outlook.es</span>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="footer-terminal-line">
-      <span>alexito@upla-sys:~$ echo "Universidad Peruana Los Andes — Ingeniería de Sistemas y Computación"</span>
+      <span>alessandro@upla:~$ echo "Universidad Peruana Los Andes — Facultad de Ingeniería"</span>
     </div>
-    <div class="footer-copy">
-      Portafolio Académico 2026-II &mdash; Alessandro Villogas Gaspar
+    <div class="footer-content">
+      <p class="footer-sub">Portafolio Académico 2026-II &bull; Alessandro Villogas Gaspar</p>
     </div>
   </footer>
 

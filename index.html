@@ -1,229 +1,210 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portafolio académico de Alessandro Villogas Gaspar — Ingeniería de Sistemas y Computación — UPLA." />
-  <title>Terminal Académico — Alessandro Villogas</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238b5cf6' stroke-width='2'><polyline points='4 17 10 11 4 5'/><line x1='12' y1='19' x2='20' y2='19'/></svg>" />
+  <meta name="description"
+    content="Portafolio académico de Alessandro Villogas Gaspar — Universidad Peruana Los Andes." />
+  <title>Portafolio Académico — Alessandro Villogas</title>
+  <link rel="icon" href="assets/img/upla.png" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
+
 <body>
 
-<nav class="navbar" role="navigation" aria-label="Navegación principal">
-  <div class="navbar-inner">
-    <a href="index.html" class="navbar-brand">
-      <span class="brand-terminal-prompt">&gt;_</span>
-      <span class="brand-text">alexito@hub</span>
-    </a>
-    <div class="navbar-links">
-      <a href="index.html" class="nav-link active" id="nav-inicio">[01] Inicio</a>
-      <a href="algoritmos.html" class="nav-link" id="nav-algoritmos">[02] Algoritmos</a>
-      <a href="taller-vii.html" class="nav-link" id="nav-taller">[03] Taller VII</a>
-      <a href="perfil.html" class="nav-link" id="nav-profile">[04] Perfil</a>
+  <nav class="navbar terminal-navbar" role="navigation" aria-label="Navegación principal">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-term-brand">
+        <span class="brand-cmd"><span class="brand-user">alessandro@upla</span>:<span class="brand-path">~</span><span
+            class="term-cursor">$</span></span>
+      </a>
+
+      <div class="navbar-links">
+        <a href="index.html" class="nav-link active" id="nav-inicio">
+          <span class="nav-cmd-prompt">&gt;</span> ./inicio
+        </a>
+        <a href="algoritmos.html" class="nav-link" id="nav-algoritmos">
+          <span class="nav-cmd-prompt">&gt;</span> ./algoritmos
+        </a>
+        <a href="taller-vii.html" class="nav-link" id="nav-taller">
+          <span class="nav-cmd-prompt">&gt;</span> ./taller-vii
+        </a>
+        <a href="perfil.html" class="nav-link" id="nav-profile">
+          <span class="nav-cmd-prompt">&gt;</span> ./perfil
+        </a>
+      </div>
+
+      <div class="navbar-spacer"></div>
+
+      <div class="navbar-actions">
+        <span class="nav-session-tag"><span class="status-live-dot"></span>TTY1 : 2026-II</span>
+        <button class="burger" id="burger" aria-label="Abrir menú">
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+        </button>
+      </div>
     </div>
-    <div class="navbar-spacer"></div>
-    <div class="navbar-actions">
-      <span class="sys-status-badge">
-        <span class="sys-dot"></span> SYS_ONLINE
-      </span>
-      <button class="burger" id="burger" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+  </nav>
+
+  <div class="nav-drawer" id="nav-drawer">
+    <div class="drawer-term-header">// NAVEGACIÓN TERMINAL</div>
+    <a href="index.html" class="drawer-link active"><span class="drawer-prompt">$</span> ./inicio.sh</a>
+    <a href="algoritmos.html" class="drawer-link"><span class="drawer-prompt">$</span> ./algoritmos.sh</a>
+    <a href="taller-vii.html" class="drawer-link"><span class="drawer-prompt">$</span> ./taller_vii.sh</a>
+    <a href="perfil.html" class="drawer-link"><span class="drawer-prompt">$</span> ./perfil.sh</a>
   </div>
-</nav>
 
-<div class="nav-drawer" id="nav-drawer">
-  <a href="index.html" class="drawer-link active">&gt; Inicio</a>
-  <a href="algoritmos.html" class="drawer-link">&gt; Algoritmos y Estructura de Datos</a>
-  <a href="taller-vii.html" class="drawer-link">&gt; Taller VII: Desarrollo de Aplicaciones I</a>
-  <a href="perfil.html" class="drawer-link">&gt; Perfil</a>
-</div>
+  <main class="page-wrapper">
+    <div class="container">
 
-<main class="page-wrapper">
-  <div class="container">
-
-    <!-- Terminal Window: Perfil y Datos de Desarrollador -->
-    <section class="terminal-window profile-terminal">
-      <div class="terminal-topbar">
-        <div class="terminal-dots">
-          <span class="term-dot dot-red"></span>
-          <span class="term-dot dot-yellow"></span>
-          <span class="term-dot dot-green"></span>
-        </div>
-        <div class="terminal-title">bash — alexito@upla-sys: ~/profile — 80x24</div>
-        <div class="terminal-topbar-right">
-          <span class="term-flag">DEV_ENV</span>
-        </div>
-      </div>
-
-      <div class="terminal-body profile-term-body">
-        <div class="profile-left-col">
-          <div class="photo-term-frame">
-            <img src="https://github.com/Alexito-Hub.png" alt="Alessandro Villogas Gaspar" class="photo-term-img" />
-            <div class="photo-scanline"></div>
+      <!-- 1. Perfil del Estudiante (Sin elementos amontonados) -->
+      <section class="terminal-window">
+        <div class="terminal-topbar">
+          <div class="terminal-dots">
+            <span class="term-dot dot-red"></span>
+            <span class="term-dot dot-yellow"></span>
+            <span class="term-dot dot-green"></span>
           </div>
-          <div class="photo-meta-tag">
-            <span class="meta-tag-id">ID: 103476365</span>
-            <span class="meta-tag-status">ONLINE</span>
-          </div>
+          <div class="terminal-title">alessandro@upla:~$ whoami --academic</div>
+          <div class="terminal-tag">PERFIL</div>
         </div>
 
-        <div class="profile-right-col">
-          <div class="term-cmd-line">
-            <span class="term-user">alexito@upla</span>:<span class="term-path">~</span>$ whoami --verbose
-          </div>
-
-          <div class="term-identity-block">
-            <h1 class="term-dev-name">Alessandro Villogas Gaspar</h1>
-            <div class="term-role-pill">
-              <span class="pill-prefix">&gt;</span> Estudiante de Ingeniería de Sistemas y Computación
+        <div class="terminal-body">
+          <div class="hero-card">
+            <div class="hero-avatar">
+              <img src="https://github.com/Alexito-Hub.png" alt="Alessandro Villogas" />
             </div>
-            <p class="term-bio-text">
-              Enfocado en el aprendizaje continuo sobre análisis de complejidad algorítmica, estructuras de datos y desarrollo de aplicaciones de software moderno.
-            </p>
-          </div>
-
-          <div class="term-social-row">
-            <a href="https://github.com/Alexito-Hub" target="_blank" rel="noopener noreferrer" class="term-btn btn-github">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              <span>GitHub</span>
-            </a>
-            <a href="https://www.linkedin.com/in/alessandro-villogas/" target="_blank" rel="noopener noreferrer" class="term-btn btn-linkedin">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-              <span>LinkedIn</span>
-            </a>
-            <a href="mailto:alessandrovillogas@outlook.es" class="term-btn btn-mail">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              <span>Contacto</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Terminal Window: Información Institucional de la Universidad -->
-    <section class="terminal-window upla-terminal">
-      <div class="terminal-topbar">
-        <div class="terminal-dots">
-          <span class="term-dot dot-red"></span>
-          <span class="term-dot dot-yellow"></span>
-          <span class="term-dot dot-green"></span>
-        </div>
-        <div class="terminal-title">cat /etc/upla_institutional_info.conf</div>
-        <div class="terminal-topbar-right">
-          <span class="term-code-tag">ACAD_RECORD</span>
-        </div>
-      </div>
-
-      <div class="terminal-body upla-term-body">
-        <div class="upla-header-row">
-          <div class="upla-logo-text">
-            <span class="upla-sigla">UPLA</span>
-            <span class="upla-full-name">Universidad Peruana Los Andes</span>
-          </div>
-          <span class="upla-badge-presencial">MODALIDAD PRESENCIAL</span>
-        </div>
-
-        <div class="upla-info-grid">
-          <div class="upla-info-card">
-            <span class="info-card-label">// FACULTAD</span>
-            <span class="info-card-value">Facultad de Ingeniería</span>
-          </div>
-          <div class="upla-info-card">
-            <span class="info-card-label">// ESCUELA PROFESIONAL</span>
-            <span class="info-card-value">Ingeniería de Sistemas y Computación</span>
-          </div>
-          <div class="upla-info-card">
-            <span class="info-card-label">// PLAN DE ESTUDIOS</span>
-            <span class="info-card-value">Plan 2022 · IV Ciclo</span>
-          </div>
-          <div class="upla-info-card">
-            <span class="info-card-label">// PERÍODO ACADÉMICO</span>
-            <span class="info-card-value">Semestre 2026-II</span>
-          </div>
-          <div class="upla-info-card">
-            <span class="info-card-label">// SEDE CENTRAL</span>
-            <span class="info-card-value">Huancayo, Junín, Perú</span>
-          </div>
-          <div class="upla-info-card">
-            <span class="info-card-label">// COMPETENCIA</span>
-            <span class="info-card-value">Desarrollo de Software y Soluciones Tecnológicas</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Terminal Window: Cursos Registrados -->
-    <section class="terminal-window courses-terminal">
-      <div class="terminal-topbar">
-        <div class="terminal-dots">
-          <span class="term-dot dot-red"></span>
-          <span class="term-dot dot-yellow"></span>
-          <span class="term-dot dot-green"></span>
-        </div>
-        <div class="terminal-title">ls -la /academic/courses/2026-II/</div>
-        <div class="terminal-topbar-right">
-          <span class="term-code-tag">2_ENTRIES</span>
-        </div>
-      </div>
-
-      <div class="terminal-body courses-term-body">
-        <div class="courses-term-grid">
-          <!-- Curso 1 -->
-          <div class="course-term-card">
-            <div class="course-term-header">
-              <div class="course-code-tag">CODE: 332141 // 03 CRÉDITOS</div>
-              <span class="course-status-dot">ACTIVE</span>
+            <div class="hero-info">
+              <h1 class="hero-name">Alessandro Villogas Gaspar</h1>
+              <p class="hero-role">&gt; Estudiante de Ingeniería de Sistemas y Computación</p>
+              <p class="hero-desc">
+                Portafolio académico de desarrollo de software, análisis de algoritmos y estructuras de datos.
+              </p>
+              <div class="hero-links">
+                <a href="https://github.com/Alexito-Hub" target="_blank" rel="noopener noreferrer" class="hero-btn">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/alessandro-villogas/" target="_blank" rel="noopener noreferrer"
+                  class="hero-btn">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="mailto:alessandrovillogas@outlook.es" class="hero-btn">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span>Contacto</span>
+                </a>
+              </div>
             </div>
-            <h3 class="course-term-title">Algoritmos y Estructura de Datos</h3>
-            <p class="course-term-docente">Docente: Mg. Raúl Enrique Fernández Bejarano</p>
-            <p class="course-term-desc">
-              4 unidades de aprendizaje: arreglos bidimensionales, pilas, colas, recursividad, listas enlazadas, árboles, grafos y métodos de ordenación.
-            </p>
-            <div class="course-term-actions">
-              <a href="algoritmos.html" class="term-action-btn">
-                <span>./enter_algoritmos.sh</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Información de la Universidad (Abajo del perfil, ordenada y espaciosa) -->
+      <section class="terminal-window">
+        <div class="terminal-topbar">
+          <div class="terminal-dots">
+            <span class="term-dot dot-red"></span>
+            <span class="term-dot dot-yellow"></span>
+            <span class="term-dot dot-green"></span>
+          </div>
+          <div class="terminal-title">alessandro@upla:~$ cat /etc/universidad_info.conf</div>
+          <div class="terminal-tag">UPLA</div>
+        </div>
+
+        <div class="terminal-body">
+          <div class="upla-institution-card">
+            <div class="upla-card-logo">
+              <img src="assets/img/upla.png" alt="Universidad Peruana Los Andes" />
+            </div>
+            <div class="upla-card-info">
+              <div class="upla-card-header">
+                <h2 class="upla-title">Universidad Peruana Los Andes</h2>
+                <span class="upla-pill">Modalidad Presencial</span>
+              </div>
+              <p class="upla-faculty">Facultad de Ingeniería &bull; Escuela Profesional de Ingeniería de Sistemas y
+                Computación</p>
+              <div class="upla-meta-tags">
+                <span class="upla-meta-tag">Plan: 2022</span>
+                <span class="upla-meta-tag">Ciclo: IV</span>
+                <span class="upla-meta-tag">Sede: Huancayo, Perú</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Asignaturas del Semestre -->
+      <section class="terminal-window">
+        <div class="terminal-topbar">
+          <div class="terminal-dots">
+            <span class="term-dot dot-red"></span>
+            <span class="term-dot dot-yellow"></span>
+            <span class="term-dot dot-green"></span>
+          </div>
+          <div class="terminal-title">alessandro@upla:~$ ls -la /academic/courses/2026-II/</div>
+          <div class="terminal-tag">2_CURSOS</div>
+        </div>
+
+        <div class="terminal-body">
+          <div class="courses-grid">
+            <div class="course-card">
+              <div class="course-body">
+                <span class="course-tag">Asignatura I &bull; 03 Créditos</span>
+                <h3 class="course-title">Algoritmos y Estructura de Datos</h3>
+                <p class="course-teacher">Docente: Mg. Raúl Enrique Fernández Bejarano</p>
+                <p class="course-desc">4 unidades del sílabo: arreglos, pilas, colas, listas, árboles y grafos.</p>
+              </div>
+              <a href="algoritmos.html" class="course-btn">
+                <span>./ver_entregas.sh</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
               </a>
             </div>
-          </div>
 
-          <!-- Curso 2 -->
-          <div class="course-term-card">
-            <div class="course-term-header">
-              <div class="course-code-tag">CODE: TALLER-VII // APLICACIONES I</div>
-              <span class="course-status-dot">ACTIVE</span>
-            </div>
-            <h3 class="course-term-title">Taller VII: Desarrollo de Aplicaciones I</h3>
-            <p class="course-term-docente">Área: Desarrollo Web & Prototipado UI/UX</p>
-            <p class="course-term-desc">
-              4 unidades de aprendizaje enfocadas en diseño en Figma, maquetación, arquitectura de software y desarrollo práctico de aplicaciones.
-            </p>
-            <div class="course-term-actions">
-              <a href="taller-vii.html" class="term-action-btn">
-                <span>./enter_taller.sh</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            <div class="course-card">
+              <div class="course-body">
+                <span class="course-tag">Asignatura II &bull; Taller</span>
+                <h3 class="course-title">Taller VII: Desarrollo de Aplicaciones I</h3>
+                <p class="course-teacher">Laboratorio de Aplicaciones Web</p>
+                <p class="course-desc">Prototipado en Figma, maquetación y desarrollo práctico de aplicaciones.</p>
+              </div>
+              <a href="taller-vii.html" class="course-btn">
+                <span>./ver_entregas.sh</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
               </a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-  </div>
-</main>
+    </div>
+  </main>
 
-<footer class="site-footer">
-  <div class="footer-terminal-line">
-    <span>alexito@upla-sys:~$ echo "Universidad Peruana Los Andes — Ingeniería de Sistemas y Computación"</span>
-  </div>
-  <div class="footer-copy">
-    Portafolio Académico 2026-II &mdash; Alessandro Villogas Gaspar
-  </div>
-</footer>
+  <footer class="site-footer">
+    <div class="footer-terminal-line">
+      <span>alexito@upla:~$ echo "Universidad Peruana Los Andes — Facultad de Ingeniería"</span>
+    </div>
+    <div class="footer-content">
+      <p class="footer-sub">Portafolio Académico 2026-II &bull; Alessandro Villogas Gaspar</p>
+    </div>
+  </footer>
 
-<script src="assets/js/app.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
+
 </html>

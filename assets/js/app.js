@@ -4,16 +4,16 @@
 const algoritmosUnidades = [
   {
     titulo: 'CONCEPTOS DE ALGORITMOS Y ESTRUCTURAS DE DATOS',
-    capacidad: 'Aplica los conceptos básicos de los algoritmos y estructuras de datos para su aplicación en diversos problemas.',
+    semanas: 'Semanas 01 - 04',
+    abierta: true,
     entregas: [
       {
-        id: 'alg-semana-01',
-        semana: 'SEMANA 01',
-        nombre: 'Arreglos Bidimensionales en Java',
-        subtitulo: '9 ejercicios prácticos desarrollados y capturados',
+        id: 'alg-sem-1',
+        semana: 'Semana 01',
+        nombre: 'Arreglos Bidimensionales',
         tipo: 'imagenes',
+        cantidad: 9,
         releaseUrl: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/iimg',
-        docUrl: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana01-update/algorit.docx',
         imagenes: [
           { nombre: 'Ejercicio 01', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/iimg/Ejercicio_01.png' },
           { nombre: 'Ejercicio 02', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/iimg/Ejercicio_02.png' },
@@ -27,11 +27,11 @@ const algoritmosUnidades = [
         ]
       },
       {
-        id: 'alg-semana-02',
-        semana: 'SEMANA 02',
+        id: 'alg-sem-2',
+        semana: 'Semana 02',
         nombre: 'Arreglos Paralelos y de Objetos',
-        subtitulo: '10 ejercicios prácticos desarrollados y capturados',
         tipo: 'imagenes',
+        cantidad: 10,
         releaseUrl: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/iimg',
         imagenes: [
           { nombre: 'Ejercicio 2.01', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/iimg/Ejercicio_2_01.png' },
@@ -50,17 +50,20 @@ const algoritmosUnidades = [
   },
   {
     titulo: 'PILAS, COLAS Y RECURSIVIDAD',
-    capacidad: 'Construye algoritmos utilizando pilas, colas y recursividad, a través del aprendizaje basado en problemas, para guardar resultados parciales y las llamadas pendientes del procedimiento recursivo.',
+    semanas: 'Semanas 05 - 08',
+    abierta: false,
     entregas: []
   },
   {
     titulo: 'LISTAS ENLAZADAS',
-    capacidad: 'Construye algoritmos utilizando listas enlazadas, a través del aprendizaje basado en problemas, para implementarse en otras estructuras de datos.',
+    semanas: 'Semanas 09 - 12',
+    abierta: false,
     entregas: []
   },
   {
     titulo: 'ARBOLES, GRAFOS, MÉTODOS DE ORDENACIÓN Y BÚSQUEDA',
-    capacidad: 'Construye algoritmos utilizando árboles, grafos, métodos de ordenación y métodos de búsqueda, a través del aprendizaje basado en problemas, para encontrar el elemento que se requiere o identificar las relaciones entre los datos.',
+    semanas: 'Semanas 13 - 16',
+    abierta: false,
     entregas: []
   }
 ];
@@ -71,21 +74,21 @@ const algoritmosUnidades = [
 const tallerUnidades = [
   {
     titulo: 'Introducción a Taller VII: Desarrollo de apps',
+    semanas: 'Semanas 01 - 04',
+    abierta: true,
     entregas: [
       {
-        id: 'taller-sem-01',
-        semana: 'SEMANA 01',
-        nombre: 'Desarrollo de trabajo en figma ',
-        subtitulo: 'Prototipado interactivo de interfaz de usuario en Figma',
+        id: 'taller-sem-1',
+        semana: 'Semana 01',
+        nombre: 'Desarrollo de trabajo en figma',
         tipo: 'figma',
         url: 'https://www.figma.com/design/oCzbZQH8LLbaF9meqa5jAt/Taller?node-id=2-417&t=31kaySltkgmQDZK3-1',
-        textoBtn: 'Abrir Figma'
+        textoBtn: 'Ver en Figma ↗'
       },
       {
-        id: 'taller-sem-02',
-        semana: 'SEMANA 02',
+        id: 'taller-sem-2',
+        semana: 'Semana 02',
         nombre: 'Desarrollo de aplicación (.rar)',
-        subtitulo: 'Archivo comprimido de proyecto con código fuente',
         tipo: 'rar',
         url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana02/taller_semana02.rar',
         textoBtn: 'Descargar .rar'
@@ -95,7 +98,7 @@ const tallerUnidades = [
 ];
 
 // ==========================================
-// ANIMACIÓN HACKER CYBER MATRIX RAIN
+// ANIMACIÓN DE FONDO: CYBER MATRIX RAIN
 // ==========================================
 function initMatrixBackground() {
   if (document.getElementById('matrix-bg-canvas')) return;
@@ -126,7 +129,7 @@ function initMatrixBackground() {
   window.addEventListener('resize', resize);
 
   let lastTime = 0;
-  const fpsInterval = 1000 / 25; // 25 FPS para rendimiento ligero y fluido
+  const fpsInterval = 1000 / 25; // 25 FPS para fluidez y bajo consumo
 
   function draw(currentTime) {
     requestAnimationFrame(draw);
@@ -137,7 +140,7 @@ function initMatrixBackground() {
     if (elapsed < fpsInterval) return;
     lastTime = currentTime - (elapsed % fpsInterval);
 
-    ctx.fillStyle = 'rgba(7, 7, 13, 0.12)';
+    ctx.fillStyle = 'rgba(9, 12, 21, 0.14)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     ctx.font = `${fontSize}px 'JetBrains Mono', monospace`;
@@ -148,11 +151,11 @@ function initMatrixBackground() {
       const y = drops[i] * fontSize;
 
       if (Math.random() > 0.88) {
-        ctx.fillStyle = '#38bdf8'; // Celeste neon
-      } else if (Math.random() > 0.5) {
-        ctx.fillStyle = '#8b5cf6'; // Violeta neon
+        ctx.fillStyle = '#38bdf8'; // Celeste
+      } else if (Math.random() > 0.6) {
+        ctx.fillStyle = '#818cf8'; // Índigo
       } else {
-        ctx.fillStyle = '#475569'; // Muted dark cyber slate
+        ctx.fillStyle = '#475569'; // Gris slate
       }
 
       ctx.fillText(char, x, y);
@@ -168,7 +171,7 @@ function initMatrixBackground() {
 }
 
 // ==========================================
-// REGISTRO DE GALERÍAS Y CONTROLADOR DE LIGHTBOX (TERMINAL STYLE)
+// REGISTRO DE GALERÍAS Y VISOR DE IMÁGENES
 // ==========================================
 const galleries = {};
 let activeGalleryId = null;
@@ -181,31 +184,24 @@ function initLightbox() {
     <div id="gallery-modal" class="gallery-modal" role="dialog" aria-modal="true" aria-label="Visualizador de imágenes">
       <div class="gallery-header">
         <div class="gallery-title-box">
-          <div class="gallery-title" id="gallery-modal-title">Visualizador de Entregas</div>
+          <div class="gallery-title" id="gallery-modal-title">Visualizador</div>
           <div class="gallery-subtitle" id="gallery-modal-subtitle">Cargando...</div>
         </div>
         <div class="gallery-actions">
-          <a id="gallery-modal-ext" href="#" target="_blank" rel="noopener noreferrer" class="gallery-btn" title="Abrir imagen original en nueva pestaña">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            <span>Abrir original</span>
+          <a id="gallery-modal-ext" href="#" target="_blank" rel="noopener noreferrer" class="gallery-btn" title="Abrir imagen original">
+            <span>Abrir original ↗</span>
           </a>
-          <button type="button" class="gallery-btn gallery-btn-close" id="gallery-modal-close" aria-label="Cerrar">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-          </button>
+          <button type="button" class="gallery-btn gallery-btn-close" id="gallery-modal-close" aria-label="Cerrar">&times;</button>
         </div>
       </div>
 
       <div class="gallery-stage">
-        <button type="button" class="gallery-nav-btn gallery-prev" id="gallery-modal-prev" aria-label="Anterior">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-        </button>
+        <button type="button" class="gallery-nav-btn gallery-prev" id="gallery-modal-prev" aria-label="Anterior">‹</button>
         <div class="gallery-img-container">
           <div class="gallery-loader" id="gallery-modal-loader"></div>
           <img id="gallery-modal-img" src="" alt="Captura del ejercicio" />
         </div>
-        <button type="button" class="gallery-nav-btn gallery-next" id="gallery-modal-next" aria-label="Siguiente">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-        </button>
+        <button type="button" class="gallery-nav-btn gallery-next" id="gallery-modal-next" aria-label="Siguiente">›</button>
       </div>
 
       <div class="gallery-thumbs-bar" id="gallery-modal-thumbs"></div>
@@ -284,7 +280,7 @@ function updateGalleryView() {
   const loaderEl = document.getElementById('gallery-modal-loader');
 
   if (titleEl) titleEl.textContent = gallery.title;
-  if (subtitleEl) subtitleEl.textContent = `${item.nombre}  //  ${activeGalleryIndex + 1} de ${total}`;
+  if (subtitleEl) subtitleEl.textContent = `${item.nombre} · ${activeGalleryIndex + 1} de ${total}`;
   if (extEl) extEl.href = item.url;
 
   if (loaderEl) loaderEl.style.display = 'block';
@@ -335,180 +331,136 @@ function renderGalleryThumbs() {
   });
 }
 
-// Exponer en window para eventos inline
 window.openGallery = openGallery;
 window.closeGallery = closeGallery;
 
 // ==========================================
-// RENDERIZADO DINÁMICO DE UNIDADES Y ENTREGAS (MODO TERMINAL)
+// FUNCIÓN PARA COLAPSAR/EXPANDIR UNIDADES
+// ==========================================
+function toggleUnitAccordion(headerEl) {
+  const unitBox = headerEl.closest('.unit-box');
+  if (!unitBox) return;
+  unitBox.classList.toggle('collapsed');
+}
+window.toggleUnitAccordion = toggleUnitAccordion;
+
+// ==========================================
+// RENDERIZADO ESTRUCTURADO Y ORDENADO DE UNIDADES
 // ==========================================
 function renderUnits(containerId, unidades) {
   const container = document.getElementById(containerId);
   if (!container) return;
 
   container.innerHTML = unidades.map((unidad, i) => {
+    const hasEntregas = unidad.entregas && unidad.entregas.length > 0;
+    const isInitiallyOpen = unidad.abierta !== undefined ? unidad.abierta : hasEntregas;
+    const collapsedClass = isInitiallyOpen ? '' : 'collapsed';
+
     let entregasHtml = '';
 
-    if (unidad.entregas && unidad.entregas.length > 0) {
+    if (hasEntregas) {
       entregasHtml = unidad.entregas.map(e => {
-        // Registrar galería si es de tipo imágenes
         if (e.tipo === 'imagenes' && e.id) {
           galleries[e.id] = {
-            title: e.nombre,
+            title: `${e.semana}: ${e.nombre}`,
             items: e.imagenes || []
           };
         }
 
-        const semanaLabel = e.semana || `SEMANA 0${i + 1}`;
-        let typeBadgeClass = 'type-enlace';
-        let typeBadgeText = 'ENLACE';
-
-        if (e.tipo === 'imagenes') {
-          typeBadgeClass = 'type-img';
-          typeBadgeText = 'IMÁGENES';
-        } else if (e.tipo === 'rar') {
-          typeBadgeClass = 'type-rar';
-          typeBadgeText = 'RAR';
-        } else if (e.tipo === 'figma') {
-          typeBadgeClass = 'type-figma';
-          typeBadgeText = 'FIGMA';
-        } else if (e.tipo === 'word') {
-          typeBadgeClass = 'type-word';
-          typeBadgeText = 'WORD';
-        } else if (e.tipo === 'pdf') {
-          typeBadgeClass = 'type-pdf';
-          typeBadgeText = 'PDF';
-        }
-
-        let previewStripHtml = '';
         let actionsHtml = '';
+        let badgeTag = '';
+        let thumbsPreviewHtml = '';
 
         if (e.tipo === 'imagenes') {
-          const totalImg = e.imagenes ? e.imagenes.length : 0;
-          const previewItems = (e.imagenes || []).slice(0, 3).map((img, idx) => `
-            <div class="term-mini-thumb" onclick="openGallery('${e.id}', ${idx})" title="${img.nombre}">
+          const totalImg = e.cantidad || (e.imagenes ? e.imagenes.length : 0);
+          badgeTag = `<span class="badge-clean badge-violet">${totalImg} imágenes</span>`;
+
+          const miniThumbs = (e.imagenes || []).slice(0, 3).map((img, idx) => `
+            <div class="row-mini-thumb" onclick="openGallery('${e.id}', ${idx})" title="${img.nombre}">
               <img src="${img.url}" alt="${img.nombre}" loading="lazy" />
             </div>
           `).join('');
 
           const remainingCount = totalImg - 3;
-          const moreBtn = remainingCount > 0
-            ? `<button type="button" class="term-preview-more" onclick="openGallery('${e.id}', 3)">+${remainingCount} más</button>`
+          const morePill = remainingCount > 0
+            ? `<span class="row-thumb-more" onclick="openGallery('${e.id}', 3)">+${remainingCount}</span>`
             : '';
 
-          previewStripHtml = `
-            <div class="term-preview-strip">
-              ${previewItems}
-              ${moreBtn}
+          thumbsPreviewHtml = `
+            <div class="row-thumbs-group">
+              ${miniThumbs}
+              ${morePill}
             </div>
           `;
 
           actionsHtml = `
-            <button type="button" class="term-exec-btn btn-view" onclick="openGallery('${e.id}', 0)">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-              <span>Visualizar (${totalImg})</span>
+            <button type="button" class="btn-clean btn-primary" onclick="openGallery('${e.id}', 0)">
+              Visualizar (${totalImg})
             </button>
-            <a href="${e.releaseUrl || '#'}" target="_blank" rel="noopener noreferrer" class="term-exec-btn btn-git" title="Ver imágenes en GitHub">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-              <span>GitHub</span>
+            <a href="${e.releaseUrl || '#'}" target="_blank" rel="noopener noreferrer" class="btn-clean btn-ghost" title="Ver en GitHub">
+              GitHub ↗
             </a>
           `;
         } else if (e.tipo === 'rar') {
+          badgeTag = `<span class="badge-clean badge-amber">Paquete .RAR</span>`;
           actionsHtml = `
-            <a href="${e.url}" download class="term-exec-btn btn-rar">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-              <span>${e.textoBtn || 'Descargar .rar'}</span>
+            <a href="${e.url}" download class="btn-clean btn-amber">
+              ${e.textoBtn || 'Descargar .rar'}
             </a>
           `;
         } else if (e.tipo === 'figma') {
+          badgeTag = `<span class="badge-clean badge-sky">Figma UI</span>`;
           actionsHtml = `
-            <a href="${e.url}" target="_blank" rel="noopener noreferrer" class="term-exec-btn btn-link">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-              <span>${e.textoBtn || 'Abrir Figma'}</span>
-            </a>
-          `;
-        } else if (e.tipo === 'pdf') {
-          actionsHtml = `
-            <a href="${e.url}" target="_blank" class="term-exec-btn btn-link">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
-              <span>Ver PDF</span>
-            </a>
-            <a href="${e.url}" download class="term-exec-btn btn-git">
-              <span>Descargar</span>
-            </a>
-          `;
-        } else if (e.tipo === 'word') {
-          actionsHtml = `
-            <a href="${e.url}" download class="term-exec-btn btn-link">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-              <span>Descargar .docx</span>
-            </a>
-          `;
-        } else {
-          actionsHtml = `
-            <a href="${e.url}" target="_blank" rel="noopener noreferrer" class="term-exec-btn btn-link">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-              <span>${e.textoBtn || 'Ver enlace'}</span>
+            <a href="${e.url}" target="_blank" rel="noopener noreferrer" class="btn-clean btn-sky">
+              ${e.textoBtn || 'Ver en Figma ↗'}
             </a>
           `;
         }
 
         return `
-          <div class="term-delivery-card">
-            <div class="delivery-tag-col">
-              <span class="term-week-tag">${semanaLabel}</span>
-              <span class="term-type-tag ${typeBadgeClass}">${typeBadgeText}</span>
+          <div class="delivery-row">
+            <div class="delivery-meta">
+              <span class="delivery-week">${e.semana}</span>
+              <div class="delivery-title-box">
+                <span class="delivery-name">${e.nombre}</span>
+                ${badgeTag}
+              </div>
             </div>
-            <div class="delivery-details-col">
-              <div class="delivery-title-line">${e.nombre}</div>
-              <div class="delivery-sub-line">// ${e.subtitulo || ''}</div>
-              ${previewStripHtml}
-            </div>
-            <div class="delivery-actions-col">
+            ${thumbsPreviewHtml}
+            <div class="delivery-btns">
               ${actionsHtml}
             </div>
           </div>`;
       }).join('');
     } else {
       entregasHtml = `
-        <div class="term-empty-state">
-          <span class="term-empty-code">[STATUS: PENDING]</span>
-          <span class="term-empty-msg">// Entregas programadas según calendario académico UPLA 2026-II.</span>
+        <div class="unit-pending-notice">
+          <span class="notice-prefix">&gt; Estado:</span>
+          <span>Programado según sílabo académico UPLA (${unidad.semanas}). Entregas próximas a publicarse.</span>
         </div>`;
     }
 
-    const capacidadHtml = unidad.capacidad
-      ? `<div class="unit-capacidad-bar"><span class="capacidad-prompt">&gt; capacidad:</span>${unidad.capacidad}</div>`
-      : '';
-
-    const entregasCount = unidad.entregas ? unidad.entregas.length : 0;
-    const statusChip = entregasCount > 0 ? `${entregasCount}_FILES` : 'IN_PROGRESS';
-
     return `
-      <section class="unit-terminal-box">
-        <div class="terminal-topbar">
-          <div class="terminal-dots">
-            <span class="term-dot dot-red"></span>
-            <span class="term-dot dot-yellow"></span>
-            <span class="term-dot dot-green"></span>
+      <section class="unit-box ${collapsedClass}">
+        <div class="unit-box-header" onclick="toggleUnitAccordion(this)" role="button" tabindex="0" title="Click para expandir o contraer">
+          <div class="unit-title-group">
+            <span class="unit-tag">U0${i + 1}</span>
+            <div class="unit-name-wrapper">
+              <h2 class="unit-title">${unidad.titulo}</h2>
+              <span class="unit-timeline">${unidad.semanas}</span>
+            </div>
           </div>
-          <div class="terminal-title">unidad_0${i + 1}.sys — ${unidad.titulo}</div>
-          <div class="terminal-topbar-right">
-            <span class="term-code-tag">${statusChip}</span>
+          <div class="unit-header-right">
+            ${hasEntregas
+              ? `<span class="unit-status-tag">${unidad.entregas.length} entrega(s)</span>`
+              : `<span class="unit-pending-tag">[En espera]</span>`
+            }
+            <span class="unit-toggle-icon"></span>
           </div>
         </div>
-
-        <div class="unit-term-header">
-          <div class="unit-term-header-left">
-            <span class="unit-num-badge">UNIDAD 0${i + 1}</span>
-            <h2 class="unit-title-text">${unidad.titulo}</h2>
-          </div>
-          <span class="unit-status-chip">${entregasCount > 0 ? 'ACTIVE' : 'STANDBY'}</span>
+        <div class="unit-deliveries-list">
+          ${entregasHtml}
         </div>
-
-        ${capacidadHtml}
-
-        <div class="unit-term-body">${entregasHtml}</div>
       </section>`;
   }).join('');
 }
