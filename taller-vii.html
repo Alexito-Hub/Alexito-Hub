@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Taller VII: Desarrollo de Aplicaciones I — 4 Unidades temáticas." />
-  <title>Taller VII: Desarrollo de Aplicaciones I — Portafolio</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2338bdf8' stroke-width='2'><rect x='2' y='3' width='20' height='14' rx='2'/><line x1='8' y1='21' x2='16' y2='21'/><line x1='12' y1='17' x2='12' y2='21'/></svg>" />
+  <meta name="description" content="Taller VII: Desarrollo de Aplicaciones I — Universidad Peruana Los Andes." />
+  <title>Taller VII: Desarrollo de Aplicaciones I — UPLA</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2338bdf8' stroke-width='2'><polyline points='4 17 10 11 4 5'/><line x1='12' y1='19' x2='20' y2='19'/></svg>" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
@@ -13,17 +13,20 @@
 <nav class="navbar" role="navigation" aria-label="Navegación principal">
   <div class="navbar-inner">
     <a href="index.html" class="navbar-brand">
-      <span class="brand-dot"></span>
-      Portafolio
+      <span class="brand-terminal-prompt">&gt;_</span>
+      <span class="brand-text">alexito@hub</span>
     </a>
     <div class="navbar-links">
-      <a href="index.html" class="nav-link" id="nav-inicio">Inicio</a>
-      <a href="algoritmos.html" class="nav-link" id="nav-algoritmos">Algoritmos y Estructura de Datos</a>
-      <a href="taller-vii.html" class="nav-link active" id="nav-taller">Taller VII: Desarrollo de Aplicaciones I</a>
-      <a href="perfil.html" class="nav-link" id="nav-profile">Perfil</a>
+      <a href="index.html" class="nav-link" id="nav-inicio">[01] Inicio</a>
+      <a href="algoritmos.html" class="nav-link" id="nav-algoritmos">[02] Algoritmos</a>
+      <a href="taller-vii.html" class="nav-link active" id="nav-taller">[03] Taller VII</a>
+      <a href="perfil.html" class="nav-link" id="nav-profile">[04] Perfil</a>
     </div>
     <div class="navbar-spacer"></div>
     <div class="navbar-actions">
+      <span class="sys-status-badge">
+        <span class="sys-dot"></span> SYS_ONLINE
+      </span>
       <button class="burger" id="burger" aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </button>
@@ -32,25 +35,65 @@
 </nav>
 
 <div class="nav-drawer" id="nav-drawer">
-  <a href="index.html" class="drawer-link">Inicio</a>
-  <a href="algoritmos.html" class="drawer-link">Algoritmos y Estructura de Datos</a>
-  <a href="taller-vii.html" class="drawer-link active">Taller VII: Desarrollo de Aplicaciones I</a>
-  <a href="perfil.html" class="drawer-link">Perfil</a>
+  <a href="index.html" class="drawer-link">&gt; Inicio</a>
+  <a href="algoritmos.html" class="drawer-link">&gt; Algoritmos y Estructura de Datos</a>
+  <a href="taller-vii.html" class="drawer-link active">&gt; Taller VII: Desarrollo de Aplicaciones I</a>
+  <a href="perfil.html" class="drawer-link">&gt; Perfil</a>
 </div>
 
 <main class="page-wrapper">
   <div class="container">
-    <div class="hero">
-      <span class="hero-tag">Asignatura II</span>
-      <h1>Taller VII: Desarrollo de Aplicaciones I</h1>
-      <p>Entregas organizadas en 4 unidades.</p>
-    </div>
+
+    <!-- Terminal Metadata Banner de Taller VII -->
+    <section class="terminal-window course-meta-terminal">
+      <div class="terminal-topbar">
+        <div class="terminal-dots">
+          <span class="term-dot dot-red"></span>
+          <span class="term-dot dot-yellow"></span>
+          <span class="term-dot dot-green"></span>
+        </div>
+        <div class="terminal-title">course — upla://facultad-ingenieria/sistemas/taller-vii.sys</div>
+        <div class="terminal-topbar-right">
+          <span class="term-code-tag">DEV_LAB</span>
+        </div>
+      </div>
+
+      <div class="terminal-body course-meta-body">
+        <div class="course-meta-top">
+          <div class="course-meta-main">
+            <span class="meta-inst-tag">// UNIVERSIDAD PERUANA LOS ANDES · FACULTAD DE INGENIERÍA</span>
+            <h1 class="course-title-term">Taller VII: Desarrollo de Aplicaciones I</h1>
+            <p class="course-docente-term">
+              Programa de Estudio: <strong style="color: var(--text-1);">Ingeniería de Sistemas y Computación</strong>
+            </p>
+          </div>
+          <div class="course-specs-badge">
+            <div class="spec-item"><span class="spec-k">ENFOQUE:</span> <span class="spec-v">Desarrollo Web & Prototipado</span></div>
+            <div class="spec-item"><span class="spec-k">MODALIDAD:</span> <span class="spec-v">Presencial</span></div>
+            <div class="spec-item"><span class="spec-k">HERRAMIENTAS:</span> <span class="spec-v">Figma, HTML, CSS, JS</span></div>
+            <div class="spec-item"><span class="spec-k">PERÍODO:</span> <span class="spec-v">2026-II</span></div>
+          </div>
+        </div>
+        <div class="course-sumilla-term">
+          <span class="sumilla-prompt">&gt; laboratorio:</span>
+          Taller práctico orientado a la concepción, prototipado interactivo, arquitectura y construcción de aplicaciones de software web y de escritorio.
+        </div>
+      </div>
+    </section>
+
+    <!-- Entregas de Taller -->
     <div class="units-stack" id="units-taller"></div>
+
   </div>
 </main>
 
 <footer class="site-footer">
-  Portafolio Académico &mdash; Ingeniería de Sistemas
+  <div class="footer-terminal-line">
+    <span>alexito@upla-sys:~$ echo "Universidad Peruana Los Andes — Ingeniería de Sistemas y Computación"</span>
+  </div>
+  <div class="footer-copy">
+    Portafolio Académico 2026-II &mdash; Alessandro Villogas Gaspar
+  </div>
 </footer>
 
 <script src="assets/js/app.js"></script>
