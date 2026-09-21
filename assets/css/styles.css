@@ -1191,7 +1191,7 @@ button {
 
 .gallery-header {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1400px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1223,6 +1223,61 @@ button {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Barra de controles de zoom terminal */
+.gallery-zoom-bar {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(14, 18, 30, 0.85);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 2px 4px;
+  gap: 2px;
+}
+
+.gallery-zoom-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  min-width: 44px;
+  text-align: center;
+  color: var(--text-2);
+  font-weight: 600;
+  padding: 0 4px;
+  user-select: none;
+}
+
+.gallery-zoom-tag.active-zoom {
+  color: var(--sky);
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
+}
+
+.gallery-btn-zoom {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  color: var(--text-2);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.gallery-btn-zoom:hover {
+  background: var(--indigo-dim);
+  color: #fff;
+}
+
+.gallery-btn-zoom svg {
+  display: block;
 }
 
 .gallery-btn {
@@ -1262,7 +1317,7 @@ button {
 .gallery-stage {
   flex: 1;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1400px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1273,8 +1328,8 @@ button {
 }
 
 .gallery-nav-btn {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background: rgba(19, 24, 38, 0.85);
   border: 1px solid var(--border);
@@ -1282,27 +1337,41 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   transition: all var(--transition);
   cursor: pointer;
   flex-shrink: 0;
-  z-index: 2;
+  z-index: 10;
+  backdrop-filter: blur(6px);
 }
 
 .gallery-nav-btn:hover {
   background: var(--indigo);
   border-color: var(--indigo);
   color: #fff;
+  transform: scale(1.05);
 }
 
 .gallery-img-container {
   flex: 1;
   height: 100%;
-  max-height: calc(100vh - 200px);
+  max-height: calc(100vh - 180px);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  cursor: zoom-in;
+  user-select: none;
+}
+
+.gallery-img-container.is-zoomed {
+  cursor: grab;
+}
+
+.gallery-img-container.is-dragging {
+  cursor: grabbing !important;
 }
 
 .gallery-img-container img {
@@ -1311,9 +1380,47 @@ button {
   object-fit: contain;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
   user-select: none;
-  transition: opacity 0.15s ease;
+  -webkit-user-drag: none;
+  transform-origin: center center;
+  will-change: transform;
+  pointer-events: auto;
+}
+
+.gallery-zoom-hint {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(9, 12, 21, 0.88);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: var(--radius-pill);
+  padding: 5px 14px;
+  font-size: 0.7rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text-2);
+  pointer-events: none;
+  opacity: 0.9;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 5;
+  white-space: nowrap;
+}
+
+.gallery-zoom-hint kbd {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 3px;
+  padding: 1px 4px;
+  font-size: 0.65rem;
+  color: var(--sky);
+}
+
+.gallery-img-container.is-zoomed .gallery-zoom-hint {
+  opacity: 0;
+  transform: translateX(-50%) translateY(8px);
 }
 
 .gallery-loader {
@@ -1325,6 +1432,7 @@ button {
   border-radius: 50%;
   animation: spin 0.7s linear infinite;
   display: none;
+  z-index: 6;
 }
 
 @keyframes spin {
@@ -1333,7 +1441,7 @@ button {
 
 .gallery-thumbs-bar {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1400px;
   display: flex;
   gap: 6px;
   overflow-x: auto;
@@ -1485,5 +1593,24 @@ button {
   }
   .upla-meta-tags {
     justify-content: center;
+  }
+  .gallery-modal {
+    padding: 10px 8px 12px;
+  }
+  .gallery-header {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .gallery-stage {
+    gap: 6px;
+    padding-block: 4px;
+  }
+  .gallery-nav-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 1.1rem;
+  }
+  .gallery-zoom-hint {
+    display: none;
   }
 }
