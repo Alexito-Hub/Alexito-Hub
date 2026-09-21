@@ -1,5 +1,5 @@
 // ==========================================
-// ASIGNATURA I: Algoritmos y Estructura de Datos (4 Unidades del Sílabo)
+// ASIGNATURA I: Algoritmos y Estructura de Datos (4 Unidades del Sílabo UPLA)
 // ==========================================
 const algoritmosUnidades = [
   {
@@ -66,7 +66,7 @@ const algoritmosUnidades = [
 ];
 
 // ==========================================
-// ASIGNATURA II: Taller VII: Desarrollo de Aplicaciones I
+// ASIGNATURA II: Taller VII: Desarrollo de Aplicaciones I (UPLA)
 // ==========================================
 const tallerUnidades = [
   {
@@ -76,18 +76,17 @@ const tallerUnidades = [
         id: 'taller-sem-01',
         semana: 'SEMANA 01',
         nombre: 'Desarrollo de trabajo en figma ',
-        subtitulo: 'Prototipo y diseño de interfaz interactiva en Figma',
+        subtitulo: 'Prototipado interactivo de interfaz de usuario en Figma',
         tipo: 'figma',
         url: 'https://www.figma.com/design/oCzbZQH8LLbaF9meqa5jAt/Taller?node-id=2-417&t=31kaySltkgmQDZK3-1',
-        textoBtn: 'Abrir en Figma'
+        textoBtn: 'Abrir Figma'
       },
       {
         id: 'taller-sem-02',
         semana: 'SEMANA 02',
         nombre: 'Desarrollo de aplicación (.rar)',
-        subtitulo: 'Paquete de código fuente y archivos de aplicación',
+        subtitulo: 'Archivo comprimido de proyecto con código fuente',
         tipo: 'rar',
-        // Actualiza esta URL cuando crees el release o archivo .rar en GitHub
         url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana02/taller_semana02.rar',
         textoBtn: 'Descargar .rar'
       }
@@ -96,7 +95,7 @@ const tallerUnidades = [
 ];
 
 // ==========================================
-// ANIMACIÓN DE FONDO: HACKER CYBER MATRIX RAIN
+// ANIMACIÓN HACKER CYBER MATRIX RAIN
 // ==========================================
 function initMatrixBackground() {
   if (document.getElementById('matrix-bg-canvas')) return;
@@ -127,7 +126,7 @@ function initMatrixBackground() {
   window.addEventListener('resize', resize);
 
   let lastTime = 0;
-  const fpsInterval = 1000 / 26; // 26 FPS para bajo consumo de recursos
+  const fpsInterval = 1000 / 25; // 25 FPS para rendimiento ligero y fluido
 
   function draw(currentTime) {
     requestAnimationFrame(draw);
@@ -138,7 +137,7 @@ function initMatrixBackground() {
     if (elapsed < fpsInterval) return;
     lastTime = currentTime - (elapsed % fpsInterval);
 
-    ctx.fillStyle = 'rgba(8, 8, 15, 0.1)';
+    ctx.fillStyle = 'rgba(7, 7, 13, 0.12)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     ctx.font = `${fontSize}px 'JetBrains Mono', monospace`;
@@ -148,13 +147,12 @@ function initMatrixBackground() {
       const x = i * fontSize * 1.2;
       const y = drops[i] * fontSize;
 
-      // Variación de color cyberpunk (violeta y celeste)
-      if (Math.random() > 0.85) {
+      if (Math.random() > 0.88) {
         ctx.fillStyle = '#38bdf8'; // Celeste neon
       } else if (Math.random() > 0.5) {
         ctx.fillStyle = '#8b5cf6'; // Violeta neon
       } else {
-        ctx.fillStyle = '#64748b'; // Muted cyber slate
+        ctx.fillStyle = '#475569'; // Muted dark cyber slate
       }
 
       ctx.fillText(char, x, y);
@@ -170,7 +168,7 @@ function initMatrixBackground() {
 }
 
 // ==========================================
-// REGISTRO DE GALERÍAS Y CONTROLADOR DE LIGHTBOX
+// REGISTRO DE GALERÍAS Y CONTROLADOR DE LIGHTBOX (TERMINAL STYLE)
 // ==========================================
 const galleries = {};
 let activeGalleryId = null;
@@ -342,7 +340,7 @@ window.openGallery = openGallery;
 window.closeGallery = closeGallery;
 
 // ==========================================
-// RENDERIZADO DINÁMICO DE UNIDADES Y SEMANAS
+// RENDERIZADO DINÁMICO DE UNIDADES Y ENTREGAS (MODO TERMINAL)
 // ==========================================
 function renderUnits(containerId, unidades) {
   const container = document.getElementById(containerId);
@@ -388,67 +386,67 @@ function renderUnits(containerId, unidades) {
         if (e.tipo === 'imagenes') {
           const totalImg = e.imagenes ? e.imagenes.length : 0;
           const previewItems = (e.imagenes || []).slice(0, 3).map((img, idx) => `
-            <div class="delivery-mini-thumb" onclick="openGallery('${e.id}', ${idx})" title="${img.nombre}">
+            <div class="term-mini-thumb" onclick="openGallery('${e.id}', ${idx})" title="${img.nombre}">
               <img src="${img.url}" alt="${img.nombre}" loading="lazy" />
             </div>
           `).join('');
 
           const remainingCount = totalImg - 3;
           const moreBtn = remainingCount > 0
-            ? `<button type="button" class="delivery-thumb-more" onclick="openGallery('${e.id}', 3)">+${remainingCount} más</button>`
+            ? `<button type="button" class="term-preview-more" onclick="openGallery('${e.id}', 3)">+${remainingCount} más</button>`
             : '';
 
           previewStripHtml = `
-            <div class="delivery-thumb-strip">
+            <div class="term-preview-strip">
               ${previewItems}
               ${moreBtn}
             </div>
           `;
 
           actionsHtml = `
-            <button type="button" class="action-tech-btn btn-view-gallery" onclick="openGallery('${e.id}', 0)">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            <button type="button" class="term-exec-btn btn-view" onclick="openGallery('${e.id}', 0)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
               <span>Visualizar (${totalImg})</span>
             </button>
-            <a href="${e.releaseUrl || '#'}" target="_blank" rel="noopener noreferrer" class="action-tech-btn btn-github-sub" title="Ver imágenes en GitHub">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <a href="${e.releaseUrl || '#'}" target="_blank" rel="noopener noreferrer" class="term-exec-btn btn-git" title="Ver imágenes en GitHub">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
               <span>GitHub</span>
             </a>
           `;
         } else if (e.tipo === 'rar') {
           actionsHtml = `
-            <a href="${e.url}" download class="action-tech-btn btn-dl-rar">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <a href="${e.url}" download class="term-exec-btn btn-rar">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
               <span>${e.textoBtn || 'Descargar .rar'}</span>
             </a>
           `;
         } else if (e.tipo === 'figma') {
           actionsHtml = `
-            <a href="${e.url}" target="_blank" rel="noopener noreferrer" class="action-tech-btn btn-open-link">
+            <a href="${e.url}" target="_blank" rel="noopener noreferrer" class="term-exec-btn btn-link">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
               <span>${e.textoBtn || 'Abrir Figma'}</span>
             </a>
           `;
         } else if (e.tipo === 'pdf') {
           actionsHtml = `
-            <a href="${e.url}" target="_blank" class="action-tech-btn btn-open-link">
+            <a href="${e.url}" target="_blank" class="term-exec-btn btn-link">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
               <span>Ver PDF</span>
             </a>
-            <a href="${e.url}" download class="action-tech-btn btn-github-sub">
+            <a href="${e.url}" download class="term-exec-btn btn-git">
               <span>Descargar</span>
             </a>
           `;
         } else if (e.tipo === 'word') {
           actionsHtml = `
-            <a href="${e.url}" download class="action-tech-btn btn-open-link">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <a href="${e.url}" download class="term-exec-btn btn-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
               <span>Descargar .docx</span>
             </a>
           `;
         } else {
           actionsHtml = `
-            <a href="${e.url}" target="_blank" rel="noopener noreferrer" class="action-tech-btn btn-open-link">
+            <a href="${e.url}" target="_blank" rel="noopener noreferrer" class="term-exec-btn btn-link">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
               <span>${e.textoBtn || 'Ver enlace'}</span>
             </a>
@@ -456,56 +454,61 @@ function renderUnits(containerId, unidades) {
         }
 
         return `
-          <div class="delivery-item-card">
-            <div class="delivery-left">
-              <span class="delivery-week-badge">${semanaLabel}</span>
-              <span class="delivery-type-pill ${typeBadgeClass}">${typeBadgeText}</span>
+          <div class="term-delivery-card">
+            <div class="delivery-tag-col">
+              <span class="term-week-tag">${semanaLabel}</span>
+              <span class="term-type-tag ${typeBadgeClass}">${typeBadgeText}</span>
             </div>
-            <div class="delivery-center">
-              <div class="delivery-main-info">
-                <h3 class="delivery-title">${e.nombre}</h3>
-                <span class="delivery-sub">${e.subtitulo || ''}</span>
-              </div>
+            <div class="delivery-details-col">
+              <div class="delivery-title-line">${e.nombre}</div>
+              <div class="delivery-sub-line">// ${e.subtitulo || ''}</div>
               ${previewStripHtml}
             </div>
-            <div class="delivery-right">
+            <div class="delivery-actions-col">
               ${actionsHtml}
             </div>
           </div>`;
       }).join('');
     } else {
       entregasHtml = `
-        <div class="unit-empty-tech">
-          <div class="tech-empty-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          </div>
-          <div class="tech-empty-text">
-            <span class="tech-empty-code">[ESTADO: EN ESPERA]</span>
-            <span class="tech-empty-desc">Las entregas correspondientes a esta unidad se habilitarán según el avance del semestre.</span>
-          </div>
+        <div class="term-empty-state">
+          <span class="term-empty-code">[STATUS: PENDING]</span>
+          <span class="term-empty-msg">// Entregas programadas según calendario académico UPLA 2026-II.</span>
         </div>`;
     }
 
     const capacidadHtml = unidad.capacidad
-      ? `<p class="unit-rect-capacidad">${unidad.capacidad}</p>`
+      ? `<div class="unit-capacidad-bar"><span class="capacidad-prompt">&gt; capacidad:</span>${unidad.capacidad}</div>`
       : '';
 
     const entregasCount = unidad.entregas ? unidad.entregas.length : 0;
-    const statusText = entregasCount > 0 ? `${entregasCount} entrega(s)` : 'En desarrollo';
+    const statusChip = entregasCount > 0 ? `${entregasCount}_FILES` : 'IN_PROGRESS';
 
     return `
-      <section class="unit-rect">
-        <div class="unit-rect-header">
-          <div class="unit-header-info">
-            <div class="unit-tag-row">
-              <span class="unit-rect-tag">UNIDAD 0${i + 1}</span>
-              <span class="unit-status-tag">${statusText}</span>
-            </div>
-            <h2 class="unit-rect-title">${unidad.titulo}</h2>
-            ${capacidadHtml}
+      <section class="unit-terminal-box">
+        <div class="terminal-topbar">
+          <div class="terminal-dots">
+            <span class="term-dot dot-red"></span>
+            <span class="term-dot dot-yellow"></span>
+            <span class="term-dot dot-green"></span>
+          </div>
+          <div class="terminal-title">unidad_0${i + 1}.sys — ${unidad.titulo}</div>
+          <div class="terminal-topbar-right">
+            <span class="term-code-tag">${statusChip}</span>
           </div>
         </div>
-        <div class="unit-deliveries-stack">${entregasHtml}</div>
+
+        <div class="unit-term-header">
+          <div class="unit-term-header-left">
+            <span class="unit-num-badge">UNIDAD 0${i + 1}</span>
+            <h2 class="unit-title-text">${unidad.titulo}</h2>
+          </div>
+          <span class="unit-status-chip">${entregasCount > 0 ? 'ACTIVE' : 'STANDBY'}</span>
+        </div>
+
+        ${capacidadHtml}
+
+        <div class="unit-term-body">${entregasHtml}</div>
       </section>`;
   }).join('');
 }
