@@ -105,7 +105,7 @@ const tallerUnidades = [
         semana: 'Semana 02',
         nombre: 'Desarrollo de aplicación (.rar)',
         tipo: 'rar',
-        url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana02/taller_semana02.rar',
+        url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana-apps/Ale.rar',
         textoBtn: 'Descargar .rar'
       }
     ]
@@ -186,11 +186,108 @@ function initMatrixBackground() {
 }
 
 // ==========================================
-// REGISTRO DE GALERÍAS Y VISOR DE IMÁGENES
+// REGISTRO DE GALERÍAS Y VISOR DE IMÁGENES CON ZOOM Y PANEO
 // ==========================================
 const galleries = {};
 let activeGalleryId = null;
 let activeGalleryIndex = 0;
+
+// Variables de estado del Zoom y Paneo
+let currentZoom = 1;
+const minZoom = 1;
+const maxZoom = 4.5;
+let panX = 0;
+let panY = 0;
+let isDragging = false;
+let dragStartX = 0;
+let dragStartY = 0;
+let touchStartDist = 0;
+let touchStartZoom = 1;
+
+function applyTransform(animate = false) {
+  const imgEl = document.getElementById('gallery-modal-img');
+  const imgContainer = document.getElementById('gallery-img-container');
+  const zoomLevelEl = document.getElementById('gallery-zoom-level');
+  if (!imgEl) return;
+
+  imgEl.style.transition = animate ? 'transform 0.2s cubic-bezier(0.16, 1, 0.3, 1)' : 'none';
+  imgEl.style.transform = `translate(${panX}px, ${panY}px) scale(${currentZoom})`;
+
+  if (zoomLevelEl) {
+    zoomLevelEl.textContent = `${Math.round(currentZoom * 100)}%`;
+    zoomLevelEl.classList.toggle('active-zoom', currentZoom > 1.05);
+  }
+
+  if (imgContainer) {
+    imgContainer.classList.toggle('is-zoomed', currentZoom > 1.05);
+    if (currentZoom <= 1.05) {
+      imgContainer.classList.remove('is-dragging');
+    }
+  }
+}
+
+function clampPan() {
+  const imgContainer = document.getElementById('gallery-img-container');
+  if (!imgContainer || currentZoom <= 1.05) {
+    panX = 0;
+    panY = 0;
+    return;
+  }
+
+  const containerRect = imgContainer.getBoundingClientRect();
+  const maxPanX = Math.max(0, (containerRect.width * (currentZoom - 1)) / 2 + 100);
+  const maxPanY = Math.max(0, (containerRect.height * (currentZoom - 1)) / 2 + 100);
+
+  panX = Math.max(-maxPanX, Math.min(maxPanX, panX));
+  panY = Math.max(-maxPanY, Math.min(maxPanY, panY));
+}
+
+function setZoom(targetZoom, clientX = null, clientY = null, animate = true) {
+  const clamped = Math.min(maxZoom, Math.max(minZoom, Math.round(targetZoom * 100) / 100));
+  if (Math.abs(clamped - currentZoom) < 0.01 && clamped !== 1) return;
+
+  const imgContainer = document.getElementById('gallery-img-container');
+  if (clamped <= 1) {
+    resetZoom(animate);
+    return;
+  }
+
+  if (clientX !== null && clientY !== null && imgContainer) {
+    const rect = imgContainer.getBoundingClientRect();
+    const offsetX = clientX - (rect.left + rect.width / 2);
+    const offsetY = clientY - (rect.top + rect.height / 2);
+
+    const zoomRatio = clamped / currentZoom;
+    panX = offsetX - (offsetX - panX) * zoomRatio;
+    panY = offsetY - (offsetY - panY) * zoomRatio;
+  } else {
+    const zoomRatio = clamped / currentZoom;
+    panX = panX * zoomRatio;
+    panY = panY * zoomRatio;
+  }
+
+  currentZoom = clamped;
+  clampPan();
+  applyTransform(animate);
+}
+
+function resetZoom(animate = true) {
+  currentZoom = 1;
+  panX = 0;
+  panY = 0;
+  applyTransform(animate);
+}
+
+function toggleFullscreen() {
+  const modal = document.getElementById('gallery-modal');
+  if (!modal) return;
+  if (!document.fullscreenElement) {
+    if (modal.requestFullscreen) modal.requestFullscreen().catch(() => { });
+    else if (modal.webkitRequestFullscreen) modal.webkitRequestFullscreen();
+  } else {
+    if (document.exitFullscreen) document.exitFullscreen().catch(() => { });
+  }
+}
 
 function initLightbox() {
   if (document.getElementById('gallery-modal')) return;
@@ -202,9 +299,26 @@ function initLightbox() {
           <div class="gallery-title" id="gallery-modal-title">Visualizador</div>
           <div class="gallery-subtitle" id="gallery-modal-subtitle">Cargando...</div>
         </div>
+
         <div class="gallery-actions">
-          <a id="gallery-modal-ext" href="#" target="_blank" rel="noopener noreferrer" class="gallery-btn" title="Abrir imagen original">
-            <span>Abrir original ↗</span>
+          <div class="gallery-zoom-bar" role="group" aria-label="Controles de zoom">
+            <button type="button" class="gallery-btn-zoom" id="gallery-zoom-out" aria-label="Reducir zoom" title="Alejar (-)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </button>
+            <span class="gallery-zoom-tag" id="gallery-zoom-level" title="Nivel de zoom">100%</span>
+            <button type="button" class="gallery-btn-zoom" id="gallery-zoom-in" aria-label="Aumentar zoom" title="Acercar (+)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </button>
+            <button type="button" class="gallery-btn-zoom" id="gallery-zoom-reset" aria-label="Restablecer tamaño original" title="Restablecer 1:1 (tecla 0)">
+              1:1
+            </button>
+            <button type="button" class="gallery-btn-zoom" id="gallery-fullscreen" aria-label="Pantalla completa" title="Pantalla completa (tecla F)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+            </button>
+          </div>
+
+          <a id="gallery-modal-ext" href="#" target="_blank" rel="noopener noreferrer" class="gallery-btn" title="Abrir imagen original en nueva pestaña">
+            <span>Descargar</span>
           </a>
           <button type="button" class="gallery-btn gallery-btn-close" id="gallery-modal-close" aria-label="Cerrar">&times;</button>
         </div>
@@ -212,9 +326,12 @@ function initLightbox() {
 
       <div class="gallery-stage">
         <button type="button" class="gallery-nav-btn gallery-prev" id="gallery-modal-prev" aria-label="Anterior">‹</button>
-        <div class="gallery-img-container">
+        <div class="gallery-img-container" id="gallery-img-container" title="Doble clic o rueda para agrandar. Arrastra para mover">
           <div class="gallery-loader" id="gallery-modal-loader"></div>
-          <img id="gallery-modal-img" src="" alt="Captura del ejercicio" />
+          <img id="gallery-modal-img" src="" alt="Captura del ejercicio" draggable="false" />
+          <div class="gallery-zoom-hint" id="gallery-zoom-hint">
+            <span><kbd>Rueda</kbd> o <kbd>Doble clic</kbd> para zoom &bull; <kbd>Arrastrar</kbd> para explorar</span>
+          </div>
         </div>
         <button type="button" class="gallery-nav-btn gallery-next" id="gallery-modal-next" aria-label="Siguiente">›</button>
       </div>
@@ -228,10 +345,102 @@ function initLightbox() {
   const closeBtn = document.getElementById('gallery-modal-close');
   const prevBtn = document.getElementById('gallery-modal-prev');
   const nextBtn = document.getElementById('gallery-modal-next');
+  const zoomInBtn = document.getElementById('gallery-zoom-in');
+  const zoomOutBtn = document.getElementById('gallery-zoom-out');
+  const zoomResetBtn = document.getElementById('gallery-zoom-reset');
+  const fsBtn = document.getElementById('gallery-fullscreen');
+  const imgContainer = document.getElementById('gallery-img-container');
 
   if (closeBtn) closeBtn.addEventListener('click', closeGallery);
   if (prevBtn) prevBtn.addEventListener('click', () => navigateGallery(-1));
   if (nextBtn) nextBtn.addEventListener('click', () => navigateGallery(1));
+
+  if (zoomInBtn) zoomInBtn.addEventListener('click', () => setZoom(currentZoom + 0.35, null, null, true));
+  if (zoomOutBtn) zoomOutBtn.addEventListener('click', () => setZoom(currentZoom - 0.35, null, null, true));
+  if (zoomResetBtn) zoomResetBtn.addEventListener('click', () => resetZoom(true));
+  if (fsBtn) fsBtn.addEventListener('click', toggleFullscreen);
+
+  if (imgContainer) {
+    // Zoom con rueda del ratón
+    imgContainer.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      const factor = e.deltaY < 0 ? 1.25 : 0.8;
+      setZoom(currentZoom * factor, e.clientX, e.clientY, true);
+    }, { passive: false });
+
+    // Doble clic para agrandar o restablecer
+    imgContainer.addEventListener('dblclick', (e) => {
+      e.preventDefault();
+      if (currentZoom > 1.2) {
+        resetZoom(true);
+      } else {
+        setZoom(2.2, e.clientX, e.clientY, true);
+      }
+    });
+
+    // Paneo con arrastre del ratón
+    imgContainer.addEventListener('mousedown', (e) => {
+      if (e.button !== 0 || currentZoom <= 1.05) return;
+      isDragging = true;
+      dragStartX = e.clientX - panX;
+      dragStartY = e.clientY - panY;
+      imgContainer.classList.add('is-dragging');
+      e.preventDefault();
+    });
+
+    // Gestos táctiles para dispositivos móviles
+    imgContainer.addEventListener('touchstart', (e) => {
+      if (e.touches.length === 1 && currentZoom > 1.05) {
+        isDragging = true;
+        dragStartX = e.touches[0].clientX - panX;
+        dragStartY = e.touches[0].clientY - panY;
+      } else if (e.touches.length === 2) {
+        isDragging = false;
+        const dx = e.touches[0].clientX - e.touches[1].clientX;
+        const dy = e.touches[0].clientY - e.touches[1].clientY;
+        touchStartDist = Math.hypot(dx, dy);
+        touchStartZoom = currentZoom;
+      }
+    }, { passive: true });
+
+    imgContainer.addEventListener('touchmove', (e) => {
+      if (e.touches.length === 1 && isDragging) {
+        panX = e.touches[0].clientX - dragStartX;
+        panY = e.touches[0].clientY - dragStartY;
+        clampPan();
+        applyTransform(false);
+      } else if (e.touches.length === 2 && touchStartDist > 0) {
+        const dx = e.touches[0].clientX - e.touches[1].clientX;
+        const dy = e.touches[0].clientY - e.touches[1].clientY;
+        const dist = Math.hypot(dx, dy);
+        const factor = dist / touchStartDist;
+        const midX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
+        const midY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
+        setZoom(touchStartZoom * factor, midX, midY, false);
+      }
+    }, { passive: true });
+
+    imgContainer.addEventListener('touchend', () => {
+      isDragging = false;
+      touchStartDist = 0;
+    });
+  }
+
+  window.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    panX = e.clientX - dragStartX;
+    panY = e.clientY - dragStartY;
+    clampPan();
+    applyTransform(false);
+  });
+
+  window.addEventListener('mouseup', () => {
+    if (isDragging) {
+      isDragging = false;
+      const c = document.getElementById('gallery-img-container');
+      if (c) c.classList.remove('is-dragging');
+    }
+  });
 
   if (modal) {
     modal.addEventListener('click', (e) => {
@@ -242,9 +451,28 @@ function initLightbox() {
   document.addEventListener('keydown', (e) => {
     const currentModal = document.getElementById('gallery-modal');
     if (!currentModal || !currentModal.classList.contains('open')) return;
-    if (e.key === 'Escape') closeGallery();
-    else if (e.key === 'ArrowLeft') navigateGallery(-1);
-    else if (e.key === 'ArrowRight') navigateGallery(1);
+
+    if (e.key === 'Escape') {
+      if (currentZoom > 1.1) {
+        resetZoom(true);
+      } else if (document.fullscreenElement) {
+        if (document.exitFullscreen) document.exitFullscreen().catch(() => { });
+      } else {
+        closeGallery();
+      }
+    } else if (e.key === 'ArrowLeft') {
+      navigateGallery(-1);
+    } else if (e.key === 'ArrowRight') {
+      navigateGallery(1);
+    } else if (e.key === '+' || e.key === '=') {
+      setZoom(currentZoom + 0.35, null, null, true);
+    } else if (e.key === '-' || e.key === '_') {
+      setZoom(currentZoom - 0.35, null, null, true);
+    } else if (e.key === '0') {
+      resetZoom(true);
+    } else if (e.key === 'f' || e.key === 'F') {
+      toggleFullscreen();
+    }
   });
 }
 
@@ -261,6 +489,7 @@ function openGallery(galleryId, startIndex = 0) {
     document.body.style.overflow = 'hidden';
   }
 
+  resetZoom(false);
   renderGalleryThumbs();
   updateGalleryView();
 }
@@ -269,6 +498,10 @@ function closeGallery() {
   const modal = document.getElementById('gallery-modal');
   if (modal) modal.classList.remove('open');
   document.body.style.overflow = '';
+  resetZoom(false);
+  if (document.fullscreenElement) {
+    if (document.exitFullscreen) document.exitFullscreen().catch(() => { });
+  }
 }
 
 function navigateGallery(delta) {
@@ -278,6 +511,7 @@ function navigateGallery(delta) {
 
   const total = gallery.items.length;
   activeGalleryIndex = (activeGalleryIndex + delta + total) % total;
+  resetZoom(false);
   updateGalleryView();
 }
 
@@ -285,6 +519,7 @@ function updateGalleryView() {
   const gallery = galleries[activeGalleryId];
   if (!gallery) return;
 
+  resetZoom(false);
   const item = gallery.items[activeGalleryIndex];
   const total = gallery.items.length;
 
@@ -412,9 +647,6 @@ function renderUnits(containerId, unidades) {
             <button type="button" class="btn-clean btn-primary" onclick="openGallery('${e.id}', 0)">
               Visualizar (${totalImg})
             </button>
-            <a href="${e.releaseUrl || '#'}" target="_blank" rel="noopener noreferrer" class="btn-clean btn-ghost" title="Ver en GitHub">
-              GitHub ↗
-            </a>
           `;
         } else if (e.tipo === 'rar') {
           badgeTag = `<span class="badge-clean badge-amber">Paquete .RAR</span>`;
