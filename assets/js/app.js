@@ -45,6 +45,21 @@ const algoritmosUnidades = [
           { nombre: 'Ejercicio 2.09', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/iimg/Ejercicio_2_09.png' },
           { nombre: 'Ejercicio 2.10', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/iimg/Ejercicio_2_10.png' }
         ]
+      },
+      {
+        id: 'alg-sem-3',
+        semana: 'Semana 03',
+        nombre: 'Arreglo de Vendedores',
+        tipo: 'imagenes',
+        cantidad: 5,
+        releaseUrl: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana03',
+        imagenes: [
+          { nombre: "Enunciado 1", url: "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03/Enunciado_01.png" },
+          { nombre: "Enunciado 2", url: "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03/Enunciado_02.png" },
+          { nombre: "Enunciado 3", url: "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03/Enunciado_03.png" },
+          { nombre: "Enunciado 4", url: "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03/Enunciado_04.png" },
+          { nombre: "Enunciado 5", url: "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03/Enunciado_05.png" }
+        ]
       }
     ]
   },
@@ -452,9 +467,9 @@ function renderUnits(containerId, unidades) {
           </div>
           <div class="unit-header-right">
             ${hasEntregas
-              ? `<span class="unit-status-tag">${unidad.entregas.length} entrega(s)</span>`
-              : `<span class="unit-pending-tag">[En espera]</span>`
-            }
+        ? `<span class="unit-status-tag">${unidad.entregas.length} entrega(s)</span>`
+        : `<span class="unit-pending-tag">[En espera]</span>`
+      }
             <span class="unit-toggle-icon"></span>
           </div>
         </div>
