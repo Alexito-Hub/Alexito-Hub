@@ -49,16 +49,36 @@ const algoritmosUnidades = [
       {
         id: 'alg-sem-3',
         semana: 'Semana 03',
-        nombre: 'Arreglo de Vendedores',
+        nombre: 'Arreglos Paralelos',
         tipo: 'imagenes',
-        cantidad: 5,
-        releaseUrl: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana03',
+        cantidad: 25,
+        releaseUrl: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana03-algoritmo',
         imagenes: [
-          { nombre: "Enunciado 1", url: "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03/Enunciado_01.png" },
-          { nombre: "Enunciado 2", url: "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03/Enunciado_02.png" },
-          { nombre: "Enunciado 3", url: "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03/Enunciado_03.png" },
-          { nombre: "Enunciado 4", url: "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03/Enunciado_04.png" },
-          { nombre: "Enunciado 5", url: "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03/Enunciado_05.png" }
+          { nombre: 'Ejercicio 01 - Método 1', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/01-M1.png' },
+          { nombre: 'Ejercicio 01 - Método 2', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/01-M2.png' },
+          { nombre: 'Ejercicio 02 - Método 1', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/02-M1.png' },
+          { nombre: 'Ejercicio 02 - Método 2', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/02-M2.png' },
+          { nombre: 'Ejercicio 02 - Método 3', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/02-M3.png' },
+          { nombre: 'Ejercicio 02 - Método 4', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/02-M4.png' },
+          { nombre: 'Ejercicio 03 - Método 1', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/03-M1.png' },
+          { nombre: 'Ejercicio 03 - Método 2', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/03-M2.png' },
+          { nombre: 'Ejercicio 03 - Método 3', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/03-M3.png' },
+          { nombre: 'Ejercicio 03 - Método 4', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/03-M4.png' },
+          { nombre: 'Ejercicio 04 - Método 1', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/04-M1.png' },
+          { nombre: 'Ejercicio 04 - Método 2', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/04-M2.png' },
+          { nombre: 'Ejercicio 04 - Método 3', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/04-M3.png' },
+          { nombre: 'Ejercicio 04 - Método 4', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/04-M4.png' },
+          { nombre: 'Ejercicio 04 - Método 5', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/04-M5.png' },
+          { nombre: 'Ejercicio 04 - Método 6', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/04-M6.png' },
+          { nombre: 'Ejercicio 05 - Método 1', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/05-M1.png' },
+          { nombre: 'Ejercicio 05 - Método 2', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/05-M2.png' },
+          { nombre: 'Ejercicio 05 - Método 3', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/05-M3.png' },
+          { nombre: 'Ejercicio 05 - Método 4', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/05-M4.png' },
+          { nombre: 'Ejercicio 05 - Método 5', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/05-M5.png' },
+          { nombre: 'Ejercicio 05 - Método 6', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/05-M6.png' },
+          { nombre: 'Ejercicio 05 - Método 7', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/05-M7.png' },
+          { nombre: 'Ejercicio 05 - Método 8', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/05-M8.png' },
+          { nombre: 'Ejercicio 05 - Método 9', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/05-M9.png' }
         ]
       }
     ]
@@ -98,7 +118,7 @@ const tallerUnidades = [
         nombre: 'Desarrollo de trabajo en figma',
         tipo: 'figma',
         url: 'https://www.figma.com/design/oCzbZQH8LLbaF9meqa5jAt/Taller?node-id=2-417&t=31kaySltkgmQDZK3-1',
-        textoBtn: 'Ver en Figma ↗'
+        textoBtn: 'Ver en Figma'
       },
       {
         id: 'taller-sem-2',
@@ -107,7 +127,15 @@ const tallerUnidades = [
         tipo: 'rar',
         url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana-apps/Ale.rar',
         textoBtn: 'Descargar .rar'
-      }
+      },
+      {
+        id: 'taller-sem-3',
+        semana: 'Semana 03',
+        nombre: 'Desarrollo de Semana 03 Actividades 1 y 2',
+        tipo: 'rar',
+        url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/Semana03-Taller/Semana03.rar',
+        textoBtn: 'Descargar .rar'
+      },
     ]
   }
 ];
