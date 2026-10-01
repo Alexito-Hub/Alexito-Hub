@@ -148,6 +148,7 @@ function initMatrixBackground() {
 
   const canvas = document.createElement('canvas');
   canvas.id = 'matrix-bg-canvas';
+  canvas.setAttribute('aria-hidden', 'true');
   document.body.prepend(canvas);
 
   const ctx = canvas.getContext('2d');
@@ -171,11 +172,13 @@ function initMatrixBackground() {
   resize();
   window.addEventListener('resize', resize);
 
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let frameId = null;
   let lastTime = 0;
   const fpsInterval = 1000 / 25; // 25 FPS para fluidez y bajo consumo
 
   function draw(currentTime) {
-    requestAnimationFrame(draw);
+    frameId = requestAnimationFrame(draw);
 
     if (document.hidden) return;
 
@@ -210,7 +213,18 @@ function initMatrixBackground() {
     }
   }
 
-  requestAnimationFrame(draw);
+  function updateMotion() {
+    if (frameId !== null) cancelAnimationFrame(frameId);
+    frameId = null;
+    if (motionPreference.matches) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    } else {
+      lastTime = 0;
+      frameId = requestAnimationFrame(draw);
+    }
+  }
+  motionPreference.addEventListener('change', updateMotion);
+  updateMotion();
 }
 
 // ==========================================
@@ -618,7 +632,11 @@ window.closeGallery = closeGallery;
 function toggleUnitAccordion(headerEl) {
   const unitBox = headerEl.closest('.unit-box');
   if (!unitBox) return;
-  unitBox.classList.toggle('collapsed');
+  const collapsed = unitBox.classList.toggle('collapsed');
+  headerEl.setAttribute('aria-expanded', String(!collapsed));
+  const panel = unitBox.querySelector('.unit-panel');
+  panel.inert = collapsed;
+  panel.setAttribute('aria-hidden', String(collapsed));
 }
 window.toggleUnitAccordion = toggleUnitAccordion;
 
@@ -717,7 +735,7 @@ function renderUnits(containerId, unidades) {
 
     return `
       <section class="unit-box ${collapsedClass}">
-        <div class="unit-box-header" onclick="toggleUnitAccordion(this)" role="button" tabindex="0" title="Click para expandir o contraer">
+        <div class="unit-box-header" onclick="toggleUnitAccordion(this)" onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleUnitAccordion(this); }" role="button" tabindex="0" aria-expanded="${isInitiallyOpen}" aria-controls="${containerId}-panel-${i}" title="Expandir o contraer unidad">
           <div class="unit-title-group">
             <span class="unit-tag">U0${i + 1}</span>
             <div class="unit-name-wrapper">
@@ -733,8 +751,12 @@ function renderUnits(containerId, unidades) {
             <span class="unit-toggle-icon"></span>
           </div>
         </div>
-        <div class="unit-deliveries-list">
-          ${entregasHtml}
+        <div class="unit-panel" id="${containerId}-panel-${i}" aria-hidden="${!isInitiallyOpen}" ${isInitiallyOpen ? '' : 'inert'}>
+          <div class="unit-panel-inner">
+            <div class="unit-deliveries-list">
+              ${entregasHtml}
+            </div>
+          </div>
         </div>
       </section>`;
   }).join('');

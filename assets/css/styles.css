@@ -26,7 +26,7 @@
 
   --text-1:        #f3f4f6;
   --text-2:        #94a3b8;
-  --text-3:        #64748b;
+  --text-3:        #8998ae;
 
   --navbar-h:      60px;
   --radius-lg:     12px;
@@ -44,7 +44,7 @@
 }
 
 html {
-  font-size: 15px;
+  font-size: 16px;
   scroll-behavior: smooth;
 }
 
@@ -340,7 +340,7 @@ button {
   overflow: hidden;
   margin-bottom: 20px;
   transition: border-color var(--transition);
-  animation: fadeUp 0.6s ease-out forwards;
+  animation: fadeUp 0.35s ease-out both;
   opacity: 0;
   transform: translateY(15px);
 }
@@ -465,8 +465,8 @@ button {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 0.15em solid var(--emerald);
-  animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  border-right: none;
+  animation: none;
   max-width: fit-content;
 }
 
@@ -562,8 +562,8 @@ button {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 0.15em solid var(--emerald);
-  animation: typing 1.5s steps(40, end) 0.5s both, blink-caret 0.75s step-end infinite;
+  border-right: none;
+  animation: none;
   max-width: fit-content;
 }
 
@@ -611,7 +611,7 @@ button {
 }
 
 .course-card {
-  background: rgba(255, 255, 255, 0.02);
+  background: linear-gradient(145deg, rgba(56, 189, 248, 0.045), rgba(255, 255, 255, 0.015) 65%);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 16px 18px;
@@ -619,12 +619,13 @@ button {
   flex-direction: column;
   justify-content: space-between;
   gap: 14px;
-  transition: all var(--transition);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
 .course-card:hover {
   background: rgba(255, 255, 255, 0.04);
-  border-color: var(--border-hover);
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2), 0 0 18px rgba(56, 189, 248, 0.055);
   transform: translateY(-2px);
 }
 
@@ -718,8 +719,8 @@ button {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 0.15em solid var(--emerald);
-  animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  border-right: none;
+  animation: none;
   max-width: fit-content;
 }
 
@@ -851,8 +852,21 @@ button {
   transform: rotate(-45deg);
 }
 
-.unit-box.collapsed .unit-deliveries-list {
-  display: none;
+.unit-panel {
+  display: grid;
+  grid-template-rows: 1fr;
+  opacity: 1;
+  transition: grid-template-rows 220ms ease, opacity 180ms ease;
+}
+
+.unit-panel-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.unit-box.collapsed .unit-panel {
+  grid-template-rows: 0fr;
+  opacity: 0;
 }
 
 /* ==========================================
@@ -1613,4 +1627,64 @@ button {
   .gallery-zoom-hint {
     display: none;
   }
+}
+
+/* Terminal minimalista: detalles cyber y movimiento breve. */
+body {
+  background-image: radial-gradient(ellipse at 50% 0%, rgba(56, 189, 248, 0.045), transparent 60%);
+}
+
+.terminal-window:nth-child(2) { animation-delay: 55ms; }
+.terminal-window:nth-child(3) { animation-delay: 110ms; }
+.terminal-topbar { background: rgba(9, 12, 20, 0.8); }
+.term-dot { width: 8px; height: 8px; opacity: 0.75; }
+.terminal-tag { color: #a5b4fc; }
+.hero-role, .profile-role { color: #a5b4fc; }
+.hero-name, .upla-title, .page-header h1 {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.hero-name { font-size: clamp(1.4rem, 3vw, 1.8rem); }
+.hero-desc, .profile-bio { font-size: 0.9rem; line-height: 1.7; }
+.course-title { font-size: 1.08rem; line-height: 1.4; }
+.course-card:focus-within {
+  border-color: rgba(56, 189, 248, 0.4);
+}
+.course-btn svg { transition: transform 180ms ease; }
+.course-btn:hover svg, .course-btn:focus-visible svg { transform: translateX(3px); }
+.hero-btn, .btn-clean { min-height: 36px; }
+.unit-box-header[aria-expanded="true"] {
+  background: rgba(56, 189, 248, 0.035);
+}
+.unit-box-header[aria-expanded="true"] .unit-toggle-icon {
+  border-color: var(--sky);
+}
+.unit-title { white-space: normal; line-height: 1.5; }
+.unit-timeline, .delivery-week, .btn-clean { font-size: 0.78rem; }
+.contact-val { overflow-wrap: anywhere; min-width: 0; }
+:where(a, button, [tabindex]):focus-visible {
+  outline: 2px solid var(--sky);
+  outline-offset: 4px;
+}
+.unit-box-header:focus-visible { outline-offset: -3px; }
+
+@media (max-width: 480px) {
+  .container { padding-inline: 14px; }
+  .terminal-body { padding: 16px; }
+  .unit-box-header { padding: 12px; gap: 8px; }
+  .unit-title-group { gap: 8px; }
+  .unit-status-tag, .unit-pending-tag { display: none; }
+  .unit-deliveries-list { padding: 10px; }
+  .contact-item { flex-wrap: wrap; gap: 4px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .terminal-window { opacity: 1; transform: none; }
+  .course-card:hover, .course-btn:hover svg, .course-btn:focus-visible svg { transform: none; }
+  #matrix-bg-canvas { display: none; }
 }
