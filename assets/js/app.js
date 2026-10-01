@@ -80,6 +80,41 @@ const algoritmosUnidades = [
           { nombre: 'Ejercicio 05 - Método 8', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/05-M8.png' },
           { nombre: 'Ejercicio 05 - Método 9', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana03-algoritmo/05-M9.png' }
         ]
+      },
+      {
+        id: 'alg-sem-4',
+        semana: 'Semana 04',
+        nombre: 'Arreglos de Objetos',
+        tipo: 'imagenes',
+        cantidad: 25,
+        releaseUrl: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana04-algoritmo',
+        imagenes: [
+          { nombre: 'Ejercicio 01 - Método 1: mostrarPromediosEstado()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana04-algoritmo/01-M1.png' },
+          { nombre: 'Ejercicio 01 - Método 2: listarAprobados()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana04-algoritmo/01-M2.png' },
+          { nombre: 'Ejercicio 01 - Método 3: listarDesaprobados()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana04-algoritmo/01-M3.png' },
+          { nombre: 'Ejercicio 01 - Método 4: alumnoMejorPromedio()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana04-algoritmo/01-M4.png' },
+          { nombre: 'Ejercicio 01 - Método 5: alumnoPeorPromedio()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana04-algoritmo/01-M5.png' },
+          { nombre: 'Ejercicio 01 - Método 6: promedioGeneralAula()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana04-algoritmo/01-M6.png' },
+          { nombre: 'Ejercicio 01 - Método 7: ordenarAlfabeticamente()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana04-algoritmo/01-M7.png' },
+          { nombre: 'Ejercicio 01 - Método 8: ordenarPorMerito()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana04-algoritmo/01-M8.png' },
+          { nombre: 'Ejercicio 01 - Método 9: porcentajeAprobacion()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana04-algoritmo/01-M9.png' },
+          { nombre: 'Ejercicio 01 - Método 10: buscarPorNombre()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana04-algoritmo/01-M10.png' },
+          { nombre: 'Ejercicio 02 - Método 1: registrar()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana04-algoritmo/02-M1.png' },
+          { nombre: 'Ejercicio 02 - Método 2: listarTodas()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana04-algoritmo/02-M2.png' },
+          { nombre: 'Ejercicio 02 - Método 3: buscarPorId()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana04-algoritmo/02-M3.png' },
+          { nombre: 'Ejercicio 02 - Método 4: modificar()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana04-algoritmo/02-M4.png' },
+          { nombre: 'Ejercicio 02 - Método 5: eliminar()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana04-algoritmo/02-M5.png' },
+          { nombre: 'Ejercicio 02 - Método 6: listarPorEstado()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana04-algoritmo/02-M6.png' },
+          { nombre: 'Ejercicio 02 - Método 7: computadoraMayorRam()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana04-algoritmo/02-M7.png' },
+          { nombre: 'Ejercicio 02 - Método 8: computadoraMenorAlmacenamiento()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana04-algoritmo/02-M8.png' },
+          { nombre: 'Ejercicio 02 - Método 9: contarPorEstado()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana04-algoritmo/02-M9.png' },
+          { nombre: 'Ejercicio 02 - Método 10: reporteCompleto()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana04-algoritmo/02-M10.png' },
+          { nombre: 'Ejercicio 02 - Método 11: ordenarPorId()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana04-algoritmo/02-M11.png' },
+          { nombre: 'Ejercicio 02 - Método 12: ordenarPorRam()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana04-algoritmo/02-M12.png' },
+          { nombre: 'Ejercicio 02 - Método 13: buscarPorMarca()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana04-algoritmo/02-M13.png' },
+          { nombre: 'Ejercicio 02 - Método 14: promedioRam()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana04-algoritmo/02-M14.png' },
+          { nombre: 'Ejercicio 02 - Método 15: promedioAlmacenamiento()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana04-algoritmo/02-M15.png' }
+        ]
       }
     ]
   },
