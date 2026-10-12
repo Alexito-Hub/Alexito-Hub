@@ -5,7 +5,7 @@ const algoritmosUnidades = [
   {
     titulo: 'CONCEPTOS DE ALGORITMOS Y ESTRUCTURAS DE DATOS',
     semanas: 'Semanas 01 - 04',
-    abierta: true,
+    abierta: false,
     entregas: [
       {
         id: 'alg-sem-1',
@@ -118,11 +118,53 @@ const algoritmosUnidades = [
       }
     ]
   },
-  {
+    {
     titulo: 'PILAS, COLAS Y RECURSIVIDAD',
     semanas: 'Semanas 05 - 08',
-    abierta: false,
-    entregas: []
+    abierta: true,
+    entregas: [
+      {
+        id: 'alg-sem-5',
+        semana: 'Semana 05',
+        nombre: 'ArrayList y ArrayList de Objetos',
+        tipo: 'imagenes',
+        cantidad: 31,
+        releaseUrl: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana05-algoritmos',
+        imagenes: [
+          { nombre: 'Ejercicio 01 - Método 1: buscarPorNombre()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/01-M1.png' },
+          { nombre: 'Ejercicio 01 - Método 2: listarPorCarrera()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/01-M2.png' },
+          { nombre: 'Ejercicio 01 - Método 3: ordenarPorApellidos()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/01-M3.png' },
+          { nombre: 'Ejercicio 01 - Método 4: ordenarPorEdad()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/01-M4.png' },
+          { nombre: 'Ejercicio 01 - Método 5: invertirLista()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/01-M5.png' },
+          { nombre: 'Ejercicio 01 - Método 6: obtenerPrimero()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/01-M6.png' },
+          { nombre: 'Ejercicio 01 - Método 7: obtenerUltimo()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/01-M7.png' },
+          { nombre: 'Ejercicio 01 - Método 8: eliminarPorCarrera()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/01-M8.png' },
+          { nombre: 'Ejercicio 01 - Método 9: contarPorCarrera()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/01-M9.png' },
+          { nombre: 'Ejercicio 01 - Método 10: mostrarRango()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/01-M10.png' },
+          { nombre: 'Ejercicio 02 - Método 1: registrarEstudiante()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/02-M1.png' },
+          { nombre: 'Ejercicio 02 - Método 2: listarEstudiantes()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/02-M2.png' },
+          { nombre: 'Ejercicio 02 - Método 3: buscarEstudiante()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/02-M3.png' },
+          { nombre: 'Ejercicio 02 - Método 4: modificarEstudiante()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/02-M4.png' },
+          { nombre: 'Ejercicio 02 - Método 5: eliminarEstudiante()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/02-M5.png' },
+          { nombre: 'Ejercicio 02 - Método 6: registrarCurso()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/02-M6.png' },
+          { nombre: 'Ejercicio 02 - Método 7: listarCursos()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/02-M7.png' },
+          { nombre: 'Ejercicio 02 - Método 8: buscarCurso()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/02-M8.png' },
+          { nombre: 'Ejercicio 02 - Método 9: modificarCurso()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/02-M9.png' },
+          { nombre: 'Ejercicio 02 - Método 10: eliminarCurso()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/02-M10.png' },
+          { nombre: 'Ejercicio 02 - Método 11: registrarMatricula()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/02-M11.png' },
+          { nombre: 'Ejercicio 02 - Método 12: listarMatriculas()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/02-M12.png' },
+          { nombre: 'Ejercicio 02 - Método 13: consultarCursosEstudiante()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/02-M13.png' },
+          { nombre: 'Ejercicio 02 - Método 14: modificarNota()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/02-M14.png' },
+          { nombre: 'Ejercicio 02 - Método 15: eliminarMatricula()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/02-M15.png' },
+          { nombre: 'Ejercicio 02 - Método 16: promedioEstudiante()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/02-M16.png' },
+          { nombre: 'Ejercicio 02 - Método 17: rankingAcademico()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/02-M17.png' },
+          { nombre: 'Ejercicio 02 - Método 18: estudiantesPorCarrera()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/02-M18.png' },
+          { nombre: 'Ejercicio 02 - Método 19: estudiantesDesaprobados()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/02-M19.png' },
+          { nombre: 'Ejercicio 02 - Método 20: mejorPromedio()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/02-M20.png' },
+          { nombre: 'Ejercicio 02 - Método 21: menu() · [21] Salir', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/02-M21.png' }
+        ]
+      }
+    ]
   },
   {
     titulo: 'LISTAS ENLAZADAS',
