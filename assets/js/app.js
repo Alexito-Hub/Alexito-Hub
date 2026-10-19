@@ -163,6 +163,45 @@ const algoritmosUnidades = [
           { nombre: 'Ejercicio 02 - Método 20: mejorPromedio()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/02-M20.png' },
           { nombre: 'Ejercicio 02 - Método 21: menu() · [21] Salir', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana05-algoritmos/02-M21.png' }
         ]
+      },
+      {
+        id: 'alg-sem-6',
+        semana: 'Semana 06',
+        nombre: 'Pilas (estática, dinámica y deshacer/rehacer)',
+        tipo: 'imagenes',
+        cantidad: 29,
+        releaseUrl: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana06-algoritmos-corregido',
+        imagenes: [
+          { nombre: 'Ejercicio 01 - Método 1: insertarPila() [Push]', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/01-M1.png' },
+          { nombre: 'Ejercicio 01 - Método 2: mostrarPila()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/01-M2.png' },
+          { nombre: 'Ejercicio 01 - Método 3: eliminaDatos() [Pop]', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/01-M3.png' },
+          { nombre: 'Ejercicio 01 - Método 4: eliminaPila()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/01-M4.png' },
+          { nombre: 'Ejercicio 01 - Método 5: consultarCima() [Peek]', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/01-M5.png' },
+          { nombre: 'Ejercicio 01 - Método 6: mostrarEstadoCapacidad()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/01-M6.png' },
+          { nombre: 'Ejercicio 01 - Método 7: buscarAlumnoPorCodigo()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/01-M7.png' },
+          { nombre: 'Ejercicio 01 - Método 8: verificarEstadoLogico()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/01-M8.png' },
+          { nombre: 'Ejercicio 01 - Método 9: mostrarMejorPromedio()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/01-M9.png' },
+          { nombre: 'Ejercicio 01 - Método 10: menu() · 10. Salir', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/01-M10.png' },
+          { nombre: 'Ejercicio 02 - Método 1: apilarComputadora() [Push]', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/02-M1.png' },
+          { nombre: 'Ejercicio 02 - Método 2: mostrarInventario()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/02-M2.png' },
+          { nombre: 'Ejercicio 02 - Método 3: desapilarComputadora() [Pop]', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/02-M3.png' },
+          { nombre: 'Ejercicio 02 - Método 4: consultarCima() [Peek]', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/02-M4.png' },
+          { nombre: 'Ejercicio 02 - Método 5: limpiarInventario()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/02-M5.png' },
+          { nombre: 'Ejercicio 02 - Método 6: contarComputadoras()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/02-M6.png' },
+          { nombre: 'Ejercicio 02 - Método 7: buscarPorSerie()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/02-M7.png' },
+          { nombre: 'Ejercicio 02 - Método 8: calcularValorInventario()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/02-M8.png' },
+          { nombre: 'Ejercicio 02 - Método 9: mostrarEquiposSuperioresA()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/02-M9.png' },
+          { nombre: 'Ejercicio 02 - Método 10: obtenerEquipoMasCaro()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/02-M10.png' },
+          { nombre: 'Ejercicio 02 - Método 11: menu() · 11. Salir', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/02-M11.png' },
+          { nombre: 'Ejercicio 03 - Método 1: ejecutarNuevaAccion()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/03-M1.png' },
+          { nombre: 'Ejercicio 03 - Método 2: deshacerAccion() [Undo]', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/03-M2.png' },
+          { nombre: 'Ejercicio 03 - Método 3: rehacerAccion() [Redo]', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/03-M3.png' },
+          { nombre: 'Ejercicio 03 - Método 4: mostrarEstadoHistorial()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/03-M4.png' },
+          { nombre: 'Ejercicio 03 - Método 5: buscarAccionEnHistorial()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/03-M5.png' },
+          { nombre: 'Ejercicio 03 - Método 6: invertirPilaAcciones()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/03-M6.png' },
+          { nombre: 'Ejercicio 03 - Método 7: exportarHistorialResumen()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/03-M7.png' },
+          { nombre: 'Ejercicio 03 - Método 8: menu() · 8. Salir', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/03-M8.png' }
+        ]
       }
     ]
   },
