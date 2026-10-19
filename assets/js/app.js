@@ -118,7 +118,7 @@ const algoritmosUnidades = [
       }
     ]
   },
-    {
+  {
     titulo: 'PILAS, COLAS Y RECURSIVIDAD',
     semanas: 'Semanas 05 - 08',
     abierta: true,
@@ -201,6 +201,7 @@ const algoritmosUnidades = [
           { nombre: 'Ejercicio 03 - Método 6: invertirPilaAcciones()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/03-M6.png' },
           { nombre: 'Ejercicio 03 - Método 7: exportarHistorialResumen()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/03-M7.png' },
           { nombre: 'Ejercicio 03 - Método 8: menu() · 8. Salir', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/03-M8.png' }
+
         ]
       }
     ]
