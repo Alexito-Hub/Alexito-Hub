@@ -211,6 +211,7 @@ const algoritmosUnidades = [
         tipo: 'imagenes',
         cantidad: 32,
         releaseUrl: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana07-algoritmos',
+        codigoUrl: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/Semana07_codigo_alexito.zip',
         imagenes: [
           { nombre: 'Ejercicio 01 - Método 1: encolar()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/01-M1.png' },
           { nombre: 'Ejercicio 01 - Método 2: desencolar()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/01-M2.png' },
@@ -853,6 +854,11 @@ function renderUnits(containerId, unidades) {
               Visualizar (${totalImg})
             </button>
           `;
+          if (e.codigoUrl) {
+            actionsHtml += `
+              <a href="${e.codigoUrl}" download class="btn-clean btn-amber">Descargar codigo</a>
+            `;
+          }
         } else if (e.tipo === 'rar') {
           badgeTag = `<span class="badge-clean badge-amber">Paquete .RAR</span>`;
           actionsHtml = `
