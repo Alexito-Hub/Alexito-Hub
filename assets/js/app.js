@@ -203,6 +203,48 @@ const algoritmosUnidades = [
           { nombre: 'Ejercicio 03 - Método 8: menu() · 8. Salir', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana06-algoritmos-corregido/03-M8.png' }
 
         ]
+      },
+      {
+        id: 'alg-sem-7',
+        semana: 'Semana 07',
+        nombre: 'Colas (estática circular y dinámicas)',
+        tipo: 'imagenes',
+        cantidad: 32,
+        releaseUrl: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana07-algoritmos',
+        imagenes: [
+          { nombre: 'Ejercicio 01 - Método 1: encolar()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/01-M1.png' },
+          { nombre: 'Ejercicio 01 - Método 2: desencolar()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/01-M2.png' },
+          { nombre: 'Ejercicio 01 - Método 3: verFrente()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/01-M3.png' },
+          { nombre: 'Ejercicio 01 - Método 4: listar()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/01-M4.png' },
+          { nombre: 'Ejercicio 01 - Método 5: colaVacia()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/01-M5.png' },
+          { nombre: 'Ejercicio 01 - Método 6: colaLlena()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/01-M6.png' },
+          { nombre: 'Ejercicio 01 - Método 7: getCantidad()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/01-M7.png' },
+          { nombre: 'Ejercicio 01 - Método 8: buscarAlumno()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/01-M8.png' },
+          { nombre: 'Ejercicio 01 - Método 9: promedioGrupo()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/01-M9.png' },
+          { nombre: 'Ejercicio 01 - Método 10: filtrarPorNota()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/01-M10.png' },
+          { nombre: 'Ejercicio 01 - Método 11: obtenerExtremos()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/01-M11.png' },
+          { nombre: 'Ejercicio 01 - Método 12: invertirOrden()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/01-M12.png' },
+          { nombre: 'Ejercicio 01 - Método 13: darDeBaja()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/01-M13.png' },
+          { nombre: 'Ejercicio 01 - Método 14: menu()  ·  0. Salir', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/01-M14.png' },
+          { nombre: 'Ejercicio 02 - Método 1: registrarTurno()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/02-M1.png' },
+          { nombre: 'Ejercicio 02 - Método 2: atenderTurno()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/02-M2.png' },
+          { nombre: 'Ejercicio 02 - Método 3: verSiguienteTurno()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/02-M3.png' },
+          { nombre: 'Ejercicio 02 - Método 4: listarEspera()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/02-M4.png' },
+          { nombre: 'Ejercicio 02 - Método 5: sinTurnos()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/02-M5.png' },
+          { nombre: 'Ejercicio 02 - Método 6: buscarTurno()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/02-M6.png' },
+          { nombre: 'Ejercicio 02 - Método 7: reportePorTramite()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/02-M7.png' },
+          { nombre: 'Ejercicio 02 - Método 8: cancelarTurno()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/02-M8.png' },
+          { nombre: 'Ejercicio 02 - Método 9: menu()  ·  9. Salir', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/02-M9.png' },
+          { nombre: 'Ejercicio 03 - Método 1: registrarOrden()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/03-M1.png' },
+          { nombre: 'Ejercicio 03 - Método 2: despacharOrden()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/03-M2.png' },
+          { nombre: 'Ejercicio 03 - Método 3: verProximaOrden()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/03-M3.png' },
+          { nombre: 'Ejercicio 03 - Método 4: listarOrdenes()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/03-M4.png' },
+          { nombre: 'Ejercicio 03 - Método 5: sinOrdenes()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/03-M5.png' },
+          { nombre: 'Ejercicio 03 - Método 6: buscarOrden()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/03-M6.png' },
+          { nombre: 'Ejercicio 03 - Método 7: montoAcumulado()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/03-M7.png' },
+          { nombre: 'Ejercicio 03 - Método 8: anularOrden()', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/03-M8.png' },
+          { nombre: 'Ejercicio 03 - Método 9: menu()  ·  9. Salir', url: 'https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/03-M9.png' }
+        ]
       }
     ]
   },
