@@ -102,35 +102,65 @@
                   "titulo": "Ejercicio 01",
                   "tema": "Registro de alumnos y cálculo de promedio general en main (Enunciado01.java)",
                   "explicacion": "Utiliza tres arreglos paralelos (codigo[], nombre[], notas[]) controlados por numAlu dentro de main() con menú do-while: el Método 1 registra alumnos validando entradas y el Método 2 imprime la tabla formateada calculando el promedio general.",
-                  "metodos": ["Método 1", "Método 2"]
+                  "metodos": [
+                    "Método 1",
+                    "Método 2"
+                  ]
                 },
                 {
                   "numero": "02",
                   "titulo": "Ejercicio 02",
                   "tema": "Gestión modular de empleados con arreglos paralelos (Enunciado02.java)",
                   "explicacion": "Divide en 4 métodos la lectura, listado, búsqueda y cálculo de sueldos de empleados almacenados en vectores paralelos.",
-                  "metodos": ["Método 1", "Método 2", "Método 3", "Método 4"]
+                  "metodos": [
+                    "Método 1",
+                    "Método 2",
+                    "Método 3",
+                    "Método 4"
+                  ]
                 },
                 {
                   "numero": "03",
                   "titulo": "Ejercicio 03",
                   "tema": "Evaluación académica con 3 notas en paralelo (Enunciado03.java)",
                   "explicacion": "Administra vectores paralelos para tres evaluaciones y calcula el promedio y condición de cada estudiante a través de 4 métodos.",
-                  "metodos": ["Método 1", "Método 2", "Método 3", "Método 4"]
+                  "metodos": [
+                    "Método 1",
+                    "Método 2",
+                    "Método 3",
+                    "Método 4"
+                  ]
                 },
                 {
                   "numero": "04",
                   "titulo": "Ejercicio 04",
                   "tema": "Promedio individual, búsquedas y extremos (Enunciado04.java)",
                   "explicacion": "Implementa 6 métodos para ingreso, cálculo de promedios individuales, búsquedas por criterio y determinación de nota mayor y menor.",
-                  "metodos": ["Método 1", "Método 2", "Método 3", "Método 4", "Método 5", "Método 6"]
+                  "metodos": [
+                    "Método 1",
+                    "Método 2",
+                    "Método 3",
+                    "Método 4",
+                    "Método 5",
+                    "Método 6"
+                  ]
                 },
                 {
                   "numero": "05",
                   "titulo": "Ejercicio 05",
                   "tema": "Ordenamiento sincronizado y reportes de alumnos (Enunciado05.java)",
                   "explicacion": "Contiene 9 métodos que incluyen el ordenamiento de alumnos manteniendo sincronizados sus arreglos de código, nombre y notas.",
-                  "metodos": ["Método 1", "Método 2", "Método 3", "Método 4", "Método 5", "Método 6", "Método 7", "Método 8", "Método 9"]
+                  "metodos": [
+                    "Método 1",
+                    "Método 2",
+                    "Método 3",
+                    "Método 4",
+                    "Método 5",
+                    "Método 6",
+                    "Método 7",
+                    "Método 8",
+                    "Método 9"
+                  ]
                 }
               ]
             },
@@ -393,6 +423,70 @@
                     "montoAcumulado()",
                     "anularOrden()",
                     "menu()  ·  9. Salir"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "alg-sem-8",
+              "numero": 8,
+              "semana": "Semana 08",
+              "nombre": "Recursividad — 3 actividades",
+              "tema": "Recursividad aplicada: archivos, busqueda binaria y arbol binario — 25 infografias",
+              "tipo": "imagenes",
+              "releaseUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana08-algoritmos",
+              "codigoUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana08-algoritmos/alexito.rar",
+              "baseUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana08-algoritmos/",
+              "resumenChatbot": "Semana 08 de Algoritmos: Recursividad. Tres actividades con arquitectura Modelo/DAO/Vista: Proyecto 1 gestion y analisis de archivos de una empresa (recorrido recursivo de carpetas), Proyecto 2 busqueda de productos y analisis de inventario (busqueda binaria recursiva) y Proyecto 3 gestion de expedientes con arbol binario de busqueda. Una infografia por requerimiento. Version Alexito Java 17, codigo en paquete alexito.rar.",
+              "explicacionTecnica": "En la version de Alexito-Hub Java 17 con records, enum, Optional, Javadoc y switch con flechas: Proyecto 1 GestorArchivos con ArchivoRegistro; Proyecto 2 GestorInventario con busqueda binaria recursiva; Proyecto 3 ArbolAcademico con Expediente, EstadoExpediente y NodoExpediente.",
+              "ejercicios": [
+                {
+                  "numero": "01",
+                  "titulo": "Actividad 01",
+                  "tema": "Gestion y analisis de archivos de una empresa",
+                  "explicacion": "Recorre recursivamente directorios y subdirectorios: lista, cuenta, suma tamanos, busca por nombre o extension, reporta por tipo y muestra la estructura jerarquica.",
+                  "metodos": [
+                    "seleccionarRaiz  ·  Seleccionar raiz",
+                    "listarTodos  ·  Listar recursivo",
+                    "contarArchivos",
+                    "tamanioTotal",
+                    "buscarPorNombre y buscarPorExtension",
+                    "conteoPorExtension  ·  Reporte por tipo",
+                    "imprimirArbol  ·  Estructura jerarquica",
+                    "generarPrueba",
+                    "menu  ·  0. Salir"
+                  ]
+                },
+                {
+                  "numero": "02",
+                  "titulo": "Actividad 02",
+                  "tema": "Busqueda de productos y analisis de inventario",
+                  "explicacion": "Registra productos ordenados por codigo, los busca con busqueda binaria recursiva y calcula valor total, unidades, sin existencias y bajo inventario de forma recursiva.",
+                  "metodos": [
+                    "registrar",
+                    "listar  ·  Mostrar productos",
+                    "buscarPorCodigo  ·  Busqueda binaria",
+                    "valorTotal",
+                    "unidadesTotales",
+                    "sinExistencias",
+                    "bajoInventario",
+                    "menu  ·  0. Salir"
+                  ]
+                },
+                {
+                  "numero": "03",
+                  "titulo": "Actividad 03",
+                  "tema": "Gestion de expedientes y documentos academicos",
+                  "explicacion": "Arbol binario de busqueda por codigo: insertar, buscar, listar en orden ascendente inorden, contar, altura y contar por criterio de estado.",
+                  "metodos": [
+                    "registrar",
+                    "insertar  ·  Insertar en arbol",
+                    "buscar  ·  Buscar por codigo",
+                    "listarAscendente  ·  Inorden",
+                    "total",
+                    "altura",
+                    "contarPorEstado  ·  Criterio",
+                    "menu  ·  0. Salir"
                   ]
                 }
               ]

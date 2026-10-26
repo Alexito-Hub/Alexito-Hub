@@ -8,13 +8,7 @@
 (function () {
   'use strict';
 
-  const AZURE_API_BASE_URL =
-    window.location.protocol === 'file:' ||
-    !window.location.hostname ||
-    window.location.hostname === 'localhost' ||
-    window.location.hostname === '127.0.0.1'
-      ? 'http://localhost:8080'
-      : '';
+  const AZURE_API_BASE_URL = window.CHATBOT_API_URL || 'https://ai.aurx.pro';
   const PORTFOLIO_ID = 'portfolio_b';
   const DEVICE_STORAGE_KEY = 'chatbot_device_id';
 
@@ -358,12 +352,14 @@
     const autoExec = wantsGallery || wantsNav;
 
     const wMatch = q.match(/\b(?:semana|sem|s)\s*0?([1-9]|1[0-6])\b/);
-    const eMatch = q.match(/\b(?:ejercicio|ej)\s*0?([1-9]|10)\b/);
+    const eMatch = q.match(/\b(?:ejercicio|ej|actividad|act)\s*0?([1-9]|10)\b/);
     let weekNum = wMatch ? parseInt(wMatch[1], 10) : null;
     let ejNum = eMatch ? parseInt(eMatch[1], 10) : null;
 
     if (weekNum === null) {
-      if (/\b(gestorcolaalumnos|invertirorden|posicion|darbaja)\b/.test(q)) { weekNum = 7; ejNum = ejNum || 1; }
+      if (/\b(arbol|arboles|abb|arbolacademico|nodoexpediente|gestorarchivos|gestorinventario|busquedabinaria|inorden)\b/.test(q)) {
+        weekNum = 8;
+      } else if (/\b(gestorcolaalumnos|invertirorden|posicion|darbaja)\b/.test(q)) { weekNum = 7; ejNum = ejNum || 1; }
       else if (/\b(gestorturnos|nodoticket|reporteportramite)\b/.test(q)) { weekNum = 7; ejNum = ejNum || 2; }
       else if (/\b(gestorpedidos|nodoorden|montoacumulado|centinela)\b/.test(q)) { weekNum = 7; ejNum = ejNum || 3; }
       else if (/\b(cola|colas|fifo)\b/.test(q)) { weekNum = 7; }
@@ -375,6 +371,12 @@
       else if (ejNum !== null && lastDetectedWeek !== null) {
         weekNum = lastDetectedWeek;
       }
+    }
+
+    if (weekNum === 8 && ejNum === null) {
+      if (/\b(gestorarchivos|archivoregistro|directorios|carpetas)\b/.test(q)) ejNum = 1;
+      else if (/\b(gestorinventario|productoinventario|busquedabinaria|existencias)\b/.test(q)) ejNum = 2;
+      else if (/\b(arbolacademico|nodoexpediente|expediente|inorden|abb)\b/.test(q)) ejNum = 3;
     }
 
     const isTaller = /\b(taller|figma|wireframe|prototipo|login)\b/.test(q);
@@ -690,6 +692,7 @@
               <button type="button" data-q="Explicame la semana 5 de ArrayList">S05</button>
               <button type="button" data-q="Explicame la semana 6 de pilas">S06</button>
               <button type="button" data-q="Explicame la semana 7 de colas en Java 17">S07</button>
+              <button type="button" data-q="Explicame la semana 8 de recursividad y arboles binarios">S08</button>
               <button type="button" data-q="Muestrame el prototipo de Taller en Figma">UI</button>
             </div>
           </div>
