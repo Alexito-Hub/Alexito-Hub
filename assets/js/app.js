@@ -615,10 +615,10 @@ function renderUnits(containerId, unidades) {
 
     if (hasEntregas) {
       entregasHtml = unidad.entregas.map(e => {
-        if (e.tipo === 'imagenes' && e.id) {
+        if (Array.isArray(e.imagenes) && e.imagenes.length > 0 && e.id) {
           galleries[e.id] = {
             title: `${e.semana}: ${e.nombre}`,
-            items: e.imagenes || []
+            items: e.imagenes
           };
         }
 
@@ -626,11 +626,11 @@ function renderUnits(containerId, unidades) {
         let badgeTag = '';
         let thumbsPreviewHtml = '';
 
-        if (e.tipo === 'imagenes') {
-          const totalImg = e.cantidad || (e.imagenes ? e.imagenes.length : 0);
+        if (Array.isArray(e.imagenes) && e.imagenes.length > 0) {
+          const totalImg = e.cantidad || e.imagenes.length;
           badgeTag = `<span class="badge-clean badge-violet">${totalImg} imágenes</span>`;
 
-          const miniThumbs = (e.imagenes || []).slice(0, 3).map((img, idx) => `
+          const miniThumbs = e.imagenes.slice(0, 3).map((img, idx) => `
             <div class="row-mini-thumb" onclick="openGallery('${e.id}', ${idx})" title="${img.nombre}">
               <img src="${img.url}" alt="${img.nombre}" loading="lazy" />
             </div>
@@ -648,45 +648,89 @@ function renderUnits(containerId, unidades) {
             </div>
           `;
 
-          actionsHtml = `
+          actionsHtml += `
             <button type="button" class="btn-clean btn-primary" onclick="openGallery('${e.id}', 0)">
               Visualizar (${totalImg})
             </button>
           `;
           if (e.codigoUrl) {
             actionsHtml += `
-              <a href="${e.codigoUrl}" download class="btn-clean btn-amber">Descargar codigo</a>
+              <a href="${e.codigoUrl}" download class="btn-clean btn-amber">Descargar código</a>
             `;
           }
-        } else if (e.tipo === 'rar') {
-          badgeTag = `<span class="badge-clean badge-amber">Paquete .RAR</span>`;
-          actionsHtml = `
-            <a href="${e.url}" download class="btn-clean btn-amber">
-              ${e.textoBtn || 'Descargar .rar'}
-            </a>
-          `;
-        } else if (e.tipo === 'figma') {
+        }
+
+        if (e.tipo === 'rar' || e.tipo === 'zip') {
+          badgeTag = `<span class="badge-clean badge-amber">Paquete .${(e.tipo || 'rar').toUpperCase()}</span>`;
+          if (e.url) {
+            actionsHtml += `
+              <a href="${e.url}" download class="btn-clean btn-amber">
+                ${e.textoBtn || 'Descargar .' + e.tipo}
+              </a>
+            `;
+          }
+        } else if (e.tipo === 'figma' && e.url) {
           badgeTag = `<span class="badge-clean badge-sky">Figma UI</span>`;
-          actionsHtml = `
+          actionsHtml += `
             <a href="${e.url}" target="_blank" rel="noopener noreferrer" class="btn-clean btn-sky">
               ${e.textoBtn || 'Ver en Figma'}
             </a>
           `;
         }
 
+        let archivosListHtml = '';
+        if (Array.isArray(e.archivos) && e.archivos.length > 0) {
+          if (!badgeTag) {
+            badgeTag = `<span class="badge-clean badge-sky">${e.archivos.length} documento(s)</span>`;
+          }
+          archivosListHtml = `
+            <div class="delivery-files-container">
+              ${e.archivos.map(arch => {
+                const icono = (arch.icono || 'DOC').toLowerCase();
+                const badgeClass = 'badge-' + icono;
+                let btnActions = '';
+                if (arch.verUrl) {
+                  btnActions += `<a href="${arch.verUrl}" target="_blank" rel="noopener noreferrer" class="btn-file-view">${arch.verTexto || 'Ver'}</a>`;
+                }
+                if (arch.descargarUrl) {
+                  const extraAttr = arch.descargarExterno ? 'target="_blank" rel="noopener noreferrer"' : (arch.descargarNombre ? `download="${arch.descargarNombre}"` : 'download');
+                  btnActions += `<a href="${arch.descargarUrl}" ${extraAttr} class="btn-file-download">${arch.descargarTexto || 'Descargar'}</a>`;
+                }
+                return `
+                  <div class="file-item-row">
+                    <div class="file-item-left">
+                      <span class="file-badge-icon ${badgeClass}">${arch.icono || 'DOC'}</span>
+                      <div class="file-item-info">
+                        <span class="file-item-title">${arch.titulo}</span>
+                        <span class="file-item-sub">${arch.subtitulo || ''}</span>
+                      </div>
+                    </div>
+                    <div class="file-item-actions">
+                      ${btnActions}
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          `;
+        }
+
         return `
-          <div class="delivery-row" id="${e.id || ''}">
-            <div class="delivery-meta">
-              <span class="delivery-week">${e.semana}</span>
-              <div class="delivery-title-box">
-                <span class="delivery-name">${e.nombre}</span>
-                ${badgeTag}
+          <div class="delivery-card-block" id="${e.id || ''}">
+            <div class="delivery-header-line">
+              <div class="delivery-meta">
+                <span class="delivery-week">${e.semana}</span>
+                <div class="delivery-title-box">
+                  <span class="delivery-name">${e.nombre}</span>
+                  ${badgeTag}
+                </div>
+              </div>
+              ${thumbsPreviewHtml}
+              <div class="delivery-btns">
+                ${actionsHtml}
               </div>
             </div>
-            ${thumbsPreviewHtml}
-            <div class="delivery-btns">
-              ${actionsHtml}
-            </div>
+            ${archivosListHtml}
           </div>`;
       }).join('');
     } else {

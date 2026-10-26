@@ -2335,3 +2335,173 @@ body {
     text-overflow: ellipsis;
   }
 }
+
+/* ==========================================
+   DOCUMENTOS ACADÉMICOS Y ARCHIVOS ENTREGABLES
+   ========================================== */
+.delivery-card-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all var(--transition);
+}
+
+.delivery-card-block:hover {
+  background: rgba(255, 255, 255, 0.035);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.delivery-header-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.delivery-files-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.file-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: rgba(14, 18, 30, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.15s ease;
+  flex-wrap: wrap;
+}
+
+.file-item-row:hover {
+  background: rgba(20, 26, 44, 0.85);
+  border-color: rgba(99, 102, 241, 0.35);
+}
+
+.file-item-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  flex: 1;
+}
+
+.file-badge-icon {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  letter-spacing: 0.02em;
+}
+
+.badge-pdf {
+  color: #f87171;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.badge-docx, .badge-doc {
+  color: #60a5fa;
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.badge-rar, .badge-zip {
+  color: #fbbf24;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.badge-fig, .badge-figma {
+  color: #c084fc;
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.badge-sql {
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.file-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.file-item-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-item-sub {
+  font-size: 0.72rem;
+  color: var(--text-3);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.file-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.btn-file-view {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #c7d2fe;
+  background: var(--indigo-dim);
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  transition: all var(--transition);
+}
+
+.btn-file-view:hover {
+  background: var(--indigo);
+  color: #fff;
+}
+
+.btn-file-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #7dd3fc;
+  background: var(--sky-dim);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  transition: all var(--transition);
+}
+
+.btn-file-download:hover {
+  background: #0284c7;
+  color: #fff;
+}
+

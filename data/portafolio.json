@@ -16,7 +16,8 @@
     "github": "https://github.com/Alexito-Hub",
     "linkedin": "https://www.linkedin.com/in/alessandro-villogas/",
     "repositorio": "https://github.com/Alexito-Hub/Alexito-Hub",
-    "biografia": "Estudiante de Ingeniería de Sistemas y Computación en la UPLA enfocado en el análisis de algoritmos, estructuras de datos en Java y desarrollo de aplicaciones web y de escritorio aplicando estándares de calidad de software."
+    "biografia": "Estudiante de Ingeniería de Sistemas y Computación en la UPLA enfocado en el análisis de algoritmos, estructuras de datos en Java y desarrollo de aplicaciones web y de escritorio aplicando estándares de calidad de software.",
+    "proyectoPrincipal": "NEXORA"
   },
   "conocimientoTecnico": {
     "figma_prototipado": {
@@ -29,7 +30,17 @@
       "arreglos_objetos": "Encapsulamiento en clases Modelo y administración en clase DAO con arreglo estático de objetos. Inserción O(1), búsqueda O(n), ordenamiento O(n^2).",
       "arraylist": "Colección dinámica java.util.ArrayList con redimensionamiento automático. Acceso O(1), inserción amortizada O(1), búsquedas y filtros O(n).",
       "pilas": "Estructura LIFO (Last In, First Out). Operaciones Push (apilar), Pop (desapilar) y Peek (consultar cima) en tiempo constante O(1).",
-      "colas": "Estructura FIFO (First In, First Out). Operaciones encolar al final y desencolar del frente en tiempo O(1) usando aritmética modular en cola circular o punteros inicio/fin en cola enlazada."
+      "colas": "Estructura FIFO (First In, First Out). Operaciones encolar al final y desencolar del frente en tiempo O(1) usando aritmética modular en cola circular o punteros inicio/fin en cola enlazada.",
+      "arreglos_unidimensionales": "Acceso por índice O(1); búsqueda lineal, inserción en posición y eliminación por desplazamiento de índices en tiempo O(n).",
+      "recursividad": "Recorrido recursivo de árboles de directorios O(V + E), búsqueda binaria recursiva O(log n) y árboles binarios de búsqueda O(h)."
+    },
+    "maven_pom": {
+      "titulo": "Definiciones de Maven y POM (Semana 02 - Taller VII)",
+      "explicacion": "Apache Maven automatiza la construcción y resolución transitiva de dependencias en proyectos Java. El archivo pom.xml define las coordenadas GAV (pe.edu.sistema:Semana04:1.0-SNAPSHOT), dependencias de Jakarta EE 10, conector SQL Server (mssql-jdbc) y plugins surefire para 221 pruebas JUnit 5."
+    },
+    "nexora_proyecto": {
+      "titulo": "Proyecto NEXORA (Semanas 04 a 08 - Taller VII)",
+      "explicacion": "NEXORA es una plataforma de comercio electrónico de equipamiento tecnológico con control de inventario por roles (Administrador, Almacén, Consulta, Cliente) y pasarela de pago simulada (tarjeta con algoritmo de Luhn y Yape, boleta B001 o factura F001 con IGV 18%). Implementa arquitectura MVC en Jakarta EE 10 sobre Java 17, persistencia híbrida en Microsoft SQL Server (BD_NEXORA) con respaldo en memoria, seguridad PBKDF2-SHA256 con 120 000 iteraciones, protección anti-CSRF y 221 pruebas automatizadas con JUnit 5."
     }
   },
   "cursos": {
@@ -65,7 +76,29 @@
                 "prefijoNombre": "Ejercicio ",
                 "prefijoArchivo": "Ejercicio_",
                 "pad": 2
-              }
+              },
+              "archivos": [
+                {
+                  "icono": "PDF",
+                  "titulo": "Informe Académico APA — Arreglos Unidimensionales",
+                  "subtitulo": "EJERCICIOS_CON_ARREGLOS_APA.pdf · 9 Métodos y Big-O",
+                  "verUrl": "pdfs/EJERCICIOS_CON_ARREGLOS_APA.pdf",
+                  "verTexto": "Ver PDF",
+                  "descargarUrl": "pdfs/EJERCICIOS_CON_ARREGLOS_APA.pdf",
+                  "descargarNombre": "EJERCICIOS_CON_ARREGLOS_APA.pdf",
+                  "descargarTexto": "Descargar"
+                },
+                {
+                  "icono": "DOCX",
+                  "titulo": "Documento Word APA — Arreglos Unidimensionales",
+                  "subtitulo": "EJERCICIOS_CON_ARREGLOS_APA.docx · Formato editable",
+                  "verUrl": "pdfs/EJERCICIOS_CON_ARREGLOS_APA.docx",
+                  "verTexto": "Ver Word",
+                  "descargarUrl": "pdfs/EJERCICIOS_CON_ARREGLOS_APA.docx",
+                  "descargarNombre": "EJERCICIOS_CON_ARREGLOS_APA.docx",
+                  "descargarTexto": "Descargar"
+                }
+              ]
             },
             {
               "id": "alg-sem-2",
@@ -516,53 +549,359 @@
       "pagina": "taller-vii.html",
       "containerId": "units-taller",
       "nombre": "Taller VII: Desarrollo de Aplicaciones I",
-      "docente": "Laboratorio de Aplicaciones Web y Prototipado",
+      "docente": "Mg. Ing. Raúl Fernández Bejarano",
       "ciclo": "IV Ciclo · Plan 2022",
+      "descripcion": "Proyectos, documentación técnica en formato APA 7, arquitectura MVC y desarrollo integral de la plataforma web empresarial NEXORA.",
       "unidades": [
         {
           "id": "taller-u1",
           "dot": "U01",
-          "titulo": "Introducción a Taller VII: Desarrollo de apps",
+          "titulo": "CONCEPTOS Y FUNDAMENTOS DE DESARROLLO DE APLICACIONES",
           "semanas": "Semanas 01 - 04",
-          "abierta": true,
+          "abierta": false,
           "entregas": [
             {
               "id": "taller-sem-1",
               "numero": 1,
               "semana": "Semana 01",
-              "nombre": "Desarrollo de trabajo en figma",
-              "tema": "Prototipado UI/UX en Figma",
+              "nombre": "Diseño y Prototipado UI/UX en Figma (NEXORA)",
+              "tema": "Prototipado UI/UX y Sistema de Diseño en Figma",
               "tipo": "figma",
               "url": "https://www.figma.com/design/oCzbZQH8LLbaF9meqa5jAt/Taller?node-id=2-417&t=31kaySltkgmQDZK3-1",
               "textoBtn": "Ver en Figma",
-              "resumenChatbot": "Semana 01 de Taller VII: Diseño de prototipo interactivo y maquetación de pantallas en Figma.",
-              "explicacionTecnica": "Define el sistema de diseño, wireframes, componentes visuales y flujo de interacción de usuario en Figma."
+              "resumenChatbot": "Semana 01 de Taller VII: Diseño interactivo y wireframes de alta fidelidad en Figma para la tienda tecnológica NEXORA.",
+              "explicacionTecnica": "Estructura el sistema de diseño visual, la jerarquía de componentes, navegación y pantallas de catálogo, checkout y administración en Figma.",
+              "archivos": [
+                {
+                  "icono": "FIG",
+                  "titulo": "Prototipo UI/UX en Figma",
+                  "subtitulo": "figma.com/design · NEXORA Store",
+                  "verUrl": "https://www.figma.com/design/oCzbZQH8LLbaF9meqa5jAt/Taller?node-id=2-417&t=31kaySltkgmQDZK3-1",
+                  "verTexto": "Abrir Figma",
+                  "descargarUrl": "https://www.figma.com/design/oCzbZQH8LLbaF9meqa5jAt/Taller?node-id=2-417&t=31kaySltkgmQDZK3-1",
+                  "descargarTexto": "Visitar",
+                  "descargarExterno": true
+                }
+              ]
             },
             {
               "id": "taller-sem-2",
               "numero": 2,
               "semana": "Semana 02",
-              "nombre": "Desarrollo de aplicación (.rar)",
-              "tema": "Estructura de proyecto y desarrollo de aplicación (Ale.rar)",
-              "tipo": "rar",
-              "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana-apps/Ale.rar",
-              "textoBtn": "Descargar .rar",
-              "resumenChatbot": "Semana 02 de Taller VII: Entregable práctico de desarrollo de aplicación empaquetado en Ale.rar en GitHub Releases.",
-              "explicacionTecnica": "Proyecto de aplicación configurado con estructura modular y dependencias empaquetado en Ale.rar para su compilación y despliegue."
+              "nombre": "Definiciones de Maven / POM y Desarrollo de Aplicación",
+              "tema": "Automatización de Construcción con Apache Maven y pom.xml",
+              "tipo": "documentos",
+              "resumenChatbot": "Semana 02 de Taller VII: Documento formal en formato APA 7ma Edición sobre Apache Maven y el archivo pom.xml, acompañado del paquete de software Ale.rar en GitHub Releases.",
+              "explicacionTecnica": "Analiza el ciclo de vida de construcción, la gestión de dependencias transitivas y la configuración de pom.xml para proyectos Jakarta EE, complementado con la entrega práctica empaquetada en Ale.rar.",
+              "archivos": [
+                {
+                  "icono": "PDF",
+                  "titulo": "Documento APA: Maven y POM.xml",
+                  "subtitulo": "DEFINICIONES_DE_MAVEN_Y_POM_APA.pdf · Formato APA 7",
+                  "verUrl": "pdfs/DEFINICIONES_DE_MAVEN_Y_POM_APA.pdf",
+                  "verTexto": "Ver PDF",
+                  "descargarUrl": "pdfs/DEFINICIONES_DE_MAVEN_Y_POM_APA.pdf",
+                  "descargarNombre": "DEFINICIONES_DE_MAVEN_Y_POM_APA.pdf",
+                  "descargarTexto": "Descargar"
+                },
+                {
+                  "icono": "DOCX",
+                  "titulo": "Documento Word: Maven y POM.xml",
+                  "subtitulo": "DEFINICIONES_DE_MAVEN_Y_POM_APA.docx · Word Editable",
+                  "verUrl": "pdfs/DEFINICIONES_DE_MAVEN_Y_POM_APA.docx",
+                  "verTexto": "Ver Word",
+                  "descargarUrl": "pdfs/DEFINICIONES_DE_MAVEN_Y_POM_APA.docx",
+                  "descargarNombre": "DEFINICIONES_DE_MAVEN_Y_POM_APA.docx",
+                  "descargarTexto": "Descargar"
+                },
+                {
+                  "icono": "RAR",
+                  "titulo": "Desarrollo de Aplicación (Release)",
+                  "subtitulo": "Ale.rar · GitHub Releases",
+                  "verUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana-apps",
+                  "verTexto": "Ver en GitHub",
+                  "descargarUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana-apps/Ale.rar",
+                  "descargarTexto": "Descargar .rar"
+                }
+              ]
             },
             {
               "id": "taller-sem-3",
               "numero": 3,
               "semana": "Semana 03",
-              "nombre": "Desarrollo de Semana 03 Actividades 1 y 2",
-              "tema": "Actividades 1 y 2 de Desarrollo de Aplicaciones (Semana03.rar)",
+              "nombre": "Actividades 1 y 2 de Desarrollo de Aplicaciones",
+              "tema": "Solución Modular de Software (Semana03.rar)",
               "tipo": "rar",
               "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/Semana03-Taller/Semana03.rar",
               "textoBtn": "Descargar .rar",
-              "resumenChatbot": "Semana 03 de Taller VII: Archivo descargable Semana03.rar con la implementación completa de las Actividades 1 y 2.",
-              "explicacionTecnica": "Incluye la solución de software de las Actividades 1 y 2 correspondientes a la tercera semana del laboratorio de desarrollo de aplicaciones."
+              "resumenChatbot": "Semana 03 de Taller VII: Código fuente empaquetado Semana03.rar con la implementación de las Actividades 1 y 2 en GitHub Releases.",
+              "explicacionTecnica": "Contiene los módulos funcionales de software para el laboratorio de desarrollo de aplicaciones listos para compilación.",
+              "archivos": [
+                {
+                  "icono": "RAR",
+                  "titulo": "Actividades 01 y 02 (Release)",
+                  "subtitulo": "Semana03.rar · GitHub Releases",
+                  "verUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/Semana03-Taller",
+                  "verTexto": "Ver en GitHub",
+                  "descargarUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/Semana03-Taller/Semana03.rar",
+                  "descargarTexto": "Descargar .rar"
+                }
+              ]
+            },
+            {
+              "id": "taller-sem-4",
+              "numero": 4,
+              "semana": "Semana 04",
+              "nombre": "Proyecto Web NEXORA y Prototipo en Figma",
+              "tema": "Arquitectura de eCommerce y Prototipado del Sistema NEXORA",
+              "tipo": "documentos",
+              "resumenChatbot": "Semana 04 de Taller VII: Proyecto web NEXORA con interfaz en Figma y código fuente empaquetado ProyectoWeb_NEXORA.zip en GitHub Releases.",
+              "explicacionTecnica": "Integra la arquitectura de pantallas de compra y panel administrativo en Figma con la estructura del proyecto web Java / Jakarta EE en Maven.",
+              "archivos": [
+                {
+                  "icono": "FIG",
+                  "titulo": "Diseño NEXORA en Figma",
+                  "subtitulo": "figma.com/design · Release GitHub",
+                  "verUrl": "https://www.figma.com/design/oCzbZQH8LLbaF9meqa5jAt/Taller?node-id=2-417&t=31kaySltkgmQDZK3-1",
+                  "verTexto": "Abrir Figma",
+                  "descargarUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/Dise%C3%B1o_Tekora_Figma",
+                  "descargarTexto": "Ver Release",
+                  "descargarExterno": true
+                },
+                {
+                  "icono": "ZIP",
+                  "titulo": "Proyecto Web NEXORA (Código Fuente)",
+                  "subtitulo": "ProyectoWeb_NEXORA.zip · GitHub Releases",
+                  "verUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/PROYECTO_NEXORA",
+                  "verTexto": "Ver en GitHub",
+                  "descargarUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/PROYECTO_NEXORA/ProyectoWeb_NEXORA.zip",
+                  "descargarTexto": "Descargar .zip"
+                }
+              ]
             }
           ]
+        },
+        {
+          "id": "taller-u2",
+          "dot": "U02",
+          "titulo": "ARQUITECTURA WEB, PERSISTENCIA EN SQL SERVER Y SEGURIDAD",
+          "semanas": "Semanas 05 - 08",
+          "abierta": true,
+          "entregas": [
+            {
+              "id": "taller-sem-5",
+              "numero": 5,
+              "semana": "Semana 05",
+              "nombre": "Manuales de Azure, SQL Server 2025 y Modelado de BD NEXORA",
+              "tema": "Infraestructura Cloud, Instalación de RDBMS y Diseño Conceptual/Relacional 3FN",
+              "tipo": "documentos",
+              "resumenChatbot": "Semana 05 de Taller VII: Manuales técnicos en formato APA 7 para aprovisionamiento en Azure for Students e instalación de Microsoft SQL Server 2025 con SSMS 22, además de los diagramas conceptual ER y lógico-relacional de BD_NEXORA.",
+              "explicacionTecnica": "Comprende el aprovisionamiento de infraestructura en Microsoft Azure, despliegue de SQL Server 2025 con autenticación mixta y TCP/IP, y el diseño de la base de datos BD_NEXORA en Tercera Forma Normal (tablas rol, usuario, categoria, producto, pedido, pago, movimiento_stock, auditoria).",
+              "archivos": [
+                {
+                  "icono": "PDF",
+                  "titulo": "Actividad Semana 05 (Informe APA Completo)",
+                  "subtitulo": "Actividad_Semana_05_APA.pdf · Manuales y Modelado BD",
+                  "verUrl": "pdfs/Actividad_Semana_05_APA.pdf",
+                  "verTexto": "Ver PDF",
+                  "descargarUrl": "pdfs/Actividad_Semana_05_APA.pdf",
+                  "descargarNombre": "Actividad_Semana_05_APA.pdf",
+                  "descargarTexto": "Descargar"
+                },
+                {
+                  "icono": "DOCX",
+                  "titulo": "Actividad Semana 05 (Word APA)",
+                  "subtitulo": "Actividad_Semana_05_APA.docx · Documento Editable",
+                  "verUrl": "pdfs/Actividad_Semana_05_APA.docx",
+                  "verTexto": "Ver Word",
+                  "descargarUrl": "pdfs/Actividad_Semana_05_APA.docx",
+                  "descargarNombre": "Actividad_Semana_05_APA.docx",
+                  "descargarTexto": "Descargar"
+                },
+                {
+                  "icono": "PDF",
+                  "titulo": "Manual Cuenta Microsoft Azure",
+                  "subtitulo": "Manual_Creacion_Cuenta_Microsoft_Azure.pdf · Cloud Guide",
+                  "verUrl": "pdfs/Manual_Creacion_Cuenta_Microsoft_Azure.pdf",
+                  "verTexto": "Ver PDF",
+                  "descargarUrl": "pdfs/Manual_Creacion_Cuenta_Microsoft_Azure.pdf",
+                  "descargarNombre": "Manual_Creacion_Cuenta_Microsoft_Azure.pdf",
+                  "descargarTexto": "Descargar"
+                },
+                {
+                  "icono": "PDF",
+                  "titulo": "Manual Instalación SQL Server 2025",
+                  "subtitulo": "Manual_Instalacion_SQL_Server_2025.pdf · RDBMS Setup",
+                  "verUrl": "pdfs/Manual_Instalacion_SQL_Server_2025.pdf",
+                  "verTexto": "Ver PDF",
+                  "descargarUrl": "pdfs/Manual_Instalacion_SQL_Server_2025.pdf",
+                  "descargarNombre": "Manual_Instalacion_SQL_Server_2025.pdf",
+                  "descargarTexto": "Descargar"
+                }
+              ],
+              "imagenes": [
+                {
+                  "nombre": "Modelo Conceptual Entidad-Relación · BD_NEXORA",
+                  "url": "assets/img/modelo_conceptual_er.png",
+                  "subtitulo": "Entidades, cardinalidad y relaciones comerciales",
+                  "indiceGlobal": 0
+                },
+                {
+                  "nombre": "Modelo Lógico Relacional (3FN) · BD_NEXORA",
+                  "url": "assets/img/modelo_logico_relacional.png",
+                  "subtitulo": "Esquema relacional en Tercera Forma Normal (PKs y FKs)",
+                  "indiceGlobal": 1
+                }
+              ]
+            },
+            {
+              "id": "taller-sem-6",
+              "numero": 6,
+              "semana": "Semana 06",
+              "nombre": "Modelo Físico en SQL Server y Conexión de Ventana en Java",
+              "tema": "Implementación DDL en SQL Server y Conexión JDBC (BD_NEXORA)",
+              "tipo": "documentos",
+              "resumenChatbot": "Semana 06 de Taller VII: Implementación física de la base de datos BD_NEXORA en SQL Server mediante scripts DDL (03_modelo_fisico_nexora.zip) e informe de arquitectura MVC y control de acceso.",
+              "explicacionTecnica": "Crea las tablas, claves foráneas, restricciones de integridad, procedimientos almacenados e índices en SQL Server, integrando la conexión JDBC con manejo de variables de entorno y respaldo en memoria.",
+              "archivos": [
+                {
+                  "icono": "ZIP",
+                  "titulo": "Modelo Físico SQL Server (Scripts DDL)",
+                  "subtitulo": "03_modelo_fisico_nexora.zip · GitHub Releases",
+                  "verUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/ModeloFisico_sqlserver",
+                  "verTexto": "Ver en GitHub",
+                  "descargarUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/ModeloFisico_sqlserver/03_modelo_fisico_nexora.zip",
+                  "descargarTexto": "Descargar .zip"
+                },
+                {
+                  "icono": "PDF",
+                  "titulo": "Actividad Semana 06 (Informe APA)",
+                  "subtitulo": "Actividad_Semana_06.pdf · Implementación Física SQL",
+                  "verUrl": "pdfs/Actividad_Semana_06.pdf",
+                  "verTexto": "Ver PDF",
+                  "descargarUrl": "pdfs/Actividad_Semana_06.pdf",
+                  "descargarNombre": "Actividad_Semana_06.pdf",
+                  "descargarTexto": "Descargar"
+                },
+                {
+                  "icono": "DOCX",
+                  "titulo": "Actividad Semana 06 (Word APA)",
+                  "subtitulo": "Actividad_Semana_06.docx · Documento Editable",
+                  "verUrl": "pdfs/Actividad_Semana_06.docx",
+                  "verTexto": "Ver Word",
+                  "descargarUrl": "pdfs/Actividad_Semana_06.docx",
+                  "descargarNombre": "Actividad_Semana_06.docx",
+                  "descargarTexto": "Descargar"
+                }
+              ]
+            },
+            {
+              "id": "taller-sem-7",
+              "numero": 7,
+              "semana": "Semana 07",
+              "nombre": "Módulo de Login Conectado a SQL Server y Criptografía PBKDF2",
+              "tema": "Autenticación Segura, Cifrado PBKDF2-SHA256 y Conectividad JDBC",
+              "tipo": "documentos",
+              "resumenChatbot": "Semana 07 de Taller VII: Módulo de autenticación Login conectado con Microsoft SQL Server (LOGIN_CONECTADO_NEXORA.zip) e informe técnico formal en formato APA 7.",
+              "explicacionTecnica": "Implementa el inicio de sesión autenticado contra SQL Server, hashing de contraseñas con PBKDF2WithHmacSHA256 (120 000 iteraciones y sal criptográfica), filtro SesionFilter contra ataques CSRF y control de acceso por roles.",
+              "archivos": [
+                {
+                  "icono": "ZIP",
+                  "titulo": "Módulo Login Conectado a SQL Server",
+                  "subtitulo": "LOGIN_CONECTADO_NEXORA.zip · GitHub Releases",
+                  "verUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/Login_conectadosql",
+                  "verTexto": "Ver en GitHub",
+                  "descargarUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/Login_conectadosql/LOGIN_CONECTADO_NEXORA.zip",
+                  "descargarTexto": "Descargar .zip"
+                },
+                {
+                  "icono": "PDF",
+                  "titulo": "Informe Técnico APA: Conexión Login SQL",
+                  "subtitulo": "Informe_Conexion_Login_SQL_Java_APA.pdf · Formato APA 7",
+                  "verUrl": "pdfs/Informe_Conexion_Login_SQL_Java_APA.pdf",
+                  "verTexto": "Ver PDF",
+                  "descargarUrl": "pdfs/Informe_Conexion_Login_SQL_Java_APA.pdf",
+                  "descargarNombre": "Informe_Conexion_Login_SQL_Java_APA.pdf",
+                  "descargarTexto": "Descargar"
+                },
+                {
+                  "icono": "DOCX",
+                  "titulo": "Informe Técnico Word: Conexión Login SQL",
+                  "subtitulo": "Informe_Conexion_Login_SQL_Java_APA.docx · Word Editable",
+                  "verUrl": "pdfs/Informe_Conexion_Login_SQL_Java_APA.docx",
+                  "verTexto": "Ver Word",
+                  "descargarUrl": "pdfs/Informe_Conexion_Login_SQL_Java_APA.docx",
+                  "descargarNombre": "Informe_Conexion_Login_SQL_Java_APA.docx",
+                  "descargarTexto": "Descargar"
+                }
+              ],
+              "imagenes": [
+                {
+                  "nombre": "Arquitectura de Conexión y Seguridad del Login · NEXORA",
+                  "url": "assets/img/arquitectura_conexion_login.png",
+                  "subtitulo": "Flujo de autenticación, capas MVC y protección anti-CSRF",
+                  "indiceGlobal": 0
+                }
+              ]
+            },
+            {
+              "id": "taller-sem-8",
+              "numero": 8,
+              "semana": "Semana 08",
+              "nombre": "Entrega Consolidada del Proyecto Web NEXORA e Informe Técnico Final",
+              "tema": "Tienda Online Completa con Pasarela de Pago, Kardex, 221 Pruebas e Informe APA",
+              "tipo": "documentos",
+              "resumenChatbot": "Semana 08 de Taller VII: Entrega final consolidada del sistema web NEXORA (código fuente ProyectoWeb_NEXORA.zip en GitHub Releases) e informe técnico exhaustivo en formato APA 7ma Edición con cobertura de las 221 pruebas unitarias JUnit 5.",
+              "explicacionTecnica": "Consolida la tienda online completa con pasarela de pago simulada (Luhn, Yape, comprobantes B001/F001 con IGV), administración de pedidos e inventario con kardex, seguridad criptográfica y 221 casos de prueba automatizados con JUnit 5.",
+              "archivos": [
+                {
+                  "icono": "ZIP",
+                  "titulo": "Proyecto Web NEXORA Completo (Código Fuente)",
+                  "subtitulo": "ProyectoWeb_NEXORA.zip · GitHub Releases",
+                  "verUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/PROYECTO_NEXORA",
+                  "verTexto": "Ver en GitHub",
+                  "descargarUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/PROYECTO_NEXORA/ProyectoWeb_NEXORA.zip",
+                  "descargarTexto": "Descargar .zip"
+                },
+                {
+                  "icono": "PDF",
+                  "titulo": "Informe Técnico Final APA — Proyecto NEXORA",
+                  "subtitulo": "Informe_Proyecto_Web_NEXORA_APA.pdf · Formato APA 7",
+                  "verUrl": "pdfs/Informe_Proyecto_Web_NEXORA_APA.pdf",
+                  "verTexto": "Ver PDF",
+                  "descargarUrl": "pdfs/Informe_Proyecto_Web_NEXORA_APA.pdf",
+                  "descargarNombre": "Informe_Proyecto_Web_NEXORA_APA.pdf",
+                  "descargarTexto": "Descargar"
+                },
+                {
+                  "icono": "DOCX",
+                  "titulo": "Informe Técnico Final Word — Proyecto NEXORA",
+                  "subtitulo": "Informe_Proyecto_Web_NEXORA_APA.docx · Word Editable",
+                  "verUrl": "pdfs/Informe_Proyecto_Web_NEXORA_APA.docx",
+                  "verTexto": "Ver Word",
+                  "descargarUrl": "pdfs/Informe_Proyecto_Web_NEXORA_APA.docx",
+                  "descargarNombre": "Informe_Proyecto_Web_NEXORA_APA.docx",
+                  "descargarTexto": "Descargar"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "taller-u3",
+          "dot": "U03",
+          "titulo": "INTEGRACIÓN DE SERVICIOS Y APIS",
+          "semanas": "Semanas 09 - 12",
+          "abierta": false,
+          "entregas": []
+        },
+        {
+          "id": "taller-u4",
+          "dot": "U04",
+          "titulo": "DESPLIEGUE CONTINUO Y EVALUACIÓN FINAL",
+          "semanas": "Semanas 13 - 16",
+          "abierta": false,
+          "entregas": []
         }
       ]
     }
