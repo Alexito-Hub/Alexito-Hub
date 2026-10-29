@@ -397,16 +397,16 @@
               "tema": "Colas FIFO: Circular Estática y Dinámicas con Nodo Centinela (32 métodos)",
               "tipo": "imagenes",
               "releaseUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana07-algoritmos",
-              "codigoUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/Semana07_codigo_alexito.zip",
-              "baseUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana07-algoritmos/",
+              "codigoUrl": "assets/code/Semana07_codigo_alexito.zip",
+              "baseUrl": "assets/img/semana07/",
               "resumenChatbot": "Semana 07 de Algoritmos: 32 infografías y código fuente Java 17 descargable (Semana07_codigo_alexito.zip): Ejercicio 01 Cola circular de alumnos (GestorColaAlumnos, 14 métodos); Ejercicio 02 Cola dinámica de turnos bancarios T-001 (GestorTurnos, 9 métodos); Ejercicio 03 Cola dinámica de órdenes de cocina O-01 con monto recursivo (GestorPedidos, 9 métodos).",
-              "explicacionTecnica": "En la versión de Alexito-Hub (Java 17+, documentada con Javadoc y switch con flechas), el Ejercicio 01 (GestorColaAlumnos) implementa una cola circular usando inicio, fin (próxima casilla libre), numElementos, método auxiliar posicion(k), baja desplazando casillas e inversión con java.util.Stack. El Ejercicio 02 (GestorTurnos) genera tickets correlativos T-001 sobre nodos enlazados (NodoTicket). El Ejercicio 03 (GestorPedidos) genera códigos O-01 automáticos, anula órdenes usando un nodo centinela y calcula el monto acumulado de forma recursiva.",
+              "explicacionTecnica": "En la versión de Alexito-Hub (Java 17+, documentada con Javadoc y switch con flechas), el Ejercicio 01 (GestorColaAlumnos) implementa una cola circular usando indiceFrente, indiceFinal (próxima casilla libre), cantidadAlumnos, método auxiliar posicionFisica(lugarRelativo), baja desplazando casillas e inversión con java.util.Stack. El Ejercicio 02 (GestorTurnos) genera tickets correlativos T-001 sobre nodos enlazados (NodoTicket). El Ejercicio 03 (GestorPedidos) genera códigos O-01 automáticos, anula órdenes usando un nodo centinela y calcula el monto acumulado de forma recursiva.",
               "ejercicios": [
                 {
                   "numero": "01",
                   "titulo": "Ejercicio 01",
                   "tema": "Cola estática circular de alumnos (GestorColaAlumnos.java y AppColaAlumnos.java)",
-                  "explicacion": "Administra una cola circular con punteros inicio, fin y numElementos, apoyada en el método posicion(k) = (inicio + k) % CAPACIDAD. Operaciones: encolar(), desencolar(), verFrente(), listar(), colaVacia(), colaLlena(), getCantidad(), buscarAlumno(), promedioGrupo(), filtrarPorNota(), obtenerExtremos() (mayor y menor nota), invertirOrden() con java.util.Stack y darDeBaja() desplazando casillas circulares.",
+                  "explicacion": "Administra una cola circular con punteros indiceFrente, indiceFinal y cantidadAlumnos, apoyada en el método posicionFisica(lugarRelativo) = (indiceFrente + lugarRelativo) % CAPACIDAD. Operaciones: encolar(), desencolar(), verFrente(), listar(), colaVacia(), colaLlena(), getCantidad(), buscarAlumno(), promedioGrupo(), filtrarPorNota(), obtenerExtremos() (mayor y menor nota), invertirOrden() con java.util.Stack y darDeBaja() desplazando casillas circulares.",
                   "metodos": [
                     "encolar()",
                     "desencolar()",
