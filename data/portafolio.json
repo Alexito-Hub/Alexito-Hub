@@ -468,10 +468,10 @@
               "tema": "Recursividad aplicada: archivos, busqueda binaria y arbol binario — 25 infografias",
               "tipo": "imagenes",
               "releaseUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana08-algoritmos",
-              "codigoUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana08-algoritmos/alexito.rar",
+              "codigoUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana08-algoritmos/Semana08_codigo_alexito.zip",
               "baseUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana08-algoritmos/",
-              "resumenChatbot": "Semana 08 de Algoritmos: Recursividad. Tres actividades con arquitectura Modelo/DAO/Vista: Proyecto 1 gestion y analisis de archivos de una empresa (recorrido recursivo de carpetas), Proyecto 2 busqueda de productos y analisis de inventario (busqueda binaria recursiva) y Proyecto 3 gestion de expedientes con arbol binario de busqueda. Una infografia por requerimiento. Version Alexito Java 17, codigo en paquete alexito.rar.",
-              "explicacionTecnica": "En la version de Alexito-Hub Java 17 con records, enum, Optional, Javadoc y switch con flechas: Proyecto 1 GestorArchivos con ArchivoRegistro; Proyecto 2 GestorInventario con busqueda binaria recursiva; Proyecto 3 ArbolAcademico con Expediente, EstadoExpediente y NodoExpediente.",
+              "resumenChatbot": "Semana 08 de Algoritmos: Recursividad. Tres actividades ejecutables directamente en NetBeans con Shift+F6: Actividad 01 gestion y analisis de archivos de una empresa (recorrido recursivo DFS y arbol jerarquico), Actividad 02 busqueda de productos y analisis de inventario (busqueda binaria recursiva) y Actividad 03 gestion de expedientes con arbol binario de busqueda (insercion, busqueda y recorrido inorden recursivo). 25 infografias con diagramas de flujo integrados. Version Alexito Java 17+, codigo en paquete Semana08_codigo_alexito.zip.",
+              "explicacionTecnica": "En la version de Alexito-Hub Java 17+ para NetBeans directo (sin capas abstractas DAO/Vista/Modelo): Actividad01_GestionArchivos con records y recorrido DFS con diagramas de flujo; Actividad02_InventarioProductos con busqueda binaria recursiva y diagramas de decision; Actividad03_ExpedientesAcademicos con arbol binario de busqueda (ABB), diagramas de insercion y recorrido inorden.",
               "ejercicios": [
                 {
                   "numero": "01",
@@ -531,8 +531,38 @@
           "dot": "U03",
           "titulo": "LISTAS ENLAZADAS",
           "semanas": "Semanas 09 - 12",
-          "abierta": false,
-          "entregas": []
+          "abierta": true,
+          "entregas": [
+            {
+              "id": "alg-sem-9",
+              "numero": 9,
+              "semana": "Semana 09",
+              "nombre": "Recursividad anidada — 3 actividades",
+              "tema": "Recursividad anidada: dependencias de tareas, evaluador de formulas y costos de productos — 3 infografias",
+              "tipo": "imagenes",
+              "codigoUrl": "assets/code/Semana09_codigo_alexito.zip",
+              "baseUrl": "assets/img/semana09/",
+              "resumenChatbot": "Semana 09 de Algoritmos: Recursividad anidada. Tres actividades con arquitectura Modelo/DAO/Vista, una infografia por proyecto: Proyecto 02 analisis de dependencias de tareas (profundidad con nivelMasProfundo, deteccion de ciclos); Proyecto 03 evaluador de expresiones con parentesis anidados (descenso recursivo, BigDecimal); Proyecto 04 costos de productos compuestos (costoTotal con sumarComponentes). Version Alexito Java 17.",
+              "explicacionTecnica": "Version Alexito Java 17 con records y switch con flechas: Proyecto 02 GestorDependencias (Tarea, PlanProyecto); Proyecto 03 CalculadoraFormulas (Formula); Proyecto 04 GestorCostos (Articulo, Parte). La recursividad anidada pasa el resultado de una llamada recursiva como argumento de otra.",
+              "imagenes": [
+                {
+                  "nombre": "Proyecto 02 - Sistema inteligente de analisis de dependencias de tareas",
+                  "url": "assets/img/semana09/Proyecto02.png",
+                  "indiceGlobal": 0
+                },
+                {
+                  "nombre": "Proyecto 03 - Sistema de evaluacion de formulas y reglas de negocio",
+                  "url": "assets/img/semana09/Proyecto03.png",
+                  "indiceGlobal": 1
+                },
+                {
+                  "nombre": "Proyecto 04 - Sistema de calculo de costos de productos compuestos",
+                  "url": "assets/img/semana09/Proyecto04.png",
+                  "indiceGlobal": 2
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "unidad-4",
