@@ -607,7 +607,7 @@
               "numero": 11,
               "semana": "Semana 11",
               "nombre": "Listas circulares — Proyectos 01 y 02",
-              "tema": "Lista circular de alumnos (14 operaciones + menu + explicacion) y turnos de un centro medico — 16 infografias",
+              "tema": "Lista circular de alumnos (Proyecto 01: 16 infografias) y turnos de un centro medico (Proyecto 02: 17 infografias) + informe",
               "tipo": "imagenes",
               "releaseUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana11-algoritmos",
               "codigoUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/Semana11_alexito.zip",
@@ -617,9 +617,9 @@
               "ejercicios": [
                 {
                   "numero": "01",
-                  "titulo": "Proyecto 01",
+                  "titulo": "Proyecto 01 (Gestion de alumnos)",
                   "tema": "Sistema de gestion de alumnos con lista circular simplemente enlazada",
-                  "explicacion": "Proyecto NetBeans CSemana11 (DAO/CListaCircular, Modelo/Alumno, Modelo/CNodo, Vista/MenuOpciones, Vista/Principal). El ultimo nodo apunta otra vez al primero: cada infografia dibuja los nodos, sus enlaces y la vuelta del ultimo al primero. La ultima infografia explica el mecanismo de circularidad.",
+                  "explicacion": "Proyecto NetBeans CSemana11 (DAO/CListaCircular, Modelo/Alumno, Modelo/CNodo, Vista/MenuOpciones, Vista/Principal). Cada infografia dibuja los nodos, sus enlaces y la vuelta del ultimo al primero; la ultima explica el mecanismo de circularidad.",
                   "metodos": [
                     "agregarAlInicio  ·  Insertar al inicio",
                     "agregarAlFinal  ·  Insertar al final",
@@ -638,6 +638,51 @@
                     "iniciar  ·  Menu principal (0. Salir)",
                     "CNodo  ·  Explicacion: nodos, enlaces y circularidad"
                   ]
+                },
+                {
+                  "numero": "02",
+                  "titulo": "Proyecto 02 (Turnos de un centro medico)",
+                  "tema": "Sistema de gestion de turnos de atencion en un centro medico con lista circular",
+                  "explicacion": "Proyecto NetBeans CentroMedico (Modelo/Paciente, Modelo/Turno, Modelo/CNodo, DAO/CListaTurnos, Vista). Registro de pacientes, atencion del siguiente, cancelacion y reprogramacion de turnos, consultas y administracion.",
+                  "metodos": [
+                    "registrarAlInicio  ·  Registrar al inicio",
+                    "registrarAlFinal  ·  Registrar al final",
+                    "insertarEn  ·  Insertar en una posicion",
+                    "insertarDespuesDe  ·  Insertar despues de un paciente",
+                    "atenderSiguiente  ·  Atender al siguiente",
+                    "cancelarTurno  ·  Cancelar turno por codigo",
+                    "eliminarPrimero  ·  Eliminar el primer turno",
+                    "eliminarUltimo  ·  Eliminar el ultimo turno",
+                    "reprogramar  ·  Reprogramar paciente",
+                    "buscar  ·  Buscar por codigo",
+                    "mostrarPendientes  ·  Mostrar pendientes",
+                    "getTamanio  ·  Cantidad de pacientes",
+                    "proximo  ·  Proximo paciente",
+                    "ordenarPorTurno  ·  Ordenar por numero de turno",
+                    "intercambiar  ·  Intercambiar dos pacientes",
+                    "modificar  ·  Modificar paciente",
+                    "iniciar  ·  Menu principal (0. Salir)"
+                  ]
+                }
+              ],
+              "archivos": [
+                {
+                  "icono": "PDF",
+                  "titulo": "Informe de la Semana 11 — Listas circulares",
+                  "subtitulo": "Informe_Semana11_alexito.pdf",
+                  "verUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/Informe_Semana11_alexito.pdf",
+                  "verTexto": "Ver PDF",
+                  "descargarUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/Informe_Semana11_alexito.pdf",
+                  "descargarTexto": "Descargar",
+                  "descargarNombre": "Informe_Semana11_alexito.pdf"
+                },
+                {
+                  "icono": "DOCX",
+                  "titulo": "Informe de la Semana 11 — version Word",
+                  "subtitulo": "Informe_Semana11_alexito.docx",
+                  "descargarUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/Informe_Semana11_alexito.docx",
+                  "descargarTexto": "Descargar",
+                  "descargarNombre": "Informe_Semana11_alexito.docx"
                 }
               ]
             }

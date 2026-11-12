@@ -43,9 +43,10 @@ function expandDeliveryImages(entrega) {
       const metodos = ej.metodos || [];
       metodos.forEach((m, idx) => {
         const mNum = idx + 1;
+        const grupo = ej.titulo || `Ejercicio ${ej.numero}`;
         const label = m.startsWith('Método')
-          ? `Ejercicio ${ej.numero} - ${m}`
-          : `Ejercicio ${ej.numero} - Método ${mNum}: ${m}`;
+          ? `${grupo} - ${m}`
+          : `${grupo} - Método ${mNum}: ${m}`;
         result.push({
           nombre: label,
           metodo: m,
