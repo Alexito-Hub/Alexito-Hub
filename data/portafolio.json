@@ -561,6 +561,46 @@
                   "indiceGlobal": 2
                 }
               ]
+            },
+            {
+              "id": "alg-sem-10",
+              "numero": 10,
+              "semana": "Semana 10",
+              "nombre": "Listas simplemente enlazadas — 16 metodos + menu",
+              "tema": "Lista simplemente enlazada de alumnos: insertar, eliminar, buscar, ordenar e intercambiar — 17 infografias",
+              "tipo": "imagenes",
+              "releaseUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana10-algoritmos",
+              "codigoUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-algoritmos/Semana10_alexito.zip",
+              "baseUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-algoritmos/",
+              "resumenChatbot": "Semana 10 de Algoritmos: Listas simplemente enlazadas. Proyecto NetBeans CSemana10 con DAO/CListaSE, Modelo/Alumno, Modelo/CNodo, Vista/MenuOpciones y Vista/Principal. 16 operaciones: agregar al inicio, al final, en posicion y despues de un codigo; quitar primero, ultimo, en posicion y por codigo; localizar, listar, ordenar por codigo y por promedio, intercambiar, tamanio, actualizar y esVacia. 17 infografias con diagramas de nodos. Version Alexito Java 17, codigo en Semana10_alexito.zip.",
+              "explicacionTecnica": "Version Alexito Java 17: la lista guarda dos punteros (cabeza y ultimo) y el contador tamanio, con CNodo(info, enlace). Gracias a ultimo, agregarAlFinal y getTamanio son O(1). quitarPorCodigo reutiliza localizar y quitarEnPosicion; los ordenamientos usan seleccion con canjear de la info; el menu usa switch con flechas y lectura con hasNextInt.",
+              "ejercicios": [
+                {
+                  "numero": "01",
+                  "titulo": "Enunciado 01",
+                  "tema": "Sistema de gestion de alumnos con lista simplemente enlazada",
+                  "explicacion": "Lista simplemente enlazada de alumnos (proyecto NetBeans CSemana10 con paquetes DAO, Modelo y Vista): insercion al inicio, al final, en posicion X y por referencia; eliminacion con los mismos cuatro casos; busqueda, recorrido, ordenamiento por codigo y por promedio, intercambio, tamano, modificacion y verificacion de lista vacia. Cada infografia dibuja los nodos [dato | enlace] y como cambian sus enlaces.",
+                  "metodos": [
+                    "agregarAlInicio  ·  Insertar al inicio",
+                    "agregarAlFinal  ·  Insertar al final",
+                    "agregarEnPosicion  ·  Insertar en posicion X",
+                    "agregarDespuesDe  ·  Insertar por referencia",
+                    "quitarPrimero  ·  Eliminar al inicio",
+                    "quitarUltimo  ·  Eliminar al final",
+                    "quitarEnPosicion  ·  Eliminar en posicion X",
+                    "quitarPorCodigo  ·  Eliminar por referencia",
+                    "localizar  ·  Buscar por codigo",
+                    "listar  ·  Mostrar todos",
+                    "ordenarPorCodigo  ·  Ordenar por codigo",
+                    "ordenarPorPromedio  ·  Ordenar por promedio",
+                    "intercambiarPosiciones  ·  Intercambiar dos alumnos",
+                    "getTamanio  ·  Cantidad de alumnos",
+                    "actualizar  ·  Modificar datos",
+                    "esVacia  ·  Verificar si esta vacia",
+                    "iniciar  ·  Menu principal (0. Salir)"
+                  ]
+                }
+              ]
             }
           ]
         },
