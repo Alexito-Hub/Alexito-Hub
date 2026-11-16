@@ -1046,8 +1046,418 @@
           "dot": "U03",
           "titulo": "INTEGRACIÓN DE SERVICIOS Y APIS",
           "semanas": "Semanas 09 - 12",
-          "abierta": false,
-          "entregas": []
+          "abierta": true,
+          "entregas": [
+            {
+              "id": "taller-sem-9",
+              "numero": 9,
+              "semana": "Semana 09",
+              "nombre": "Desarrollo de proyectos con React: 4 aplicaciones web",
+              "tema": "Componentes, props, useState, formularios, validaciones y CRUD en memoria",
+              "tipo": "documentos",
+              "resumenChatbot": "Semana 09 de Taller VII: cuatro aplicaciones React + Vite con datos en memoria: Registro Académico Andino (estudiantes y promedios), StockAndes (inventario de ferretería con alertas de stock mínimo), TechPoint (catálogo y carrito con descuentos de 5% y 10%) y Sonrisa Plena (agenda de citas de un consultorio sin horarios duplicados). Incluye informes en Word/PDF, infografías, diseños para Figma y manual de instalación.",
+              "explicacionTecnica": "Cada app guarda el estado en App con useState y lo reparte por props a componentes con una sola responsabilidad (carpeta por componente con su CSS e index.js). Se usan map para editar sin mutar, filter para búsquedas y eliminaciones, reduce para promedios, valor del inventario y subtotales, some para códigos y horarios duplicados y find para ubicar registros. Probado con Playwright en escritorio y en celular.",
+              "archivos": [
+                {
+                  "icono": "ZIP",
+                  "titulo": "Código React + Vite — 4 proyectos",
+                  "subtitulo": "Semana09_React_codigo_Alessandro.zip · GitHub Releases",
+                  "verUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana09-taller",
+                  "verTexto": "Ver en GitHub",
+                  "descargarUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana09-taller/Semana09_React_codigo_Alessandro.zip",
+                  "descargarTexto": "Descargar .zip"
+                },
+                {
+                  "icono": "FIG",
+                  "titulo": "Diseños para Figma (SVG editables)",
+                  "subtitulo": "Semana09_Disenos_Figma_Alessandro.zip · escritorio, móvil y guía de estilos",
+                  "verUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana09-taller",
+                  "verTexto": "Ver en GitHub",
+                  "descargarUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana09-taller/Semana09_Disenos_Figma_Alessandro.zip",
+                  "descargarTexto": "Descargar .zip"
+                },
+                {
+                  "icono": "PDF",
+                  "titulo": "Informe Proyecto 01: Registro Académico Andino",
+                  "subtitulo": "Sistema de Gestión Académica · PDF y Word",
+                  "verUrl": "pdfs/S09_Informe-Proyecto01-RegistroAcademicoAndino.pdf",
+                  "verTexto": "Ver PDF",
+                  "descargarUrl": "pdfs/S09_Informe-Proyecto01-RegistroAcademicoAndino.docx",
+                  "descargarNombre": "S09_Informe-Proyecto01-RegistroAcademicoAndino.docx",
+                  "descargarTexto": "Descargar Word"
+                },
+                {
+                  "icono": "PDF",
+                  "titulo": "Informe Proyecto 02: StockAndes",
+                  "subtitulo": "Sistema de Control de Inventario · PDF y Word",
+                  "verUrl": "pdfs/S09_Informe-Proyecto02-StockAndes.pdf",
+                  "verTexto": "Ver PDF",
+                  "descargarUrl": "pdfs/S09_Informe-Proyecto02-StockAndes.docx",
+                  "descargarNombre": "S09_Informe-Proyecto02-StockAndes.docx",
+                  "descargarTexto": "Descargar Word"
+                },
+                {
+                  "icono": "PDF",
+                  "titulo": "Informe Proyecto 03: TechPoint",
+                  "subtitulo": "Sistema de Ventas con Carrito de Compras · PDF y Word",
+                  "verUrl": "pdfs/S09_Informe-Proyecto03-TechPoint.pdf",
+                  "verTexto": "Ver PDF",
+                  "descargarUrl": "pdfs/S09_Informe-Proyecto03-TechPoint.docx",
+                  "descargarNombre": "S09_Informe-Proyecto03-TechPoint.docx",
+                  "descargarTexto": "Descargar Word"
+                },
+                {
+                  "icono": "PDF",
+                  "titulo": "Informe Proyecto 04: Sonrisa Plena",
+                  "subtitulo": "Sistema de Reservas y Citas · PDF y Word",
+                  "verUrl": "pdfs/S09_Informe-Proyecto04-SonrisaPlena.pdf",
+                  "verTexto": "Ver PDF",
+                  "descargarUrl": "pdfs/S09_Informe-Proyecto04-SonrisaPlena.docx",
+                  "descargarNombre": "S09_Informe-Proyecto04-SonrisaPlena.docx",
+                  "descargarTexto": "Descargar Word"
+                },
+                {
+                  "icono": "PDF",
+                  "titulo": "Manual de instalación React + Vite",
+                  "subtitulo": "Node.js, VS Code, Vite y ejecución de los 4 proyectos",
+                  "verUrl": "pdfs/S09_Manual-Instalacion-Villogas.pdf",
+                  "verTexto": "Ver PDF",
+                  "descargarUrl": "pdfs/S09_Manual-Instalacion-Villogas.docx",
+                  "descargarNombre": "S09_Manual-Instalacion-Villogas.docx",
+                  "descargarTexto": "Descargar Word"
+                }
+              ],
+              "imagenes": [
+                {
+                  "nombre": "Infografía Proyecto 01: Registro Académico Andino",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana09-taller/S09_Infografia-Proyecto01-RegistroAcademicoAndino.png",
+                  "subtitulo": "Sistema de Gestión Académica",
+                  "indiceGlobal": 0
+                },
+                {
+                  "nombre": "Infografía Proyecto 02: StockAndes",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana09-taller/S09_Infografia-Proyecto02-StockAndes.png",
+                  "subtitulo": "Sistema de Control de Inventario",
+                  "indiceGlobal": 1
+                },
+                {
+                  "nombre": "Infografía Proyecto 03: TechPoint",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana09-taller/S09_Infografia-Proyecto03-TechPoint.png",
+                  "subtitulo": "Sistema de Ventas con Carrito de Compras",
+                  "indiceGlobal": 2
+                },
+                {
+                  "nombre": "Infografía Proyecto 04: Sonrisa Plena",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana09-taller/S09_Infografia-Proyecto04-SonrisaPlena.png",
+                  "subtitulo": "Sistema de Reservas y Citas",
+                  "indiceGlobal": 3
+                }
+              ]
+            },
+            {
+              "id": "taller-sem-10",
+              "numero": 10,
+              "semana": "Semana 10",
+              "nombre": "Ruta Full-Stack: 55 lecciones en infografías",
+              "tema": "Java JDK, NetBeans, Maven, Tomcat, Spring Boot, React, MySQL y despliegue con Docker",
+              "tipo": "imagenes",
+              "resumenChatbot": "Semana 10 de Taller VII: curso 'Full-Stack desde cero: construye tu propia Academia Online' en 56 infografías (índice + 55 lecciones). Ocho módulos: fundamentos y entorno, Java esencial, Maven, MySQL, backend con Spring Boot (JPA, CRUD, validaciones, BCrypt, Spring Security y JWT), Tomcat (WAR), frontend con React y producción con Docker, dominio y HTTPS. Proyecto guía academia-web inspirado en plataformaacademy.tech.",
+              "explicacionTecnica": "Cada lección tiene objetivo, analogía, tres conceptos clave, paso a paso, código de ejemplo (Java 21, Spring Boot 3, Spring Security 6 con SecurityFilterChain, React Router 7, MySQL 8, Dockerfile y docker compose), error común, tip, mini reto y su aplicación en la plataforma academia-web.",
+              "archivos": [
+                {
+                  "icono": "ZIP",
+                  "titulo": "Las 56 infografías en un solo archivo",
+                  "subtitulo": "Semana10_Infografias_Alessandro.zip · GitHub Releases",
+                  "verUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana10-taller",
+                  "verTexto": "Ver en GitHub",
+                  "descargarUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/Semana10_Infografias_Alessandro.zip",
+                  "descargarTexto": "Descargar .zip"
+                }
+              ],
+              "imagenes": [
+                {
+                  "nombre": "Índice del curso (mapa de las 55 lecciones)",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_00-indice-del-curso.png",
+                  "indiceGlobal": 0
+                },
+                {
+                  "nombre": "Lección 01: Cómo funciona una aplicación web: cliente, servidor y base de datos",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_01-como-funciona-una-aplicacion-web-cliente-servido.png",
+                  "indiceGlobal": 1
+                },
+                {
+                  "nombre": "Lección 02: El mapa del stack: qué hace cada herramienta",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_02-el-mapa-del-stack-que-hace-cada-herramienta.png",
+                  "indiceGlobal": 2
+                },
+                {
+                  "nombre": "Lección 03: Instalar Java JDK 21 y configurar JAVA_HOME",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_03-instalar-java-jdk-21-y-configurar-java-home.png",
+                  "indiceGlobal": 3
+                },
+                {
+                  "nombre": "Lección 04: Instalar Apache NetBeans y crear tu primer proyecto",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_04-instalar-apache-netbeans-y-crear-tu-primer-proye.png",
+                  "indiceGlobal": 4
+                },
+                {
+                  "nombre": "Lección 05: Tu primer programa en Java: el método main",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_05-tu-primer-programa-en-java-el-metodo-main.png",
+                  "indiceGlobal": 5
+                },
+                {
+                  "nombre": "Lección 06: Instalar MySQL Server 8 y MySQL Workbench",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_06-instalar-mysql-server-8-y-mysql-workbench.png",
+                  "indiceGlobal": 6
+                },
+                {
+                  "nombre": "Lección 07: Instalar Node.js y npm para React",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_07-instalar-node-js-y-npm-para-react.png",
+                  "indiceGlobal": 7
+                },
+                {
+                  "nombre": "Lección 08: Instalar Apache Tomcat 10 y verlo funcionando",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_08-instalar-apache-tomcat-10-y-verlo-funcionando.png",
+                  "indiceGlobal": 8
+                },
+                {
+                  "nombre": "Lección 09: Variables y tipos de datos",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_09-variables-y-tipos-de-datos.png",
+                  "indiceGlobal": 9
+                },
+                {
+                  "nombre": "Lección 10: Operadores y condicionales if / else",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_10-operadores-y-condicionales-if-else.png",
+                  "indiceGlobal": 10
+                },
+                {
+                  "nombre": "Lección 11: Bucles for y while",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_11-bucles-for-y-while.png",
+                  "indiceGlobal": 11
+                },
+                {
+                  "nombre": "Lección 12: Métodos: bloques de código reutilizables",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_12-metodos-bloques-de-codigo-reutilizables.png",
+                  "indiceGlobal": 12
+                },
+                {
+                  "nombre": "Lección 13: Clases y objetos: modelando un Curso",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_13-clases-y-objetos-modelando-un-curso.png",
+                  "indiceGlobal": 13
+                },
+                {
+                  "nombre": "Lección 14: Encapsulamiento: atributos privados, getters y setters",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_14-encapsulamiento-atributos-privados-getters-y-set.png",
+                  "indiceGlobal": 14
+                },
+                {
+                  "nombre": "Lección 15: Colecciones: List y Map",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_15-colecciones-list-y-map.png",
+                  "indiceGlobal": 15
+                },
+                {
+                  "nombre": "Lección 16: Excepciones: cuando algo sale mal",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_16-excepciones-cuando-algo-sale-mal.png",
+                  "indiceGlobal": 16
+                },
+                {
+                  "nombre": "Lección 17: Qué es Maven y cómo se lee el pom.xml",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_17-que-es-maven-y-como-se-lee-el-pom-xml.png",
+                  "indiceGlobal": 17
+                },
+                {
+                  "nombre": "Lección 18: Dependencias y el repositorio central",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_18-dependencias-y-el-repositorio-central.png",
+                  "indiceGlobal": 18
+                },
+                {
+                  "nombre": "Lección 19: Ciclo de vida: clean, compile, package",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_19-ciclo-de-vida-clean-compile-package.png",
+                  "indiceGlobal": 19
+                },
+                {
+                  "nombre": "Lección 20: Modelar la academia: usuarios, cursos, lecciones, inscripciones y certificados",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_20-modelar-la-academia-usuarios-cursos-lecciones-in.png",
+                  "indiceGlobal": 20
+                },
+                {
+                  "nombre": "Lección 21: Crear la base de datos y las tablas",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_21-crear-la-base-de-datos-y-las-tablas.png",
+                  "indiceGlobal": 21
+                },
+                {
+                  "nombre": "Lección 22: Claves primarias y claves foráneas",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_22-claves-primarias-y-claves-foraneas.png",
+                  "indiceGlobal": 22
+                },
+                {
+                  "nombre": "Lección 23: Insertar y consultar: INSERT, SELECT y WHERE",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_23-insertar-y-consultar-insert-select-y-where.png",
+                  "indiceGlobal": 23
+                },
+                {
+                  "nombre": "Lección 24: Modificar y borrar: UPDATE y DELETE",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_24-modificar-y-borrar-update-y-delete.png",
+                  "indiceGlobal": 24
+                },
+                {
+                  "nombre": "Lección 25: Unir tablas con JOIN",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_25-unir-tablas-con-join.png",
+                  "indiceGlobal": 25
+                },
+                {
+                  "nombre": "Lección 26: Usuario propio para la aplicación y buenas prácticas",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_26-usuario-propio-para-la-aplicacion-y-buenas-pract.png",
+                  "indiceGlobal": 26
+                },
+                {
+                  "nombre": "Lección 27: Qué es Spring Boot y cómo crear el proyecto con Spring Initializr",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_27-que-es-spring-boot-y-como-crear-el-proyecto-con-.png",
+                  "indiceGlobal": 27
+                },
+                {
+                  "nombre": "Lección 28: Abrir el proyecto en NetBeans y entender sus carpetas",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_28-abrir-el-proyecto-en-netbeans-y-entender-sus-car.png",
+                  "indiceGlobal": 28
+                },
+                {
+                  "nombre": "Lección 29: Primer controlador REST: @RestController y @GetMapping",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_29-primer-controlador-rest-restcontroller-y-getmapp.png",
+                  "indiceGlobal": 29
+                },
+                {
+                  "nombre": "Lección 30: application.properties: conectar Spring Boot con MySQL",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_30-application-properties-conectar-spring-boot-con-.png",
+                  "indiceGlobal": 30
+                },
+                {
+                  "nombre": "Lección 31: Entidades JPA: la clase Curso como tabla",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_31-entidades-jpa-la-clase-curso-como-tabla.png",
+                  "indiceGlobal": 31
+                },
+                {
+                  "nombre": "Lección 32: Repositorios con JpaRepository",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_32-repositorios-con-jparepository.png",
+                  "indiceGlobal": 32
+                },
+                {
+                  "nombre": "Lección 33: La capa de servicio: dónde viven las reglas",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_33-la-capa-de-servicio-donde-viven-las-reglas.png",
+                  "indiceGlobal": 33
+                },
+                {
+                  "nombre": "Lección 34: CRUD completo de cursos: GET, POST, PUT y DELETE",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_34-crud-completo-de-cursos-get-post-put-y-delete.png",
+                  "indiceGlobal": 34
+                },
+                {
+                  "nombre": "Lección 35: Probar la API con Postman",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_35-probar-la-api-con-postman.png",
+                  "indiceGlobal": 35
+                },
+                {
+                  "nombre": "Lección 36: DTOs y validaciones con @Valid",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_36-dtos-y-validaciones-con-valid.png",
+                  "indiceGlobal": 36
+                },
+                {
+                  "nombre": "Lección 37: Relaciones JPA: un curso tiene muchas lecciones",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_37-relaciones-jpa-un-curso-tiene-muchas-lecciones.png",
+                  "indiceGlobal": 37
+                },
+                {
+                  "nombre": "Lección 38: Manejo de errores con @RestControllerAdvice",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_38-manejo-de-errores-con-restcontrolleradvice.png",
+                  "indiceGlobal": 38
+                },
+                {
+                  "nombre": "Lección 39: Registro de usuarios y contraseñas cifradas con BCrypt",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_39-registro-de-usuarios-y-contrasenas-cifradas-con-.png",
+                  "indiceGlobal": 39
+                },
+                {
+                  "nombre": "Lección 40: Inicio de sesión con Spring Security y JWT",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_40-inicio-de-sesion-con-spring-security-y-jwt.png",
+                  "indiceGlobal": 40
+                },
+                {
+                  "nombre": "Lección 41: Tomcat embebido vs Tomcat externo",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_41-tomcat-embebido-vs-tomcat-externo.png",
+                  "indiceGlobal": 41
+                },
+                {
+                  "nombre": "Lección 42: Empaquetar un WAR y desplegarlo en Tomcat",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_42-empaquetar-un-war-y-desplegarlo-en-tomcat.png",
+                  "indiceGlobal": 42
+                },
+                {
+                  "nombre": "Lección 43: Crear el proyecto React con Vite",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_43-crear-el-proyecto-react-con-vite.png",
+                  "indiceGlobal": 43
+                },
+                {
+                  "nombre": "Lección 44: Componentes y props: la tarjeta de curso",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_44-componentes-y-props-la-tarjeta-de-curso.png",
+                  "indiceGlobal": 44
+                },
+                {
+                  "nombre": "Lección 45: Estado y eventos con useState",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_45-estado-y-eventos-con-usestate.png",
+                  "indiceGlobal": 45
+                },
+                {
+                  "nombre": "Lección 46: useEffect y fetch: traer los cursos desde la API",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_46-useeffect-y-fetch-traer-los-cursos-desde-la-api.png",
+                  "indiceGlobal": 46
+                },
+                {
+                  "nombre": "Lección 47: React Router: páginas de inicio, catálogo y detalle",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_47-react-router-paginas-de-inicio-catalogo-y-detall.png",
+                  "indiceGlobal": 47
+                },
+                {
+                  "nombre": "Lección 48: Formularios de registro e inicio de sesión",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_48-formularios-de-registro-e-inicio-de-sesion.png",
+                  "indiceGlobal": 48
+                },
+                {
+                  "nombre": "Lección 49: Guardar el token y proteger rutas",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_49-guardar-el-token-y-proteger-rutas.png",
+                  "indiceGlobal": 49
+                },
+                {
+                  "nombre": "Lección 50: CORS: permitir que React hable con Spring Boot",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_50-cors-permitir-que-react-hable-con-spring-boot.png",
+                  "indiceGlobal": 50
+                },
+                {
+                  "nombre": "Lección 51: Inscribirse a un curso y registrar el progreso",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_51-inscribirse-a-un-curso-y-registrar-el-progreso.png",
+                  "indiceGlobal": 51
+                },
+                {
+                  "nombre": "Lección 52: Certificados verificables con código único",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_52-certificados-verificables-con-codigo-unico.png",
+                  "indiceGlobal": 52
+                },
+                {
+                  "nombre": "Lección 53: Docker: ¿es necesario? Imágenes y contenedores explicados",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_53-docker-es-necesario-imagenes-y-contenedores-expl.png",
+                  "indiceGlobal": 53
+                },
+                {
+                  "nombre": "Lección 54: Dockerfile para backend y frontend + docker-compose con MySQL",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_54-dockerfile-para-backend-y-frontend-docker-compos.png",
+                  "indiceGlobal": 54
+                },
+                {
+                  "nombre": "Lección 55: Desplegar en un servidor con dominio y HTTPS",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana10-taller/S10_55-desplegar-en-un-servidor-con-dominio-y-https.png",
+                  "indiceGlobal": 55
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "taller-u4",
