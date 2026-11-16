@@ -2505,3 +2505,127 @@ body {
   color: #fff;
 }
 
+
+/* ==========================================
+   SEMANA CON VARIOS PROYECTOS (infografía + archivos por proyecto)
+   ========================================== */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-block {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 14px;
+  padding: 12px;
+  border-radius: 8px;
+  background: rgba(14, 18, 30, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-left: 3px solid var(--indigo);
+}
+
+.project-thumb {
+  position: relative;
+  width: 112px;
+  height: 150px;
+  padding: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #000;
+  cursor: pointer;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.project-thumb span {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 5px 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  color: #fff;
+  background: rgba(15, 23, 42, 0.85);
+  text-align: center;
+}
+
+.project-thumb:hover {
+  border-color: var(--indigo);
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.35);
+}
+
+.project-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.project-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.project-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #a5b4fc;
+  background: var(--indigo-dim);
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  padding: 3px 8px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.project-name {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-1);
+}
+
+.project-sub {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--text-3);
+}
+
+.project-general {
+  padding-top: 8px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 600px) {
+  .project-block {
+    grid-template-columns: 1fr;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .project-block .file-item-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-block .file-item-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+  }
+
+  .project-thumb {
+    width: 100%;
+    height: 170px;
+  }
+}

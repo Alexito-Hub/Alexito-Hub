@@ -599,6 +599,93 @@ function toggleUnitAccordion(headerEl) {
 }
 window.toggleUnitAccordion = toggleUnitAccordion;
 
+// Fila de un archivo entregable (PDF, Word, ZIP, Figma...)
+function renderFileRow(arch) {
+  const badgeClass = 'badge-' + (arch.icono || 'DOC').toLowerCase();
+  let btnActions = '';
+  if (arch.verUrl) {
+    btnActions += `<a href="${arch.verUrl}" target="_blank" rel="noopener noreferrer" class="btn-file-view">${arch.verTexto || 'Ver'}</a>`;
+  }
+  if (arch.descargarUrl) {
+    const extraAttr = arch.descargarExterno ? 'target="_blank" rel="noopener noreferrer"' : (arch.descargarNombre ? `download="${arch.descargarNombre}"` : 'download');
+    btnActions += `<a href="${arch.descargarUrl}" ${extraAttr} class="btn-file-download">${arch.descargarTexto || 'Descargar'}</a>`;
+  }
+  return `
+    <div class="file-item-row">
+      <div class="file-item-left">
+        <span class="file-badge-icon ${badgeClass}">${arch.icono || 'DOC'}</span>
+        <div class="file-item-info">
+          <span class="file-item-title">${arch.titulo}</span>
+          <span class="file-item-sub">${arch.subtitulo || ''}</span>
+        </div>
+      </div>
+      <div class="file-item-actions">
+        ${btnActions}
+      </div>
+    </div>
+  `;
+}
+
+// Una semana con varios proyectos: cabecera única y un bloque por proyecto (infografía + archivos)
+function renderProjectGroup(e) {
+  const todas = [];
+  e.proyectos.forEach(p => (p.imagenes || []).forEach(img => todas.push({ ...img, indiceGlobal: todas.length })));
+  if (todas.length) {
+    galleries[e.id] = { title: `${e.semana}: ${e.nombre}`, items: todas };
+  }
+
+  let cursor = 0;
+  const bloques = e.proyectos.map(p => {
+    const inicio = cursor;
+    cursor += (p.imagenes || []).length;
+    const portada = (p.imagenes || [])[0];
+    const thumb = portada ? `
+      <button type="button" class="project-thumb" onclick="openGallery('${e.id}', ${inicio})" title="${portada.nombre}">
+        <img src="${portada.url}" alt="${portada.nombre}" loading="lazy" />
+        <span>Ver infografía</span>
+      </button>` : '';
+    return `
+      <div class="project-block" id="${p.id || ''}">
+        ${thumb}
+        <div class="project-body">
+          <div class="project-head">
+            <span class="project-tag">${p.etiqueta || ''}</span>
+            <div>
+              <span class="project-name">${p.nombre}</span>
+              <span class="project-sub">${p.subtitulo || ''}</span>
+            </div>
+          </div>
+          <div class="delivery-files-container">
+            ${(p.archivos || []).map(renderFileRow).join('')}
+          </div>
+        </div>
+      </div>`;
+  }).join('');
+
+  const generales = Array.isArray(e.archivos) && e.archivos.length
+    ? `<div class="delivery-files-container project-general">${e.archivos.map(renderFileRow).join('')}</div>`
+    : '';
+  const verTodas = todas.length
+    ? `<button type="button" class="btn-clean btn-primary" onclick="openGallery('${e.id}', 0)">Visualizar (${todas.length})</button>`
+    : '';
+
+  return `
+    <div class="delivery-card-block" id="${e.id || ''}">
+      <div class="delivery-header-line">
+        <div class="delivery-meta">
+          <span class="delivery-week">${e.semana}</span>
+          <div class="delivery-title-box">
+            <span class="delivery-name">${e.nombre}</span>
+            <span class="badge-clean badge-violet">${e.proyectos.length} proyectos</span>
+          </div>
+        </div>
+        <div class="delivery-btns">${verTodas}</div>
+      </div>
+      <div class="project-list">${bloques}</div>
+      ${generales}
+    </div>`;
+}
+
 // ==========================================
 // RENDERIZADO ESTRUCTURADO Y ORDENADO DE UNIDADES
 // ==========================================
@@ -616,6 +703,9 @@ function renderUnits(containerId, unidades) {
 
     if (hasEntregas) {
       entregasHtml = unidad.entregas.map(e => {
+        if (Array.isArray(e.proyectos) && e.proyectos.length > 0) {
+          return renderProjectGroup(e);
+        }
         if (Array.isArray(e.imagenes) && e.imagenes.length > 0 && e.id) {
           galleries[e.id] = {
             title: `${e.semana}: ${e.nombre}`,
@@ -686,32 +776,7 @@ function renderUnits(containerId, unidades) {
           }
           archivosListHtml = `
             <div class="delivery-files-container">
-              ${e.archivos.map(arch => {
-                const icono = (arch.icono || 'DOC').toLowerCase();
-                const badgeClass = 'badge-' + icono;
-                let btnActions = '';
-                if (arch.verUrl) {
-                  btnActions += `<a href="${arch.verUrl}" target="_blank" rel="noopener noreferrer" class="btn-file-view">${arch.verTexto || 'Ver'}</a>`;
-                }
-                if (arch.descargarUrl) {
-                  const extraAttr = arch.descargarExterno ? 'target="_blank" rel="noopener noreferrer"' : (arch.descargarNombre ? `download="${arch.descargarNombre}"` : 'download');
-                  btnActions += `<a href="${arch.descargarUrl}" ${extraAttr} class="btn-file-download">${arch.descargarTexto || 'Descargar'}</a>`;
-                }
-                return `
-                  <div class="file-item-row">
-                    <div class="file-item-left">
-                      <span class="file-badge-icon ${badgeClass}">${arch.icono || 'DOC'}</span>
-                      <div class="file-item-info">
-                        <span class="file-item-title">${arch.titulo}</span>
-                        <span class="file-item-sub">${arch.subtitulo || ''}</span>
-                      </div>
-                    </div>
-                    <div class="file-item-actions">
-                      ${btnActions}
-                    </div>
-                  </div>
-                `;
-              }).join('')}
+              ${e.archivos.map(renderFileRow).join('')}
             </div>
           `;
         }
