@@ -1049,37 +1049,19 @@
           "abierta": true,
           "entregas": [
             {
-              "id": "taller-sem-9",
+              "id": "taller-sem-9-p01",
               "numero": 9,
               "semana": "Semana 09",
-              "nombre": "Desarrollo de proyectos con React: 4 aplicaciones web",
-              "tema": "Componentes, props, useState, formularios, validaciones y CRUD en memoria",
+              "nombre": "Proyecto 01 · Registro Académico Andino",
+              "tema": "Sistema de Gestión Académica con React + Vite",
               "tipo": "documentos",
-              "resumenChatbot": "Semana 09 de Taller VII: cuatro aplicaciones React + Vite con datos en memoria: Registro Académico Andino (estudiantes y promedios), StockAndes (inventario de ferretería con alertas de stock mínimo), TechPoint (catálogo y carrito con descuentos de 5% y 10%) y Sonrisa Plena (agenda de citas de un consultorio sin horarios duplicados). Incluye informes en Word/PDF, infografías, diseños para Figma y manual de instalación.",
-              "explicacionTecnica": "Cada app guarda el estado en App con useState y lo reparte por props a componentes con una sola responsabilidad (carpeta por componente con su CSS e index.js). Se usan map para editar sin mutar, filter para búsquedas y eliminaciones, reduce para promedios, valor del inventario y subtotales, some para códigos y horarios duplicados y find para ubicar registros. Probado con Playwright en escritorio y en celular.",
+              "resumenChatbot": "Semana 09 de Taller, Proyecto 01 (Sistema de Gestión Académica): Registro Académico Andino. Una aplicación web que registra estudiantes, los busca por código o nombre, permite editarlos o eliminarlos y calcula el promedio de cada uno conforme se agregan notas. Incluye informe en PDF y Word, infografía, código React + Vite y diseño para Figma.",
+              "explicacionTecnica": "Componentes: App, Header, StudentSummary, StudentForm, StudentSearch, StudentList, StudentItem. Métodos de arreglos: map() (actualiza solo al estudiante editado y dibuja las filas), filter() (búsqueda y eliminación), reduce() (suma de notas para el promedio), some() (detecta códigos repetidos), find() (ubica al estudiante a eliminar). Validaciones: código con formato a24010 y sin repetir; nombres y apellidos solo con letras; carrera obligatoria; nota numérica entre 0 y 20.",
               "archivos": [
                 {
-                  "icono": "ZIP",
-                  "titulo": "Código React + Vite — 4 proyectos",
-                  "subtitulo": "Semana09_React_codigo_Alessandro.zip · GitHub Releases",
-                  "verUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana09-taller",
-                  "verTexto": "Ver en GitHub",
-                  "descargarUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana09-taller/Semana09_React_codigo_Alessandro.zip",
-                  "descargarTexto": "Descargar .zip"
-                },
-                {
-                  "icono": "FIG",
-                  "titulo": "Diseños para Figma (SVG editables)",
-                  "subtitulo": "Semana09_Disenos_Figma_Alessandro.zip · escritorio, móvil y guía de estilos",
-                  "verUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana09-taller",
-                  "verTexto": "Ver en GitHub",
-                  "descargarUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana09-taller/Semana09_Disenos_Figma_Alessandro.zip",
-                  "descargarTexto": "Descargar .zip"
-                },
-                {
                   "icono": "PDF",
-                  "titulo": "Informe Proyecto 01: Registro Académico Andino",
-                  "subtitulo": "Sistema de Gestión Académica · PDF y Word",
+                  "titulo": "Informe del Proyecto 01",
+                  "subtitulo": "S09_Informe-Proyecto01-RegistroAcademicoAndino.pdf · también en Word",
                   "verUrl": "pdfs/S09_Informe-Proyecto01-RegistroAcademicoAndino.pdf",
                   "verTexto": "Ver PDF",
                   "descargarUrl": "pdfs/S09_Informe-Proyecto01-RegistroAcademicoAndino.docx",
@@ -1087,44 +1069,22 @@
                   "descargarTexto": "Descargar Word"
                 },
                 {
-                  "icono": "PDF",
-                  "titulo": "Informe Proyecto 02: StockAndes",
-                  "subtitulo": "Sistema de Control de Inventario · PDF y Word",
-                  "verUrl": "pdfs/S09_Informe-Proyecto02-StockAndes.pdf",
-                  "verTexto": "Ver PDF",
-                  "descargarUrl": "pdfs/S09_Informe-Proyecto02-StockAndes.docx",
-                  "descargarNombre": "S09_Informe-Proyecto02-StockAndes.docx",
-                  "descargarTexto": "Descargar Word"
+                  "icono": "ZIP",
+                  "titulo": "Código React + Vite: Registro Académico Andino",
+                  "subtitulo": "S09_P01_RegistroAcademicoAndino_codigo.zip · npm install y npm run dev",
+                  "verUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana09-taller",
+                  "verTexto": "Ver en GitHub",
+                  "descargarUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana09-taller/S09_P01_RegistroAcademicoAndino_codigo.zip",
+                  "descargarTexto": "Descargar .zip"
                 },
                 {
-                  "icono": "PDF",
-                  "titulo": "Informe Proyecto 03: TechPoint",
-                  "subtitulo": "Sistema de Ventas con Carrito de Compras · PDF y Word",
-                  "verUrl": "pdfs/S09_Informe-Proyecto03-TechPoint.pdf",
-                  "verTexto": "Ver PDF",
-                  "descargarUrl": "pdfs/S09_Informe-Proyecto03-TechPoint.docx",
-                  "descargarNombre": "S09_Informe-Proyecto03-TechPoint.docx",
-                  "descargarTexto": "Descargar Word"
-                },
-                {
-                  "icono": "PDF",
-                  "titulo": "Informe Proyecto 04: Sonrisa Plena",
-                  "subtitulo": "Sistema de Reservas y Citas · PDF y Word",
-                  "verUrl": "pdfs/S09_Informe-Proyecto04-SonrisaPlena.pdf",
-                  "verTexto": "Ver PDF",
-                  "descargarUrl": "pdfs/S09_Informe-Proyecto04-SonrisaPlena.docx",
-                  "descargarNombre": "S09_Informe-Proyecto04-SonrisaPlena.docx",
-                  "descargarTexto": "Descargar Word"
-                },
-                {
-                  "icono": "PDF",
-                  "titulo": "Manual de instalación React + Vite",
-                  "subtitulo": "Node.js, VS Code, Vite y ejecución de los 4 proyectos",
-                  "verUrl": "pdfs/S09_Manual-Instalacion-Villogas.pdf",
-                  "verTexto": "Ver PDF",
-                  "descargarUrl": "pdfs/S09_Manual-Instalacion-Villogas.docx",
-                  "descargarNombre": "S09_Manual-Instalacion-Villogas.docx",
-                  "descargarTexto": "Descargar Word"
+                  "icono": "FIG",
+                  "titulo": "Diseño para Figma (SVG editables)",
+                  "subtitulo": "S09_P01_RegistroAcademicoAndino_figma.zip · escritorio, móvil y guía de estilos",
+                  "verUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana09-taller",
+                  "verTexto": "Ver en GitHub",
+                  "descargarUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana09-taller/S09_P01_RegistroAcademicoAndino_figma.zip",
+                  "descargarTexto": "Descargar .zip"
                 }
               ],
               "imagenes": [
@@ -1133,24 +1093,172 @@
                   "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana09-taller/S09_Infografia-Proyecto01-RegistroAcademicoAndino.png",
                   "subtitulo": "Sistema de Gestión Académica",
                   "indiceGlobal": 0
+                }
+              ]
+            },
+            {
+              "id": "taller-sem-9-p02",
+              "numero": 9,
+              "semana": "Semana 09",
+              "nombre": "Proyecto 02 · StockAndes",
+              "tema": "Sistema de Control de Inventario con React + Vite",
+              "tipo": "documentos",
+              "resumenChatbot": "Semana 09 de Taller, Proyecto 02 (Sistema de Control de Inventario): StockAndes. Una aplicación que registra productos por categoría, permite sumar o restar existencias sin pasar a negativo, avisa cuando un producto llega al stock mínimo y calcula cuánto dinero hay en almacén. Incluye informe en PDF y Word, infografía, código React + Vite y diseño para Figma.",
+              "explicacionTecnica": "Componentes: App, InventorySummary, ProductForm, ProductFilters, ProductTable, StockControl. Métodos de arreglos: filter() (búsqueda, categoría y productos en alerta), reduce() (valor del inventario y total de unidades), map() (actualiza el stock de un producto), some() (evita códigos repetidos), find() (producto a eliminar). Validaciones: código con formato abc-001 único; precio mayor que 0; stock entero y no negativo; la salida no puede superar el stock.",
+              "archivos": [
+                {
+                  "icono": "PDF",
+                  "titulo": "Informe del Proyecto 02",
+                  "subtitulo": "S09_Informe-Proyecto02-StockAndes.pdf · también en Word",
+                  "verUrl": "pdfs/S09_Informe-Proyecto02-StockAndes.pdf",
+                  "verTexto": "Ver PDF",
+                  "descargarUrl": "pdfs/S09_Informe-Proyecto02-StockAndes.docx",
+                  "descargarNombre": "S09_Informe-Proyecto02-StockAndes.docx",
+                  "descargarTexto": "Descargar Word"
                 },
+                {
+                  "icono": "ZIP",
+                  "titulo": "Código React + Vite: StockAndes",
+                  "subtitulo": "S09_P02_StockAndes_codigo.zip · npm install y npm run dev",
+                  "verUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana09-taller",
+                  "verTexto": "Ver en GitHub",
+                  "descargarUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana09-taller/S09_P02_StockAndes_codigo.zip",
+                  "descargarTexto": "Descargar .zip"
+                },
+                {
+                  "icono": "FIG",
+                  "titulo": "Diseño para Figma (SVG editables)",
+                  "subtitulo": "S09_P02_StockAndes_figma.zip · escritorio, móvil y guía de estilos",
+                  "verUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana09-taller",
+                  "verTexto": "Ver en GitHub",
+                  "descargarUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana09-taller/S09_P02_StockAndes_figma.zip",
+                  "descargarTexto": "Descargar .zip"
+                }
+              ],
+              "imagenes": [
                 {
                   "nombre": "Infografía Proyecto 02: StockAndes",
                   "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana09-taller/S09_Infografia-Proyecto02-StockAndes.png",
                   "subtitulo": "Sistema de Control de Inventario",
-                  "indiceGlobal": 1
+                  "indiceGlobal": 0
+                }
+              ]
+            },
+            {
+              "id": "taller-sem-9-p03",
+              "numero": 9,
+              "semana": "Semana 09",
+              "nombre": "Proyecto 03 · TechPoint",
+              "tema": "Sistema de Ventas con Carrito de Compras con React + Vite",
+              "tipo": "documentos",
+              "resumenChatbot": "Semana 09 de Taller, Proyecto 03 (Sistema de Ventas con Carrito de Compras): TechPoint. Una aplicación con catálogo y carrito sincronizados: el cliente agrega productos, ajusta cantidades sin pasar el stock y ve al instante el subtotal, el descuento por monto y el total a pagar. Incluye informe en PDF y Word, infografía, código React + Vite y diseño para Figma.",
+              "explicacionTecnica": "Componentes: App, ProductCatalog, ProductCard, ShoppingCart, CartItem, CheckoutSummary, SaleReceipt. Métodos de arreglos: find() (ubica el producto y la línea del carrito), reduce() (subtotal y unidades), map() (cambia cantidades y descuenta stock), filter() (búsqueda y quitar del carrito). Validaciones: cantidad mínima 1; no supera el stock disponible; productos agotados no se agregan; no se confirma una venta vacía.",
+              "archivos": [
+                {
+                  "icono": "PDF",
+                  "titulo": "Informe del Proyecto 03",
+                  "subtitulo": "S09_Informe-Proyecto03-TechPoint.pdf · también en Word",
+                  "verUrl": "pdfs/S09_Informe-Proyecto03-TechPoint.pdf",
+                  "verTexto": "Ver PDF",
+                  "descargarUrl": "pdfs/S09_Informe-Proyecto03-TechPoint.docx",
+                  "descargarNombre": "S09_Informe-Proyecto03-TechPoint.docx",
+                  "descargarTexto": "Descargar Word"
                 },
+                {
+                  "icono": "ZIP",
+                  "titulo": "Código React + Vite: TechPoint",
+                  "subtitulo": "S09_P03_TechPoint_codigo.zip · npm install y npm run dev",
+                  "verUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana09-taller",
+                  "verTexto": "Ver en GitHub",
+                  "descargarUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana09-taller/S09_P03_TechPoint_codigo.zip",
+                  "descargarTexto": "Descargar .zip"
+                },
+                {
+                  "icono": "FIG",
+                  "titulo": "Diseño para Figma (SVG editables)",
+                  "subtitulo": "S09_P03_TechPoint_figma.zip · escritorio, móvil y guía de estilos",
+                  "verUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana09-taller",
+                  "verTexto": "Ver en GitHub",
+                  "descargarUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana09-taller/S09_P03_TechPoint_figma.zip",
+                  "descargarTexto": "Descargar .zip"
+                }
+              ],
+              "imagenes": [
                 {
                   "nombre": "Infografía Proyecto 03: TechPoint",
                   "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana09-taller/S09_Infografia-Proyecto03-TechPoint.png",
                   "subtitulo": "Sistema de Ventas con Carrito de Compras",
-                  "indiceGlobal": 2
+                  "indiceGlobal": 0
+                }
+              ]
+            },
+            {
+              "id": "taller-sem-9-p04",
+              "numero": 9,
+              "semana": "Semana 09",
+              "nombre": "Proyecto 04 · Sonrisa Plena",
+              "tema": "Sistema de Reservas y Citas con React + Vite",
+              "tipo": "documentos",
+              "resumenChatbot": "Semana 09 de Taller, Proyecto 04 (Sistema de Reservas y Citas): Sonrisa Plena. Una aplicación que registra pacientes y citas con servicio, fecha y horario. Bloquea los horarios ocupados, permite cancelar, buscar y filtrar, y muestra la agenda ordenada con el importe de cada servicio. Incluye informe en PDF y Word, infografía, código React + Vite y diseño para Figma.",
+              "explicacionTecnica": "Componentes: App, AppointmentForm, ClientField, ServiceSelector, AppointmentList, AppointmentSummary. Métodos de arreglos: some() (¿el horario ya está ocupado?), find() (precio del servicio y datos del paciente), filter() (búsqueda, fecha y estado), sort() (orden por fecha y hora), reduce() (importe total y agrupación por día). Validaciones: dni de 8 dígitos; celular de 9 dígitos que empieza con 9; fecha no pasada y sin domingos; horario libre obligatorio.",
+              "archivos": [
+                {
+                  "icono": "PDF",
+                  "titulo": "Informe del Proyecto 04",
+                  "subtitulo": "S09_Informe-Proyecto04-SonrisaPlena.pdf · también en Word",
+                  "verUrl": "pdfs/S09_Informe-Proyecto04-SonrisaPlena.pdf",
+                  "verTexto": "Ver PDF",
+                  "descargarUrl": "pdfs/S09_Informe-Proyecto04-SonrisaPlena.docx",
+                  "descargarNombre": "S09_Informe-Proyecto04-SonrisaPlena.docx",
+                  "descargarTexto": "Descargar Word"
                 },
+                {
+                  "icono": "ZIP",
+                  "titulo": "Código React + Vite: Sonrisa Plena",
+                  "subtitulo": "S09_P04_SonrisaPlena_codigo.zip · npm install y npm run dev",
+                  "verUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana09-taller",
+                  "verTexto": "Ver en GitHub",
+                  "descargarUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana09-taller/S09_P04_SonrisaPlena_codigo.zip",
+                  "descargarTexto": "Descargar .zip"
+                },
+                {
+                  "icono": "FIG",
+                  "titulo": "Diseño para Figma (SVG editables)",
+                  "subtitulo": "S09_P04_SonrisaPlena_figma.zip · escritorio, móvil y guía de estilos",
+                  "verUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana09-taller",
+                  "verTexto": "Ver en GitHub",
+                  "descargarUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana09-taller/S09_P04_SonrisaPlena_figma.zip",
+                  "descargarTexto": "Descargar .zip"
+                }
+              ],
+              "imagenes": [
                 {
                   "nombre": "Infografía Proyecto 04: Sonrisa Plena",
                   "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana09-taller/S09_Infografia-Proyecto04-SonrisaPlena.png",
                   "subtitulo": "Sistema de Reservas y Citas",
-                  "indiceGlobal": 3
+                  "indiceGlobal": 0
+                }
+              ]
+            },
+            {
+              "id": "taller-sem-9-manual",
+              "numero": 9,
+              "semana": "Semana 09",
+              "nombre": "Manual de instalación del entorno React",
+              "tema": "Node.js, npm, Visual Studio Code y Vite",
+              "tipo": "documentos",
+              "resumenChatbot": "Semana 09 de Taller: manual de instalación con capturas reales de Node.js, VS Code, creación de proyectos con Vite, estructura de carpetas, ejecución de los 4 proyectos, build de producción y problemas frecuentes.",
+              "explicacionTecnica": "Pasos: instalar Node.js LTS y verificar con node --version y npm --version; npm create vite@latest con plantilla react; npm install; npm run dev en http://localhost:5173; npm run build genera dist.",
+              "archivos": [
+                {
+                  "icono": "PDF",
+                  "titulo": "Manual de instalación React + Vite",
+                  "subtitulo": "Node.js, VS Code, Vite y cómo ejecutar los 4 proyectos",
+                  "verUrl": "pdfs/S09_Manual-Instalacion-Villogas.pdf",
+                  "verTexto": "Ver PDF",
+                  "descargarUrl": "pdfs/S09_Manual-Instalacion-Villogas.docx",
+                  "descargarNombre": "S09_Manual-Instalacion-Villogas.docx",
+                  "descargarTexto": "Descargar Word"
                 }
               ]
             },
