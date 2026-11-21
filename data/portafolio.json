@@ -316,8 +316,7 @@
                     "rankingAcademico()",
                     "estudiantesPorCarrera()",
                     "estudiantesDesaprobados()",
-                    "mejorPromedio()",
-                    "menu() · [21] Salir"
+                    "mejorPromedio()"
                   ]
                 }
               ]
@@ -348,8 +347,7 @@
                     "mostrarEstadoCapacidad()",
                     "buscarAlumnoPorCodigo()",
                     "verificarEstadoLogico()",
-                    "mostrarMejorPromedio()",
-                    "menu() · 10. Salir"
+                    "mostrarMejorPromedio()"
                   ]
                 },
                 {
@@ -367,8 +365,7 @@
                     "buscarPorSerie()",
                     "calcularValorInventario()",
                     "mostrarEquiposSuperioresA()",
-                    "obtenerEquipoMasCaro()",
-                    "menu() · 11. Salir"
+                    "obtenerEquipoMasCaro()"
                   ]
                 },
                 {
@@ -383,8 +380,7 @@
                     "mostrarEstadoHistorial()",
                     "buscarAccionEnHistorial()",
                     "invertirPilaAcciones()",
-                    "exportarHistorialResumen()",
-                    "menu() · 8. Salir"
+                    "exportarHistorialResumen()"
                   ]
                 }
               ]
@@ -420,8 +416,7 @@
                     "filtrarPorNota()",
                     "obtenerExtremos()",
                     "invertirOrden()",
-                    "darDeBaja()",
-                    "menu()  ·  0. Salir"
+                    "darDeBaja()"
                   ]
                 },
                 {
@@ -437,8 +432,7 @@
                     "sinTurnos()",
                     "buscarTurno()",
                     "reportePorTramite()",
-                    "cancelarTurno()",
-                    "menu()  ·  9. Salir"
+                    "cancelarTurno()"
                   ]
                 },
                 {
@@ -454,8 +448,7 @@
                     "sinOrdenes()",
                     "buscarOrden()",
                     "montoAcumulado()",
-                    "anularOrden()",
-                    "menu()  ·  9. Salir"
+                    "anularOrden()"
                   ]
                 }
               ]
@@ -486,8 +479,7 @@
                     "buscarPorNombre y buscarPorExtension",
                     "conteoPorExtension  ·  Reporte por tipo",
                     "imprimirArbol  ·  Estructura jerarquica",
-                    "generarPrueba",
-                    "menu  ·  0. Salir"
+                    "generarPrueba"
                   ]
                 },
                 {
@@ -502,8 +494,7 @@
                     "valorTotal",
                     "unidadesTotales",
                     "sinExistencias",
-                    "bajoInventario",
-                    "menu  ·  0. Salir"
+                    "bajoInventario"
                   ]
                 },
                 {
@@ -518,8 +509,7 @@
                     "listarAscendente  ·  Inorden",
                     "total",
                     "altura",
-                    "contarPorEstado  ·  Criterio",
-                    "menu  ·  0. Salir"
+                    "contarPorEstado  ·  Criterio"
                   ]
                 }
               ]
@@ -596,8 +586,7 @@
                     "intercambiarPosiciones  ·  Intercambiar dos alumnos",
                     "getTamanio  ·  Cantidad de alumnos",
                     "actualizar  ·  Modificar datos",
-                    "esVacia  ·  Verificar si esta vacia",
-                    "iniciar  ·  Menu principal (0. Salir)"
+                    "esVacia  ·  Verificar si esta vacia"
                   ]
                 }
               ]
@@ -635,7 +624,6 @@
                     "intercambiarPosiciones  ·  Intercambiar dos alumnos",
                     "getTamanio  ·  Cantidad de alumnos",
                     "actualizar  ·  Modificar datos",
-                    "iniciar  ·  Menu principal (0. Salir)",
                     "CNodo  ·  Explicacion: nodos, enlaces y circularidad"
                   ]
                 },
@@ -660,8 +648,7 @@
                     "proximo  ·  Proximo paciente",
                     "ordenarPorTurno  ·  Ordenar por numero de turno",
                     "intercambiar  ·  Intercambiar dos pacientes",
-                    "modificar  ·  Modificar paciente",
-                    "iniciar  ·  Menu principal (0. Salir)"
+                    "modificar  ·  Modificar paciente"
                   ]
                 }
               ],
@@ -683,6 +670,256 @@
                   "descargarUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/Informe_Semana11_alexito.docx",
                   "descargarTexto": "Descargar",
                   "descargarNombre": "Informe_Semana11_alexito.docx"
+                }
+              ],
+              "imagenes": [
+                {
+                  "nombre": "Proyecto 01 (Gestion de alumnos) - Método 1: agregarAlInicio  ·  Insertar al inicio",
+                  "metodo": "agregarAlInicio  ·  Insertar al inicio",
+                  "ejercicio": "01",
+                  "metodoNumero": 1,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/01-M1.png",
+                  "indiceGlobal": 0
+                },
+                {
+                  "nombre": "Proyecto 01 (Gestion de alumnos) - Método 2: agregarAlFinal  ·  Insertar al final",
+                  "metodo": "agregarAlFinal  ·  Insertar al final",
+                  "ejercicio": "01",
+                  "metodoNumero": 2,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/01-M2.png",
+                  "indiceGlobal": 1
+                },
+                {
+                  "nombre": "Proyecto 01 (Gestion de alumnos) - Método 3: agregarEnPosicion  ·  Insertar en posicion X",
+                  "metodo": "agregarEnPosicion  ·  Insertar en posicion X",
+                  "ejercicio": "01",
+                  "metodoNumero": 3,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/01-M3.png",
+                  "indiceGlobal": 2
+                },
+                {
+                  "nombre": "Proyecto 01 (Gestion de alumnos) - Método 4: agregarDespuesDe  ·  Insertar por referencia",
+                  "metodo": "agregarDespuesDe  ·  Insertar por referencia",
+                  "ejercicio": "01",
+                  "metodoNumero": 4,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/01-M4.png",
+                  "indiceGlobal": 3
+                },
+                {
+                  "nombre": "Proyecto 01 (Gestion de alumnos) - Método 5: quitarPrimero  ·  Eliminar el primero",
+                  "metodo": "quitarPrimero  ·  Eliminar el primero",
+                  "ejercicio": "01",
+                  "metodoNumero": 5,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/01-M5.png",
+                  "indiceGlobal": 4
+                },
+                {
+                  "nombre": "Proyecto 01 (Gestion de alumnos) - Método 6: quitarUltimo  ·  Eliminar el ultimo",
+                  "metodo": "quitarUltimo  ·  Eliminar el ultimo",
+                  "ejercicio": "01",
+                  "metodoNumero": 6,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/01-M6.png",
+                  "indiceGlobal": 5
+                },
+                {
+                  "nombre": "Proyecto 01 (Gestion de alumnos) - Método 7: quitarEnPosicion  ·  Eliminar en posicion X",
+                  "metodo": "quitarEnPosicion  ·  Eliminar en posicion X",
+                  "ejercicio": "01",
+                  "metodoNumero": 7,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/01-M7.png",
+                  "indiceGlobal": 6
+                },
+                {
+                  "nombre": "Proyecto 01 (Gestion de alumnos) - Método 8: quitarPorCodigo  ·  Eliminar por referencia",
+                  "metodo": "quitarPorCodigo  ·  Eliminar por referencia",
+                  "ejercicio": "01",
+                  "metodoNumero": 8,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/01-M8.png",
+                  "indiceGlobal": 7
+                },
+                {
+                  "nombre": "Proyecto 01 (Gestion de alumnos) - Método 9: obtener  ·  Buscar por codigo",
+                  "metodo": "obtener  ·  Buscar por codigo",
+                  "ejercicio": "01",
+                  "metodoNumero": 9,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/01-M9.png",
+                  "indiceGlobal": 8
+                },
+                {
+                  "nombre": "Proyecto 01 (Gestion de alumnos) - Método 10: listar  ·  Recorrer la lista",
+                  "metodo": "listar  ·  Recorrer la lista",
+                  "ejercicio": "01",
+                  "metodoNumero": 10,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/01-M10.png",
+                  "indiceGlobal": 9
+                },
+                {
+                  "nombre": "Proyecto 01 (Gestion de alumnos) - Método 11: ordenarPorCodigo  ·  Ordenar por codigo",
+                  "metodo": "ordenarPorCodigo  ·  Ordenar por codigo",
+                  "ejercicio": "01",
+                  "metodoNumero": 11,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/01-M11.png",
+                  "indiceGlobal": 10
+                },
+                {
+                  "nombre": "Proyecto 01 (Gestion de alumnos) - Método 12: intercambiarPosiciones  ·  Intercambiar dos alumnos",
+                  "metodo": "intercambiarPosiciones  ·  Intercambiar dos alumnos",
+                  "ejercicio": "01",
+                  "metodoNumero": 12,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/01-M12.png",
+                  "indiceGlobal": 11
+                },
+                {
+                  "nombre": "Proyecto 01 (Gestion de alumnos) - Método 13: getTamanio  ·  Cantidad de alumnos",
+                  "metodo": "getTamanio  ·  Cantidad de alumnos",
+                  "ejercicio": "01",
+                  "metodoNumero": 13,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/01-M13.png",
+                  "indiceGlobal": 12
+                },
+                {
+                  "nombre": "Proyecto 01 (Gestion de alumnos) - Método 14: actualizar  ·  Modificar datos",
+                  "metodo": "actualizar  ·  Modificar datos",
+                  "ejercicio": "01",
+                  "metodoNumero": 14,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/01-M14.png",
+                  "indiceGlobal": 13
+                },
+                {
+                  "nombre": "Proyecto 01 (Gestion de alumnos) - Método 16: CNodo  ·  Explicacion: nodos, enlaces y circularidad",
+                  "metodo": "CNodo  ·  Explicacion: nodos, enlaces y circularidad",
+                  "ejercicio": "01",
+                  "metodoNumero": 16,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/01-M16.png",
+                  "indiceGlobal": 14
+                },
+                {
+                  "nombre": "Proyecto 02 (Turnos de un centro medico) - Método 1: registrarAlInicio  ·  Registrar al inicio",
+                  "metodo": "registrarAlInicio  ·  Registrar al inicio",
+                  "ejercicio": "02",
+                  "metodoNumero": 1,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/02-M1.png",
+                  "indiceGlobal": 15
+                },
+                {
+                  "nombre": "Proyecto 02 (Turnos de un centro medico) - Método 2: registrarAlFinal  ·  Registrar al final",
+                  "metodo": "registrarAlFinal  ·  Registrar al final",
+                  "ejercicio": "02",
+                  "metodoNumero": 2,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/02-M2.png",
+                  "indiceGlobal": 16
+                },
+                {
+                  "nombre": "Proyecto 02 (Turnos de un centro medico) - Método 3: insertarEn  ·  Insertar en una posicion",
+                  "metodo": "insertarEn  ·  Insertar en una posicion",
+                  "ejercicio": "02",
+                  "metodoNumero": 3,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/02-M3.png",
+                  "indiceGlobal": 17
+                },
+                {
+                  "nombre": "Proyecto 02 (Turnos de un centro medico) - Método 4: insertarDespuesDe  ·  Insertar despues de un paciente",
+                  "metodo": "insertarDespuesDe  ·  Insertar despues de un paciente",
+                  "ejercicio": "02",
+                  "metodoNumero": 4,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/02-M4.png",
+                  "indiceGlobal": 18
+                },
+                {
+                  "nombre": "Proyecto 02 (Turnos de un centro medico) - Método 5: atenderSiguiente  ·  Atender al siguiente",
+                  "metodo": "atenderSiguiente  ·  Atender al siguiente",
+                  "ejercicio": "02",
+                  "metodoNumero": 5,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/02-M5.png",
+                  "indiceGlobal": 19
+                },
+                {
+                  "nombre": "Proyecto 02 (Turnos de un centro medico) - Método 6: cancelarTurno  ·  Cancelar turno por codigo",
+                  "metodo": "cancelarTurno  ·  Cancelar turno por codigo",
+                  "ejercicio": "02",
+                  "metodoNumero": 6,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/02-M6.png",
+                  "indiceGlobal": 20
+                },
+                {
+                  "nombre": "Proyecto 02 (Turnos de un centro medico) - Método 7: eliminarPrimero  ·  Eliminar el primer turno",
+                  "metodo": "eliminarPrimero  ·  Eliminar el primer turno",
+                  "ejercicio": "02",
+                  "metodoNumero": 7,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/02-M7.png",
+                  "indiceGlobal": 21
+                },
+                {
+                  "nombre": "Proyecto 02 (Turnos de un centro medico) - Método 8: eliminarUltimo  ·  Eliminar el ultimo turno",
+                  "metodo": "eliminarUltimo  ·  Eliminar el ultimo turno",
+                  "ejercicio": "02",
+                  "metodoNumero": 8,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/02-M8.png",
+                  "indiceGlobal": 22
+                },
+                {
+                  "nombre": "Proyecto 02 (Turnos de un centro medico) - Método 9: reprogramar  ·  Reprogramar paciente",
+                  "metodo": "reprogramar  ·  Reprogramar paciente",
+                  "ejercicio": "02",
+                  "metodoNumero": 9,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/02-M9.png",
+                  "indiceGlobal": 23
+                },
+                {
+                  "nombre": "Proyecto 02 (Turnos de un centro medico) - Método 10: buscar  ·  Buscar por codigo",
+                  "metodo": "buscar  ·  Buscar por codigo",
+                  "ejercicio": "02",
+                  "metodoNumero": 10,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/02-M10.png",
+                  "indiceGlobal": 24
+                },
+                {
+                  "nombre": "Proyecto 02 (Turnos de un centro medico) - Método 11: mostrarPendientes  ·  Mostrar pendientes",
+                  "metodo": "mostrarPendientes  ·  Mostrar pendientes",
+                  "ejercicio": "02",
+                  "metodoNumero": 11,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/02-M11.png",
+                  "indiceGlobal": 25
+                },
+                {
+                  "nombre": "Proyecto 02 (Turnos de un centro medico) - Método 12: getTamanio  ·  Cantidad de pacientes",
+                  "metodo": "getTamanio  ·  Cantidad de pacientes",
+                  "ejercicio": "02",
+                  "metodoNumero": 12,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/02-M12.png",
+                  "indiceGlobal": 26
+                },
+                {
+                  "nombre": "Proyecto 02 (Turnos de un centro medico) - Método 13: proximo  ·  Proximo paciente",
+                  "metodo": "proximo  ·  Proximo paciente",
+                  "ejercicio": "02",
+                  "metodoNumero": 13,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/02-M13.png",
+                  "indiceGlobal": 27
+                },
+                {
+                  "nombre": "Proyecto 02 (Turnos de un centro medico) - Método 14: ordenarPorTurno  ·  Ordenar por numero de turno",
+                  "metodo": "ordenarPorTurno  ·  Ordenar por numero de turno",
+                  "ejercicio": "02",
+                  "metodoNumero": 14,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/02-M14.png",
+                  "indiceGlobal": 28
+                },
+                {
+                  "nombre": "Proyecto 02 (Turnos de un centro medico) - Método 15: intercambiar  ·  Intercambiar dos pacientes",
+                  "metodo": "intercambiar  ·  Intercambiar dos pacientes",
+                  "ejercicio": "02",
+                  "metodoNumero": 15,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/02-M15.png",
+                  "indiceGlobal": 29
+                },
+                {
+                  "nombre": "Proyecto 02 (Turnos de un centro medico) - Método 16: modificar  ·  Modificar paciente",
+                  "metodo": "modificar  ·  Modificar paciente",
+                  "ejercicio": "02",
+                  "metodoNumero": 16,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana11-algoritmos/02-M16.png",
+                  "indiceGlobal": 30
                 }
               ]
             },
