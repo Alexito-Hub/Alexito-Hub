@@ -1033,6 +1033,171 @@
                   ]
                 }
               ]
+            },
+            {
+              "id": "alg-sem-14",
+              "numero": 14,
+              "semana": "Semana 14",
+              "nombre": "Arboles: almacen comercial con BST — 15 operaciones",
+              "tema": "Gestion y busqueda de productos con arbol binario de busqueda e interfaz grafica — informe tecnico en 16 infografias",
+              "tipo": "imagenes",
+              "releaseUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/tag/semana14-algoritmos",
+              "codigoUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana14-algoritmos/Semana14_alexito.zip",
+              "baseUrl": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana14-algoritmos/",
+              "resumenChatbot": "Semana 14 de Algoritmos: Arboles. Proyecto 1, sistema de gestion y busqueda de productos para un almacen comercial: aplicacion de escritorio en Java con interfaz grafica y arquitectura Modelo - DAO - Vista. Cada producto (codigo, nombre, categoria, marca, precio, stock, fecha de registro) se guarda en un arbol binario de busqueda ordenado por codigo (izquierda menores, derecha mayores). 15 operaciones: registrar, insertar, buscar, actualizar, eliminar (hoja, un hijo, dos hijos), recorridos inorden, preorden y postorden, codigo menor y mayor, reporte ascendente (inorden), stock menor a un limite y valor total del inventario (suma de precio x stock). 16 infografias: informe tecnico + una por operacion. Version Alexito Java 17 (Swing, tema oscuro), codigo en Semana14_alexito.zip.",
+              "explicacionTecnica": "Version Alexito Java 17: ProductoDAO iterativo (sin recursion); recorridos con pilas ArrayDeque; al eliminar un nodo con dos hijos sube el predecesor inorden (el mayor de la izquierda). Producto es un record, buscar devuelve Optional y los reportes usan streams. VentanaAlmacen muestra el arbol y una consola de entrada y salida.",
+              "ejercicios": [
+                {
+                  "numero": "01",
+                  "titulo": "Proyecto 1 (Almacen comercial con BST)",
+                  "tema": "Sistema de gestion y busqueda de productos con arbol binario de busqueda",
+                  "explicacion": "Proyecto NetBeans AlmacenProductos (Modelo/Producto (record), Modelo/Nodo, DAO/ProductoDAO, Vista/VentanaAlmacen, Vista/LienzoArbol, Vista/App). Cada infografia trae el grafico del arbol, la captura real de la ventana, la entrada y salida reales y el codigo explicado linea por linea.",
+                  "metodos": [
+                    "registrar  ·  Registrar producto",
+                    "insertar  ·  Insertar en el arbol",
+                    "buscar  ·  Buscar por codigo",
+                    "actualizar  ·  Actualizar producto",
+                    "eliminar  ·  Eliminar nodo hoja",
+                    "eliminar  ·  Eliminar nodo con un hijo",
+                    "eliminar  ·  Eliminar nodo con dos hijos",
+                    "inorden  ·  Recorrido inorden",
+                    "preorden  ·  Recorrido preorden",
+                    "postorden  ·  Recorrido postorden",
+                    "minimo  ·  Codigo menor (minimo)",
+                    "maximo  ·  Codigo mayor (maximo)",
+                    "reporteAscendente  ·  Reporte ascendente",
+                    "stockMenorA  ·  Stock menor a un limite",
+                    "valorInventario  ·  Valor total del inventario"
+                  ]
+                }
+              ],
+              "imagenes": [
+                {
+                  "nombre": "Proyecto 1 (Almacen comercial con BST) - Informe tecnico",
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana14-algoritmos/01-INF.png",
+                  "indiceGlobal": 0
+                },
+                {
+                  "nombre": "Proyecto 1 (Almacen comercial con BST) - Método 1: registrar  ·  Registrar producto",
+                  "metodo": "registrar  ·  Registrar producto",
+                  "ejercicio": "01",
+                  "metodoNumero": 1,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana14-algoritmos/01-M1.png",
+                  "indiceGlobal": 1
+                },
+                {
+                  "nombre": "Proyecto 1 (Almacen comercial con BST) - Método 2: insertar  ·  Insertar en el arbol",
+                  "metodo": "insertar  ·  Insertar en el arbol",
+                  "ejercicio": "01",
+                  "metodoNumero": 2,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana14-algoritmos/01-M2.png",
+                  "indiceGlobal": 2
+                },
+                {
+                  "nombre": "Proyecto 1 (Almacen comercial con BST) - Método 3: buscar  ·  Buscar por codigo",
+                  "metodo": "buscar  ·  Buscar por codigo",
+                  "ejercicio": "01",
+                  "metodoNumero": 3,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana14-algoritmos/01-M3.png",
+                  "indiceGlobal": 3
+                },
+                {
+                  "nombre": "Proyecto 1 (Almacen comercial con BST) - Método 4: actualizar  ·  Actualizar producto",
+                  "metodo": "actualizar  ·  Actualizar producto",
+                  "ejercicio": "01",
+                  "metodoNumero": 4,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana14-algoritmos/01-M4.png",
+                  "indiceGlobal": 4
+                },
+                {
+                  "nombre": "Proyecto 1 (Almacen comercial con BST) - Método 5: eliminar  ·  Eliminar nodo hoja",
+                  "metodo": "eliminar  ·  Eliminar nodo hoja",
+                  "ejercicio": "01",
+                  "metodoNumero": 5,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana14-algoritmos/01-M5.png",
+                  "indiceGlobal": 5
+                },
+                {
+                  "nombre": "Proyecto 1 (Almacen comercial con BST) - Método 6: eliminar  ·  Eliminar nodo con un hijo",
+                  "metodo": "eliminar  ·  Eliminar nodo con un hijo",
+                  "ejercicio": "01",
+                  "metodoNumero": 6,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana14-algoritmos/01-M6.png",
+                  "indiceGlobal": 6
+                },
+                {
+                  "nombre": "Proyecto 1 (Almacen comercial con BST) - Método 7: eliminar  ·  Eliminar nodo con dos hijos",
+                  "metodo": "eliminar  ·  Eliminar nodo con dos hijos",
+                  "ejercicio": "01",
+                  "metodoNumero": 7,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana14-algoritmos/01-M7.png",
+                  "indiceGlobal": 7
+                },
+                {
+                  "nombre": "Proyecto 1 (Almacen comercial con BST) - Método 8: inorden  ·  Recorrido inorden",
+                  "metodo": "inorden  ·  Recorrido inorden",
+                  "ejercicio": "01",
+                  "metodoNumero": 8,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana14-algoritmos/01-M8.png",
+                  "indiceGlobal": 8
+                },
+                {
+                  "nombre": "Proyecto 1 (Almacen comercial con BST) - Método 9: preorden  ·  Recorrido preorden",
+                  "metodo": "preorden  ·  Recorrido preorden",
+                  "ejercicio": "01",
+                  "metodoNumero": 9,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana14-algoritmos/01-M9.png",
+                  "indiceGlobal": 9
+                },
+                {
+                  "nombre": "Proyecto 1 (Almacen comercial con BST) - Método 10: postorden  ·  Recorrido postorden",
+                  "metodo": "postorden  ·  Recorrido postorden",
+                  "ejercicio": "01",
+                  "metodoNumero": 10,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana14-algoritmos/01-M10.png",
+                  "indiceGlobal": 10
+                },
+                {
+                  "nombre": "Proyecto 1 (Almacen comercial con BST) - Método 11: minimo  ·  Codigo menor (minimo)",
+                  "metodo": "minimo  ·  Codigo menor (minimo)",
+                  "ejercicio": "01",
+                  "metodoNumero": 11,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana14-algoritmos/01-M11.png",
+                  "indiceGlobal": 11
+                },
+                {
+                  "nombre": "Proyecto 1 (Almacen comercial con BST) - Método 12: maximo  ·  Codigo mayor (maximo)",
+                  "metodo": "maximo  ·  Codigo mayor (maximo)",
+                  "ejercicio": "01",
+                  "metodoNumero": 12,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana14-algoritmos/01-M12.png",
+                  "indiceGlobal": 12
+                },
+                {
+                  "nombre": "Proyecto 1 (Almacen comercial con BST) - Método 13: reporteAscendente  ·  Reporte ascendente",
+                  "metodo": "reporteAscendente  ·  Reporte ascendente",
+                  "ejercicio": "01",
+                  "metodoNumero": 13,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana14-algoritmos/01-M13.png",
+                  "indiceGlobal": 13
+                },
+                {
+                  "nombre": "Proyecto 1 (Almacen comercial con BST) - Método 14: stockMenorA  ·  Stock menor a un limite",
+                  "metodo": "stockMenorA  ·  Stock menor a un limite",
+                  "ejercicio": "01",
+                  "metodoNumero": 14,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana14-algoritmos/01-M14.png",
+                  "indiceGlobal": 14
+                },
+                {
+                  "nombre": "Proyecto 1 (Almacen comercial con BST) - Método 15: valorInventario  ·  Valor total del inventario",
+                  "metodo": "valorInventario  ·  Valor total del inventario",
+                  "ejercicio": "01",
+                  "metodoNumero": 15,
+                  "url": "https://github.com/Alexito-Hub/Alexito-Hub/releases/download/semana14-algoritmos/01-M15.png",
+                  "indiceGlobal": 15
+                }
+              ]
             }
           ]
         }
